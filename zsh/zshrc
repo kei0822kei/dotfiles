@@ -9,7 +9,10 @@ if [ "$OSTYPE" = "linux-gnu" ]; then
   alias ls='ls -F --color=auto --show-control-char'
   alias lsf='ls -F  | grep -v /'
   alias lsd='ls -F | grep / | sed -e "s/\///"'
-  alias vim='nvim'
+  if [ "$(type nvim)" = "nvim not found" ]; then
+    echo "nvim is not installed yet"
+  else
+    alias vim='nvim'
 fi
 
 
