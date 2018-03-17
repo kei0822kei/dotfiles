@@ -1,0 +1,33 @@
+# -*- zshenv -*-
+
+
+################################################################################
+# PATH
+################################################################################
+### global
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/versions/anaconda3-5.0.1/bin:$PATH"
+export PATH="$HOME/Github:$PATH"
+export PATH="$HOME/Github/phonaly/scripts:$PATH"
+export PATH="$HOME/Github/smooziee/scripts:$PATH"
+
+### mizokami-ubuntu
+if [ "$USER" = "mizokami-ubuntu" ]; then
+  export PATH="$HOME/Software/tsuboguruma:$PATH"
+  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
+fi
+
+
+################################################################################
+# ZSHRC
+################################################################################
+export ZDOTDIR=$HOME/.mydot/zsh
+alias zinit="source $HOME/.mydot/zsh/.zshrc"
+
+
+################################################################################
+# ANACONDA ACTIVATE
+################################################################################
+source activate
