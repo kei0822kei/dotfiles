@@ -49,3 +49,11 @@ hook_add = 'source ~/.mydot/nvim/rc/airline.vim'
 [[plugins]]
 repo = 'lervag/vimtex'
 hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+
+[[plugins]]
+repo = 'vim-scripts/vim-auto-save'
+hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
+
