@@ -6,6 +6,6 @@ plugins and their manuals
 
 ## NERDTree
 <Bookmark>
-:Bookmark [] 
-:ClearBookmarks [] 
-:ClearAllBookmarks 
+:Bookmark []  
+:ClearBookmarks []  
+:ClearAllBookmarks  
