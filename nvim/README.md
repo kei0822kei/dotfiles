@@ -5,7 +5,8 @@ Overview
 plugins and their manuals
 
 ## NERDTree
-<Bookmark>
+Bookmark
+
 :Bookmark []  
 :ClearBookmarks []  
 :ClearAllBookmarks  
