@@ -12,11 +12,6 @@ from matplotlib import pyplot as plt
 import argparse
 
 
-### settings
-cur_dir = os.getcwd()
-sys.path.append(home_dir+"Script/Module/Read_file")
-
-
 ### Arg-parser
 parser = argparse.ArgumentParser(
     description="")
