@@ -12,6 +12,7 @@ export PATH="$PYENV_ROOT/versions/anaconda3-5.0.1/bin:$PATH"
 export PATH="$HOME/Github:$PATH"
 export PATH="$HOME/Github/phonaly/scripts:$PATH"
 export PATH="$HOME/Github/smooziee/scripts:$PATH"
+export PATH="$HOME/Github/poscry/scripts:$PATH"
 
 ### mizokami-ubuntu
 if [ "$USER" = "mizokami-ubuntu" ]; then
