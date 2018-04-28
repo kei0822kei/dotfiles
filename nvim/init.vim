@@ -83,3 +83,6 @@ noremap!  
 set backspace=2
 " noremap      maybe don't need
 " noremap!     maybe don't need
+
+"""tab
+nnoremap <Tab> :tabn<cr>

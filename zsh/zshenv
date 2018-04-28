@@ -13,11 +13,13 @@ export PATH="$HOME/Github:$PATH"
 export PATH="$HOME/Github/phonaly/scripts:$PATH"
 export PATH="$HOME/Github/smooziee/scripts:$PATH"
 export PATH="$HOME/Github/poscry/scripts:$PATH"
+export PATH="$HOME/Github/mklearn/scripts:$PATH"
 
 ### mizokami-ubuntu
 if [ "$USER" = "mizokami-ubuntu" ]; then
   export PATH="$HOME/Software/tsuboguruma:$PATH"
   export PATH="$HOME/Software/VESTA-x86_64:$PATH"
+  export PATH="$HOME/Script/Run:$PATH"
 fi
 
 
