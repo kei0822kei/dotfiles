@@ -16,6 +16,7 @@ manuals
 
 special character  
 ; & ( ) | ^ < > ? * [ ] $ ' " ` { } <Enter> <Tab> <Space>  
+
 \; escape next 1 character  
 '; escape between ' ' except '  
 "; escape betwwen " " except $ ` \  
@@ -43,10 +44,12 @@ fi
 
 
 -*- command grouping -*-
+
 ???  
 
 
 -*- special variable -*-
+
 $?; exit code  
 $$; current process ID  (you can check by ps command)  
 $!; background process ID  ex) wait $!    wait background job  
