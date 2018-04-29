@@ -30,3 +30,20 @@ zR; 全ての折畳を開く
 ## vim-auto-save
 deactivate <= default  
 activate => let g:auto_save = 1  
+
+
+## vim-over
+normal mode: <Leader>o  
+normal mode: sub => substitute word  
+visual mode: <Leader>o  
+
+
+## vim-quickrun
+<Leader>r  
+
+
+## easy-motion
+<Leader>k  => head up  
+<Leader>j  => head down  
+<Leader>b  => word up  
+<Leader>e  => word down  
