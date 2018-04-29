@@ -69,6 +69,9 @@ set formatoptions+=mM
 """visualize invisibles
 set list
 set listchars=tab:»-,trail:-,nbsp:%,eol:↲
+hi SpecialKey ctermfg=237 guifg=#3a3a3a
+hi NonText ctermfg=66 guifg=#5f8787
+
 
 """leader ==> space
 let mapleader = "\<Space>"

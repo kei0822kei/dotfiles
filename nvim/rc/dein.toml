@@ -47,6 +47,7 @@ hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
 
 [[plugins]]
 repo = 'osyo-manga/vim-over'
+hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
 
 [[plugins]]
 repo = 'vim-scripts/vim-auto-save'
@@ -80,3 +81,4 @@ on_i = 1
 repo = 'airblade/vim-gitgutter'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
+
