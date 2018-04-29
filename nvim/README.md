@@ -28,7 +28,5 @@ zR; 全ての折畳を開く
 
 
 ## vim-auto-save
-default => deactivate
-to activate
-let g:auto_save = 1
-
+deactivate <= default
+activate => let g:auto_save = 1
