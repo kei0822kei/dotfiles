@@ -17,7 +17,7 @@ if [ ! -e "$ZSHDIR" ]; then
 fi
 ln -sf "$GITDIR/zsh/zshenv" "$HOME/.zshenv"
 ln -sf "$GITDIR/zsh/zshrc" "$ZSHDIR/.zshrc"
-ln -sf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
+# ln -sf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
 
 ### tmux
 ln -sf "$GITDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
