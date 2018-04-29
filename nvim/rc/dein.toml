@@ -42,11 +42,6 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/airline.vim'
-
-[[plugins]]
 repo = 'lervag/vimtex'
 hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
 
@@ -57,3 +52,31 @@ repo = 'osyo-manga/vim-over'
 repo = 'vim-scripts/vim-auto-save'
 hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
 
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/airline.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+on_i = 1
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
+
+[[plugins]]
+repo = 'itchyny/landscape.vim'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_i = 1
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'

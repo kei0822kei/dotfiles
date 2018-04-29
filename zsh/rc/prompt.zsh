@@ -7,8 +7,7 @@ RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-echo hoge
-source $ZDOTDIR/rc/zsh-git-prompt.zsh
+# source $ZDOTDIR/rc/zsh-git-prompt.zsh
 # an example prompt
 PROMPT='%m%b$(git_super_status) %# '
 # meskarune/.zshrc
