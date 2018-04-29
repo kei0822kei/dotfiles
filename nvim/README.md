@@ -39,11 +39,11 @@ visual mode: <Leader>o
 
 
 ## vim-quickrun
-<Leader>r  
+:<Leader>r  
 
 
 ## easy-motion
-<Leader>k  => head up  
-<Leader>j  => head down  
-<Leader>b  => word up  
-<Leader>e  => word down  
+:<Leader>k  => head up  
+:<Leader>j  => head down  
+:<Leader>b  => word up  
+:<Leader>e  => word down  
