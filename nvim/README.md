@@ -33,9 +33,9 @@ activate => let g:auto_save = 1
 
 
 ## vim-over
-normal mode: <Leader>o  
+normal mode: \<Leader\>o  
 normal mode: sub => substitute word  
-visual mode: <Leader>o  
+visual mode: \<Leader\>o  
 
 
 ## vim-quickrun
@@ -43,10 +43,10 @@ visual mode: <Leader>o
 
 
 ## easy-motion
-<Leader>k  => head up  
-<Leader>j  => head down  
-<Leader>b  => word up  
-<Leader>e  => word down  
+\<Leader\>k  => head up  
+\<Leader\>j  => head down  
+\<Leader\>b  => word up  
+\<Leader\>e  => word down  
 
 
 ## syntastic
