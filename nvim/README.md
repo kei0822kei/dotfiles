@@ -5,12 +5,12 @@ Overview
 plugins and their manuals
 
 ## NERDTree
--- Bookmark --
+-- Bookmark --  
 :Bookmark []  
 :ClearBookmarks []  
 :ClearAllBookmarks  
 
--- file --
+-- file --  
 m -> a;    make file or directory  
 m -> m -> "file path";    mv  
 m -> d;    delete  
