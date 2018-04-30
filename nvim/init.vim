@@ -89,3 +89,6 @@ set backspace=2
 
 """tab
 nnoremap <Tab> :tabn<cr>
+
+set wildmode=longest:full,full
+set history=10000

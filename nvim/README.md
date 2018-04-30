@@ -47,3 +47,10 @@ visual mode: <Leader>o
 <Leader>j  => head down  
 <Leader>b  => word up  
 <Leader>e  => word down  
+
+
+## syntastic
+:SyntasticCheck  
+:Error  
+setting file => $HOME/.flake8
+
