@@ -33,11 +33,6 @@ repo = 'pgilad/vim-skeletons'
 hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
 
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
-
-[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
@@ -82,3 +77,26 @@ repo = 'airblade/vim-gitgutter'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
 
+
+# indent guide
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/indentLine.vim'
+
+# [[plugins]]
+# repo = 'nathanaelkane/vim-indent-guides'
+# on_i = 1
+# hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
+
+
+# check tool
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+on_i = 1
+
+
+# completion
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_i = 1

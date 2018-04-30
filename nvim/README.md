@@ -5,12 +5,12 @@ Overview
 plugins and their manuals
 
 ## NERDTree
--- Bookmark --
+-- Bookmark --  
 :Bookmark []  
 :ClearBookmarks []  
 :ClearAllBookmarks  
 
--- file --
+-- file --  
 m -> a;    make file or directory  
 m -> m -> "file path";    mv  
 m -> d;    delete  
@@ -33,17 +33,25 @@ activate => let g:auto_save = 1
 
 
 ## vim-over
-normal mode: <Leader>o  
+normal mode: \<Leader\>o  
 normal mode: sub => substitute word  
-visual mode: <Leader>o  
+visual mode: \<Leader\>o  
 
 
 ## vim-quickrun
-<Leader>r  
+\<Leader\>r  
 
 
 ## easy-motion
-<Leader>k  => head up  
-<Leader>j  => head down  
-<Leader>b  => word up  
-<Leader>e  => word down  
+\<Leader\>k  => head up  
+\<Leader\>j  => head down  
+\<Leader\>b  => word up  
+\<Leader\>e  => word down  
+
+
+## syntastic
+:SyntasticCheck  
+:Error  
+:SyntasticInfo  
+setting file => $HOME/.flake8
+

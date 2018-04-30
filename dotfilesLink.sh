@@ -1,8 +1,9 @@
-#!/usr/bin/zsh
+#!/usr/bin/sh
 
 ################################################################################
 # make shortcut
 ################################################################################
+
 ### setting variables
 GITDIR="$HOME/Github/dotfiles"
 MYDOTDIR="$HOME/.mydot"
@@ -31,3 +32,7 @@ ln -sf "$GITDIR/nvim/init.vim" "$NVIMDIR/init.vim"
 ln -sf "$GITDIR/nvim/ftplugin" "$NVIMDIR/ftplugin"
 ln -sf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -sf "$GITDIR/nvim/template" "$NVIMDIR/template"
+
+### flake8
+ln -sf "$GITDIR/lint/flake8" "$HOME/.flake8"
+

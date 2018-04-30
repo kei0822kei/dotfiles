@@ -49,13 +49,13 @@ set shiftwidth=2         "set indent 2 spaces (it is also needed)
 set nowrap               "you can input the same line until line feed
 
 """completion function
-inoremap { {}<LEFT>
-inoremap ( ()<LEFT>
-inoremap [ []<LEFT>
-inoremap ' ''<LEFT>
-inoremap " ""<LEFT>
-inoremap < <><LEFT>
-inoremap ` ``<LEFT>
+" "inoremap { {}<LEFT>
+" "inoremap ( ()<LEFT>
+" "inoremap [ []<LEFT>
+" "inoremap ' ''<LEFT>
+" "inoremap " ""<LEFT>
+" "inoremap < <><LEFT>
+" "inoremap ` ``<LEFT>
 
 """when you open vim
 set nocompatible         "igmore vi settings
@@ -89,3 +89,9 @@ set backspace=2
 
 """tab
 nnoremap <Tab> :tabn<cr>
+
+set wildmode=longest:full,full
+set history=10000
+
+set cursorline
+set cursorcolumn
