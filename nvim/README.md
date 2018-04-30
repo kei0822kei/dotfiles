@@ -39,7 +39,7 @@ visual mode: <Leader>o
 
 
 ## vim-quickrun
-<Leader>r  
+\<Leader\>r  
 
 
 ## easy-motion
@@ -52,5 +52,6 @@ visual mode: <Leader>o
 ## syntastic
 :SyntasticCheck  
 :Error  
+:SyntasticInfo  
 setting file => $HOME/.flake8
 
