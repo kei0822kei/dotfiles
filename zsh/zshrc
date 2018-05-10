@@ -4,7 +4,7 @@
 ################################################################################
 # PATH
 ################################################################################
-if [ "$OSTYPE" = "darwin17.0" ]; then
+if [ "$USER" = "keiyu" ]; then
   source $HOME/.zshenv
 fi
 
@@ -18,7 +18,7 @@ if [ "$OSTYPE" = "linux-gnu" ]; then
   alias lsd='ls -F | grep / | sed -e "s/\///"'
 fi
 
-if [ "$OSTYPE" = "darwin17.0" ]; then
+if [ "$USER" = "keiyu" ]; then
   alias ls='ls -G'
 fi
 
