@@ -16,6 +16,7 @@ if [ "$OSTYPE" = "linux-gnu" ]; then
   alias ls='ls -F --color=auto --show-control-char'
   alias lsf='ls -F  | grep -v / | sed s/"*"/""/g'
   alias lsd='ls -F | grep / | sed -e "s/\///"'
+  alias lss='ls -F | grep @ | sed -e s/@//g'
 fi
 
 if [ "$USER" = "keiyu" ]; then
