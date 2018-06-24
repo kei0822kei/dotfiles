@@ -132,8 +132,7 @@ stty erase "^?"   # you can use backspace while shell script is running
 
 
 ################################################################################
-# trash
-################################################################################
+# trash ###############################################################################
 ### mizokami-ubuntu
 if [ "$USER" = "mizokami-ubuntu" ]; then
   if type trash-put &> /dev/null; then
@@ -174,6 +173,8 @@ zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:"fzf"
 zplug "zsh-users/zsh-autosuggestions"         # auto completion
 zplug "zsh-users/zsh-completions"             # complete sub commands  ex) git <TAB>
 zplug "zsh-users/zsh-syntax-highlighting"     # color
+zplug "zsh-users/zaw"     # color
+# zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme
 #zplug "sindresorhus/pure"     # color
 #zplug "zsh-prompt-powerline"
 
@@ -243,3 +244,5 @@ zplug load --verbose
 # fi
 # 
 # 
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
