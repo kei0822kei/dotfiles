@@ -36,3 +36,5 @@ ln -sf "$GITDIR/nvim/template" "$NVIMDIR/template"
 ### flake8
 ln -sf "$GITDIR/lint/flake8" "$HOME/.flake8"
 
+### latex
+ln -sf "$GITGIR/latexmkrc" "$HOME/.latexmkrc"
