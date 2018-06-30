@@ -48,15 +48,6 @@ set shiftwidth=2         "set indent 2 spaces (it is also needed)
 """new action set nostartofline        "don't move to the head of the next line"
 set nowrap               "you can input the same line until line feed
 
-"""completion function
-" "inoremap { {}<LEFT>
-" "inoremap ( ()<LEFT>
-" "inoremap [ []<LEFT>
-" "inoremap ' ''<LEFT>
-" "inoremap " ""<LEFT>
-" "inoremap < <><LEFT>
-" "inoremap ` ``<LEFT>
-
 """when you open vim
 set nocompatible         "igmore vi settings
 set nobackup             "avoid making swap file
@@ -95,3 +86,6 @@ set history=10000
 
 set cursorline
 set cursorcolumn
+
+"""latex
+set conceallevel=0
