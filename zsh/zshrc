@@ -132,7 +132,8 @@ stty erase "^?"   # you can use backspace while shell script is running
 
 
 ################################################################################
-# trash ###############################################################################
+# trash
+################################################################################
 ### mizokami-ubuntu
 if [ "$USER" = "mizokami-ubuntu" ]; then
   if type trash-put &> /dev/null; then
@@ -168,6 +169,7 @@ source $ZPLUG_HOME/init.zsh
 
 ### install plugins
 zplug "mollifier/anyframe"                    # like denite.nvim
+# zplug "sorin-ionescu/prezto"
 #zplug "b4b4r07/enhancd", at:v1                # at: はブランチとタグをサポートしている
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:"fzf"
 zplug "zsh-users/zsh-autosuggestions"         # auto completion
@@ -246,5 +248,11 @@ zplug load --verbose
 # fi
 # 
 # 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+
+
+# Source Prezto.
+# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# fi
