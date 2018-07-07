@@ -8,8 +8,24 @@ if [ "$USER" = "keiyu" ]; then
   source $HOME/.zshenv
 fi
 
+
 ################################################################################
-# change behavior
+# zplug
+################################################################################
+source "$ZDOTDIR/rc/zplug.zsh"
+
+
+################################################################################
+# prezto
+################################################################################
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+
+################################################################################
+# alias
 ################################################################################
 ### mizokami-ubuntu & mizo
 if [ "$OSTYPE" = "linux-gnu" ]; then
@@ -21,6 +37,13 @@ fi
 
 if [ "$USER" = "keiyu" ]; then
   alias ls='ls -G'
+fi
+
+### mizokami-ubuntu
+if [ "$USER" = "mizokami-ubuntu" ]; then
+  if type trash-put &> /dev/null; then
+    alias rm=trash-put
+  fi
 fi
 
 
@@ -41,6 +64,7 @@ export XDG_CONFIG_HOME="$HOME/.mydot"
 stty	erase	''    # backspace
 stty	intr	''    # C-c
 stty	susp	''
+stty erase "^?"   # you can use backspace while shell script is running
 bindkey '' history-beginning-search-backward
 bindkey '' history-beginning-search-forward
 
@@ -80,17 +104,6 @@ setopt list_types            # 補完候補一覧でファイルの種別をマ�
 
 
 ################################################################################
-# visual
-################################################################################
-# source "$ZDOTDIR/rc/prompt.zsh" <= so late!!!
-
-RPROMPT=$'%{\e[01;01;31m%}[%~]%{\e[00m%}'
-PROMPT=$'%F{green}%m %# %f'
-autoload -U colors        # プロンプトのカラー表示を有効
-colors                    # → 色指定  $fg[色名]/$bg[色名]/$reset_color (${, $} で囲む必要がある)
-
-
-################################################################################
 # back ground
 ################################################################################
 setopt notify                # バックグラウンドジョブが終了したら(プロンプトの表示を待たずに)すぐに知らせる
@@ -123,136 +136,3 @@ setopt rm_star_silent        # rm * を実行する前に確認しない
 # setopt  nounset              # 未定義の変数を使うとエラーを吐く　これがあるとanacondaのactivateが使えなくなる
 setopt  long_list_jobs       # 内部コマンド jobs の出力をデフォルトで jobs -1 にする
 setopt  no_checkjobs         # 終了時にSIGHUPを送信しない
-
-
-################################################################################
-# change key function
-################################################################################
-stty erase "^?"   # you can use backspace while shell script is running
-
-
-################################################################################
-# trash
-################################################################################
-### mizokami-ubuntu
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  if type trash-put &> /dev/null; then
-    alias rm=trash-put
-  fi
-fi
-
-
-################################################################################
-# mount and activate
-################################################################################
-### mizokami-ubuntu
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  if [ -z "$(ls ~/VEGA)" ]; then
-    sshfs mizo@vega:/home/mizo/ $HOME/VEGA
-  fi
-fi
-
-
-################################################################################
-# zplug
-################################################################################
-### set ZPLUG_HOME
-export ZPLUG_HOME="$HOME/.mydot/zsh/.zplug"
-
-### zplug install
-if [ ! -e "$ZDOTDIR/.zplug" ]; then
-  git clone https://github.com/zplug/zplug $ZPLUG_HOME
-fi
-
-### zplug setting
-source $ZPLUG_HOME/init.zsh
-
-### install plugins
-zplug "mollifier/anyframe"                    # like denite.nvim
-# zplug "sorin-ionescu/prezto"
-#zplug "b4b4r07/enhancd", at:v1                # at: はブランチとタグをサポートしている
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:"fzf"
-zplug "zsh-users/zsh-autosuggestions"         # auto completion
-zplug "zsh-users/zsh-completions"             # complete sub commands  ex) git <TAB>
-zplug "zsh-users/zsh-syntax-highlighting"     # color
-zplug "zsh-users/zaw"     # color
-# zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme
-#zplug "sindresorhus/pure"     # color
-#zplug "zsh-prompt-powerline"
-
-#zplug 'jhawthorn/fzy'
-
-if ! zplug check --verbose; then
-  printf 'Install? [y/N]: '
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-
-# zplug update
-
-### setting of each plugin
-source "$ZDOTDIR/rc/anyframe.zsh"
-
-
-
-zplug load --verbose
-
-# alias
-#alias fzf='fzf-bin'
-#alias cb='cd-bookmark'
-
-################################################################################
-# zsh-syntax-highlighting
-################################################################################
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root line)
-
-# main - 基本ハイライト。デフォルトではこれのみ有効
-# brackets - 括弧関連
-# pattern - ユーザ定義パターン
-# cursor - カーソルポジション
-# root - ユーザがrootの場合にコマンドライン全体に適用
-# line - コマンドライン全体に適用
-
-
-################################################################################
-# cd-bookmark
-################################################################################
-
-################################################################################
-# git prompt
-################################################################################
-#source prompt.sh
-
-################################################################################
-# prompt
-################################################################################
-# pip install powerline-shell
-# 
-# function powerline_precmd() {
-#     PS1="$(powerline-shell --shell zsh $?)"
-# }
-# 
-# function install_powerline_precmd() {
-#   for s in "${precmd_functions[@]}"; do
-#     if [ "$s" = "powerline_precmd" ]; then
-#       return
-#     fi
-#   done
-#   precmd_functions+=(powerline_precmd)
-# }
-# 
-# if [ "$TERM" != "linux" ]; then
-#     install_powerline_precmd
-# fi
-# 
-# 
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-
-
-# Source Prezto.
-# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-#   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-# fi

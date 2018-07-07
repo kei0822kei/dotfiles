@@ -31,6 +31,23 @@ fi
 
 
 ################################################################################
+# ANACONDA ACTIVATE
+################################################################################
+source activate
+
+
+################################################################################
+# mount
+################################################################################
+### mizokami-ubuntu
+if [ "$USER" = "mizokami-ubuntu" ]; then
+  if [ -z "$(ls ~/VEGA)" ]; then
+    sshfs mizo@vega:/home/mizo/ $HOME/VEGA
+  fi
+fi
+
+
+################################################################################
 # ZSHRC
 ################################################################################
 export ZDOTDIR=$HOME/.mydot/zsh
@@ -38,12 +55,9 @@ alias zinit="source $HOME/.mydot/zsh/.zshrc"
 
 
 ################################################################################
-# ANACONDA ACTIVATE
+# PREZTO
 ################################################################################
-source activate
-
-
 # Ensure that a non-login, non-interactive shell has a defined environment.
-# if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
-#   source "${ZDOTDIR:-$HOME}/.zprofile"
-# fi
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
