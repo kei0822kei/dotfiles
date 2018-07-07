@@ -187,6 +187,8 @@ if ! zplug check --verbose; then
   fi
 fi
 
+# zplug update
+
 ### setting of each plugin
 source "$ZDOTDIR/rc/anyframe.zsh"
 
