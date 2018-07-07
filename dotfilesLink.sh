@@ -20,6 +20,9 @@ if [ ! -e "$ZSHDIR" ]; then
 fi
 ln -sf "$GITDIR/zsh/zshenv" "$HOME/.zshenv"
 ln -sf "$GITDIR/zsh/zshrc" "$ZSHDIR/.zshrc"
+ln -sf "$GITDIR/zsh/zlogin" "$ZSHDIR/.zlogin"
+ln -sf "$GITDIR/zsh/zlogout" "$ZSHDIR/.zlogout"
+ln -sf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
 # ln -sf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
 
 ### tmux
