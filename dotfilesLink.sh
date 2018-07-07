@@ -7,6 +7,8 @@
 ### setting variables
 GITDIR="$HOME/Github/dotfiles"
 MYDOTDIR="$HOME/.mydot"
+
+### make setting directory
 if [ ! -e "$MYDOTDIR" ]; then
   mkdir -p $MYDOTDIR
 fi
