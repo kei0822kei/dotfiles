@@ -27,6 +27,11 @@ ln -sf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
 
 ### tmux
 ln -sf "$GITDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
+ln -sf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
+ln -sf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
+ln -sf "$GITDIR/tmux/get_ssid_tmux" "$HOME/.tmux/get_ssid_tmux"
+ln -sf "$GITDIR/tmux/get_volume_tmux" "$HOME/.tmux/get_volume_tmux"
 
 ### nvim
 NVIMDIR="$MYDOTDIR/nvim"
