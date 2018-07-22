@@ -17,6 +17,13 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/neoyank.vim'
 
 [[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'source ~/.mydot/nvim/rc/deoplete.vim'
 

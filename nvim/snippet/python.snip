@@ -1,0 +1,40 @@
+snippet     class
+abbr        class Class(...): ...
+options     head
+	class ${1:#:name}():
+		"""
+		${3:description of this class}
+		    Attributes
+		    ----------
+		    paramname1 : int
+		        description
+		    paramname2 : int, default var
+		        description
+		"""
+
+snippet     def
+abbr        def function(...): ...
+options     head
+	def ${1:#:name}(${2:object}):
+		"""
+		${3:description of this instance}
+		    Parameters
+		    ----------
+		    paramname1 : int
+		        description
+		    paramname2 : int, default var
+		        description
+	
+		    Returns
+		    -------
+		    fruit_price : int
+		        description
+	
+		    Notes
+		    -----
+	
+		    Raises
+		    ------
+		    ValueError
+		        conditions which ValueError occurs
+		"""

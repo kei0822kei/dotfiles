@@ -26,6 +26,9 @@ ln -sf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
 # ln -sf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
 
 ### tmux
+if [ ! -e "$HOME/.tmux" ]; then
+  mkdir $HOME/.tmux
+fi
 ln -sf "$GITDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
 ln -sf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
@@ -42,6 +45,7 @@ ln -sf "$GITDIR/nvim/init.vim" "$NVIMDIR/init.vim"
 ln -sf "$GITDIR/nvim/ftplugin" "$NVIMDIR/ftplugin"
 ln -sf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -sf "$GITDIR/nvim/template" "$NVIMDIR/template"
+ln -sf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 
 ### flake8
 ln -sf "$GITDIR/lint/flake8" "$HOME/.flake8"
