@@ -4,12 +4,16 @@ options     head
 	class ${1:#:name}():
 		"""
 		${3:description of this class}
+
 		    Attributes
 		    ----------
-		    paramname1 : int
+		    Attribute1 : int
 		        description
-		    paramname2 : int, default var
+		    Attribute2 : int, default var
 		        description
+
+		    Notes
+		    -----
 		"""
 
 snippet     def
@@ -18,21 +22,22 @@ options     head
 	def ${1:#:name}(${2:object}):
 		"""
 		${3:description of this instance}
+
 		    Parameters
 		    ----------
 		    paramname1 : int
 		        description
 		    paramname2 : int, default var
 		        description
-	
+
 		    Returns
 		    -------
 		    fruit_price : int
 		        description
-	
+
 		    Notes
 		    -----
-	
+
 		    Raises
 		    ------
 		    ValueError
