@@ -27,6 +27,7 @@ if [ "$USER" = "mizokami-ubuntu" ]; then
   export PATH="$HOME/Software/tsuboguruma:$PATH"
   export PATH="$HOME/Software/VESTA-x86_64:$PATH"
   export PATH="$HOME/Script/Run:$PATH"
+  export PATH="$HOME/Software/ascii-phonons/scripts:$PATH"
 fi
 
 
