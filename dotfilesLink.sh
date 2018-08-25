@@ -23,7 +23,7 @@ ln -sf "$GITDIR/zsh/zshrc" "$ZSHDIR/.zshrc"
 ln -sf "$GITDIR/zsh/zlogin" "$ZSHDIR/.zlogin"
 ln -sf "$GITDIR/zsh/zlogout" "$ZSHDIR/.zlogout"
 ln -sf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
-# ln -sf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
+ln -sf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
 
 ### tmux
 if [ ! -e "$HOME/.tmux" ]; then
