@@ -37,6 +37,8 @@ fi
 
 if [ "$USER" = "keiyu" ]; then
   alias ls='ls -G'
+  alias lsf='find . -maxdepth 1 -type d | cut -c 3-'
+  alias lsd='find . -maxdepth 1 -type f | cut -c 3-'
 fi
 
 ### mizokami-ubuntu
