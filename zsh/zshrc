@@ -42,11 +42,11 @@ if [ "$USER" = "keiyu" ]; then
 fi
 
 ### mizokami-ubuntu
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  if type trash-put &> /dev/null; then
-    alias rm=trash-put
-  fi
-fi
+# if [ "$USER" = "mizokami-ubuntu" ]; then
+#   if type trash-put &> /dev/null; then
+#     alias rm=trash-put
+#   fi
+# fi
 
 
 ################################################################################
@@ -73,7 +73,7 @@ bindkey '' history-beginning-search-forward
 ### mizokami-ubuntu
 if [ "$USER" = "mizokami-ubuntu" ]; then
   ### change caps, henkan and muhenkan
-  setxkbmap -option user:keymap
+  # setxkbmap -option user:keymap
 fi
 
 
