@@ -74,6 +74,7 @@ bindkey '' history-beginning-search-forward
 if [ "$USER" = "mizokami-ubuntu" ]; then
   ### change caps, henkan and muhenkan
   # setxkbmap -option user:keymap
+  xmodmap ~/.Xmodmap
 fi
 
 
