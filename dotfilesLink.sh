@@ -13,6 +13,11 @@ if [ ! -e "$MYDOTDIR" ]; then
   mkdir -p $MYDOTDIR
 fi
 
+### bin
+ln -nsf "$GITDIR/bin/"* "$HOME/bin"
+
+
+
 ### zsh
 ZSHDIR="$MYDOTDIR/zsh"
 if [ ! -e "$ZSHDIR" ]; then

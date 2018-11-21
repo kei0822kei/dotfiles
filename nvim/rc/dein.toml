@@ -1,64 +1,57 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
+repo = 'airblade/vim-gitgutter'
 on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
 
+# check tool
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/neoyank.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = 'source ~/.mydot/nvim/rc/deoplete.vim'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = 'source ~/.mydot/nvim/rc/nerdtree.vim'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = 'source ~/.mydot/nvim/rc/quickrun.vim'
-
-[[plugins]]
-repo = 'Lokaltog/vim-easymotion'
-hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
-
-[[plugins]]
-repo = 'pgilad/vim-skeletons'
-hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
+repo = 'bronson/vim-trailing-whitespace'
+on_i = 1
 
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+# completion
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_i = 1
+
+[[plugins]]
+repo = 'plytophogy/vim-virtualenv'
+on_i = 1
+on_ft = 'python'
+
+[[plugins]]
+repo = 'itchyny/landscape.vim'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
 
 [[plugins]]
 repo = 'lervag/vimtex'
 hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
 
 [[plugins]]
+repo = 'Lokaltog/vim-easymotion'
+hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
+
+# [[plugins]]
+# repo = 'nathanaelkane/vim-indent-guides'
+# on_i = 1
+# hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
+
+[[plugins]]
 repo = 'osyo-manga/vim-over'
 hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
 
 [[plugins]]
-repo = 'vim-scripts/vim-auto-save'
-hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
-
+repo = 'pgilad/vim-skeletons'
+hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -70,24 +63,12 @@ repo = 'vim-airline/vim-airline-themes'
 on_i = 1
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
-
-[[plugins]]
-repo = 'itchyny/landscape.vim'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
+repo = 'vim-scripts/vim-auto-save'
+hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 on_i = 1
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
-
 
 # indent guide
 [[plugins]]
@@ -95,19 +76,39 @@ repo = 'Yggdroot/indentLine'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/indentLine.vim'
 
-# [[plugins]]
-# repo = 'nathanaelkane/vim-indent-guides'
-# on_i = 1
-# hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
-
-
-# check tool
 [[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
-on_i = 1
+repo = 'scrooloose/nerdtree'
+hook_add = 'source ~/.mydot/nvim/rc/nerdtree.vim'
 
-
-# completion
 [[plugins]]
-repo = 'cohama/lexima.vim'
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
 on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'source ~/.mydot/nvim/rc/deoplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = 'source ~/.mydot/nvim/rc/quickrun.vim'
