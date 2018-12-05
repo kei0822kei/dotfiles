@@ -16,8 +16,6 @@ fi
 ### bin
 ln -nsf "$GITDIR/bin/"* "$HOME/bin"
 
-
-
 ### zsh
 ZSHDIR="$MYDOTDIR/zsh"
 if [ ! -e "$ZSHDIR" ]; then
@@ -61,4 +59,9 @@ ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
 ### keybind
 if [ "$USER" = "mizokami-ubuntu" ]; then
   ln -nsf "$GITDIR/keybind/Xmodmap" "$HOME/.Xmodmap"
+fi
+
+### git
+if [ "$USER" = "mizokami-ubuntu" ]; then
+  ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
 fi

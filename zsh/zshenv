@@ -1,66 +1,34 @@
 # -*- zshenv -*-
 
-
 ################################################################################
 # PATH
 ################################################################################
-### keiyu
-if [ "$USER" = "keiyu" ]; then
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
-fi
 
-### global
+### pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+eval "$(pyenv init -)"
+
+### anaconda
 export PATH="$PYENV_ROOT/versions/anaconda3-5.0.1/bin:$PATH"
+
+### my scripts
 export PATH="$HOME/Github/phonaly/scripts:$PATH"
 export PATH="$HOME/Github/smooziee/scripts:$PATH"
 export PATH="$HOME/Github/poscry/scripts:$PATH"
 export PATH="$HOME/Github/Phonopy-Spectroscopy/Scripts:$PATH"
 export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
+export PATH="$HOME/bin:$PATH"
 
-### mizokami-ubuntu
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  export PATH="$HOME/Software/tsuboguruma:$PATH"
-  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
-  export PATH="$HOME/Script/Run:$PATH"
-  export PATH="$HOME/Software/ascii-phonons/scripts:$PATH"
-  export PATH="$HOME/Software/lobster-3.0.0:$PATH"
-fi
-
-
-################################################################################
-# ANACONDA ACTIVATE
-################################################################################
-# source activate
-
-
-################################################################################
-# mount
-################################################################################
-### mizokami-ubuntu
-# if [ "$USER" = "mizokami-ubuntu" ]; then
-#   # if [ -z "$(ls ~/VEGA)" ]; then
-#   if [ -z "$(ls ~/vega)" ]; then
-#     # sshfs mizo@vega:/home/mizo/ $HOME/VEGA
-#     # sshfs mizo@vega:/home/mizo/ $HOME/vega
-#   fi
-# fi
-# 
 
 ################################################################################
 # ZSHRC
 ################################################################################
-export ZDOTDIR=$HOME/.mydot/zsh
-alias zinit="source $HOME/.mydot/zsh/.zshrc"
+export ZDOTDIR="$HOME/.mydot/zsh"
 
 
 ################################################################################
-# PREZTO
+# GO
 ################################################################################
-# Ensure that a non-login, non-interactive shell has a defined environment.
-if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprofile"
-fi
+export GOPATH="$HOME/.mydot/go"
+export PATH="$GOPATH/bin:$PATH"

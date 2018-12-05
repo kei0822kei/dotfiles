@@ -4,9 +4,19 @@
 ################################################################################
 # PATH
 ################################################################################
-# if [ "$USER" = "keiyu" ]; then
-#   source $HOME/.zshenv
-# fi
+
+### keiyu
+if [ "$USER" = "keiyu" ]; then
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
+fi
+
+### mizokami-ubuntu
+if [ "$USER" = "mizokami-ubuntu" ]; then
+  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
+  export PATH="$HOME/Software/ascii-phonons/scripts:$PATH"
+  export PATH="$HOME/Software/lobster-3.0.0:$PATH"
+fi
 
 
 ################################################################################
@@ -16,18 +26,10 @@ source "$ZDOTDIR/rc/zplug.zsh"
 
 
 ################################################################################
-# prezto
-################################################################################
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-
-################################################################################
 # alias
 ################################################################################
 ### mizokami-ubuntu & mizo
+alias zinit="source $HOME/.mydot/zsh/.zshrc"
 if [ "$OSTYPE" = "linux-gnu" ]; then
   alias ls='ls -F --color=auto --show-control-char'
   alias lsf='ls -F  | grep -v / | sed s/"*"/""/g'
@@ -41,10 +43,16 @@ if [ "$USER" = "keiyu" ]; then
   alias lsd='find . -maxdepth 1 -type f | cut -c 3-'
 fi
 
+
+################################################################################
+# mount
+################################################################################
 ### mizokami-ubuntu
 # if [ "$USER" = "mizokami-ubuntu" ]; then
-#   if type trash-put &> /dev/null; then
-#     alias rm=trash-put
+#   # if [ -z "$(ls ~/VEGA)" ]; then
+#   if [ -z "$(ls ~/vega)" ]; then
+#     # sshfs mizo@vega:/home/mizo/ $HOME/VEGA
+#     # sshfs mizo@vega:/home/mizo/ $HOME/vega
 #   fi
 # fi
 
