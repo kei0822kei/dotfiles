@@ -13,12 +13,13 @@ eval "$(pyenv init -)"
 export PATH="$PYENV_ROOT/versions/anaconda3-5.0.1/bin:$PATH"
 
 ### my scripts
-export PATH="$HOME/Github/phonaly/scripts:$PATH"
-export PATH="$HOME/Github/smooziee/scripts:$PATH"
-export PATH="$HOME/Github/poscry/scripts:$PATH"
-export PATH="$HOME/Github/Phonopy-Spectroscopy/Scripts:$PATH"
-export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
-export PATH="$HOME/bin:$PATH"
+GITHUB_REPO="$HOME/.ghq/github.com"
+export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/smooziee/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/poscry/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
+export PATH="$GITHUB_REPO/Vega/kei0822kei/vasper/scripts:$PATH"
+export PATH="$GITHUB_REPO/bin:$PATH"
 
 
 ################################################################################
@@ -32,3 +33,4 @@ export ZDOTDIR="$HOME/.mydot/zsh"
 ################################################################################
 export GOPATH="$HOME/.mydot/go"
 export PATH="$GOPATH/bin:$PATH"
+
