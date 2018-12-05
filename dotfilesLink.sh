@@ -5,7 +5,7 @@
 ################################################################################
 
 ### setting variables
-GITDIR="$HOME/Github/dotfiles"
+GITDIR="$HOME/.ghq/github.com/kei0822kei/dotfiles"
 MYDOTDIR="$HOME/.mydot"
 
 ### make setting directory
