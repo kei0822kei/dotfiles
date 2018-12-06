@@ -1,28 +1,14 @@
 # -*- zshrc -*-
 
+echo ""
+echo "~~~ source .zshrc ~~~"
+echo ""
 
 ################################################################################
 # anaconda
 ################################################################################
-source $PYENV_ROOT/versions/anaconda3-5.0.1/etc/profile.d/conda.sh
-
-
-################################################################################
-# PATH
-################################################################################
-
-### keiyu
-if [ "$USER" = "keiyu" ]; then
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
-fi
-
-### mizokami-ubuntu
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  export PATH="$HOME/Software/VESTA-x86_64:$PATH"
-  export PATH="$HOME/Software/ascii-phonons/scripts:$PATH"
-  export PATH="$HOME/Software/lobster-3.0.0:$PATH"
-fi
+# source $PYENV_ROOT/versions/anaconda3-5.0.1/etc/profile.d/conda.sh
+source $PYENV_ROOT/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
 
 
 ################################################################################
@@ -134,7 +120,7 @@ setopt  extended_glob        # ファイル名で #, ~, ^ の三文字を正規�
 setopt  numeric_glob_sort    # ファイル名の展開で辞書順ではなく数値的にソート
 setopt  multios              # 複数のリダイレクトを記述できる
 limit   coredumpsize 0       # コアダンプファイルを作らない
-#setopt  noclobber            # リダイレクトによる上書き禁止
+setopt  noclobber            # リダイレクトによる上書き禁止
 
 
 ################################################################################
