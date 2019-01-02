@@ -35,8 +35,8 @@ GITHUB_REPO="$HOME/.ghq/github.com"
 export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/smooziee/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/poscry/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
-export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
 export PATH="$GITHUB_REPO/bin:$PATH"
 
 
