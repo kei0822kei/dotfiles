@@ -62,6 +62,4 @@ if [ "$USER" = "mizokami-ubuntu" ]; then
 fi
 
 ### git
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
-fi
+ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"

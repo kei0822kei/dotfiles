@@ -9,7 +9,7 @@ echo ""
 ################################################################################
 # source $PYENV_ROOT/versions/anaconda3-5.0.1/etc/profile.d/conda.sh
 # source $PYENV_ROOT/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
-. /home/mizo/src/pyenv/versions/anaconda3-2018.12/etc/profile.d/conda.sh
+. $HOME/src/pyenv/versions/anaconda3-2018.12/etc/profile.d/conda.sh
 
 
 ################################################################################
@@ -59,7 +59,7 @@ bindkey '^N' history-beginning-search-forward
 ################################################################################
 # nvim
 ################################################################################
-alias vim='/home/mizo/src/nvim/nvim.appimage'
+alias vim=$HOME/src/nvim/nvim.appimage
 export XDG_CONFIG_HOME="$HOME/.mydot"
 
 
