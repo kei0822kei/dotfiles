@@ -38,6 +38,7 @@ ln -nsf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
 ln -nsf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
 ln -nsf "$GITDIR/tmux/get_ssid_tmux" "$HOME/.tmux/get_ssid_tmux"
 ln -nsf "$GITDIR/tmux/get_volume_tmux" "$HOME/.tmux/get_volume_tmux"
+ln -nsf "$GITDIR/tmux/ssh-change-profile.bash" "$HOME/.tmux/ssh-change-profile.bash"
 
 ### nvim
 NVIMDIR="$MYDOTDIR/nvim"
