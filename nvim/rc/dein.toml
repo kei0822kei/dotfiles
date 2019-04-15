@@ -17,6 +17,12 @@ on_ft = 'toml'
 repo = 'cohama/lexima.vim'
 on_i = 1
 
+# completion
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/vim-cheatsheet.vim'
+
 [[plugins]]
 repo = 'plytophogy/vim-virtualenv'
 on_i = 1

@@ -5,9 +5,9 @@ let g:quickrun_config = {
 \         },
 \}
 
-let g:quickrun_config = {
-\   'tex': {
-\       'command': 'latexmk',
-\       'exec': ['%c -gg -pdfdvi %s', 'mupdf %s:r.pdf']
-\   },
-\}
+"let g:quickrun_config = {
+"\   'tex': {
+"\       'command': 'latexmk',
+"\       'exec': ['%c -gg -pdfdvi %s', 'mupdf %s:r.pdf']
+"\   },
+"\}

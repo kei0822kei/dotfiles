@@ -5,7 +5,7 @@
 ################################################################################
 
 ### setting variables
-GITDIR="$HOME/.ghq/github.com/kei0822kei/dotfiles"
+GITDIR="$HOME/src/github.com/kei0822kei/dotfiles"
 MYDOTDIR="$HOME/.mydot"
 
 ### make setting directory
@@ -14,7 +14,7 @@ if [ ! -e "$MYDOTDIR" ]; then
 fi
 
 ### bin
-ln -nsf "$GITDIR/bin/"* "$HOME/bin"
+# ln -nsf "$GITDIR/bin/"* "$HOME/bin"
 
 ### zsh
 ZSHDIR="$MYDOTDIR/zsh"

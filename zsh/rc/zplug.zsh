@@ -37,3 +37,5 @@ zplug load --verbose
 
 ### setting of each plugin
 source "$ZDOTDIR/rc/anyframe.zsh"
+source "$ZDOTDIR/rc/autosuggestions.zsh"
+# source "$ZDOTDIR/rc/prompt.zsh"
