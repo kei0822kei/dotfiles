@@ -9,7 +9,7 @@ echo ""
 ################################################################################
 # source $PYENV_ROOT/versions/anaconda3-5.0.1/etc/profile.d/conda.sh
 # source $PYENV_ROOT/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
-. /home/mizo/src/pyenv/versions/anaconda3-2018.12/etc/profile.d/conda.sh
+. $HOME/src/pyenv/versions/anaconda3-2018.12/etc/profile.d/conda.sh
 
 
 ################################################################################
@@ -57,9 +57,29 @@ bindkey '^N' history-beginning-search-forward
 
 
 ################################################################################
+# ghq
+################################################################################
+if [ ! -e "$GOPATH/bin/ghq" ]; then
+  go get github.com/motemen/ghq
+fi
+
+
+################################################################################
 # nvim
 ################################################################################
-alias vim='/home/mizo/src/nvim/nvim.appimage'
+if [ ! -e $HOME/src/nvim ]; then
+  if [ `uname` = "Darwin" ]; then
+    (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz; tar xzf nvim-macos.tar.gz)
+  else
+    (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage; chmod u+x nvim.appimage)
+  fi
+fi
+
+if [ `uname` = "Darwin" ]; then
+  alias vim=$HOME/src/nvim/nvim-osx64/bin/nvim
+else
+  alias vim=$HOME/src/nvim/nvim.appimage
+fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
 
 
