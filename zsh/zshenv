@@ -42,8 +42,21 @@ export PATH="$GOPATH/bin:$PATH"
 ################################################################################
 # PYENV
 ################################################################################
+if [ ! -e "$HOME/src/pyenv" ]; then
+  git clone https://github.com/yyuu/pyenv.git $HOME/src/pyenv
+  flag=1
+fi
 export PYENV_ROOT="$HOME/src/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+if [ "$flag" = 1 ]; then
+  $HOME/src/pyenv/bin/pyenv install anaconda3-2018.12
+  $HOME/src/pyenv/bin/pyenv rehash
+  $HOME/src/pyenv/bin/pyenv global anaconda3-2018.12
+  echo "please do"
+  echo "source ~/.zshenv"
+  echo "conda update conda"
+fi
+
 export PATH="$PYENV_ROOT/versions/anaconda3-2018.12/bin/:$PATH"
 # source $PYENV_ROOT/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
