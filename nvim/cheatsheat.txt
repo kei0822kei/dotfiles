@@ -1,0 +1,108 @@
+###################
+# command line
+###################
+
+# history
+:history => Enter; execute   i; insert mode
+q: => open command line including history
+
+# input
+(insert mode) C-v + <Tab>  =>  input <Tab>
+
+# shortcut
+end of the line; ^
+head of the line; $
+
+
+
+###################
+# braceless
+###################
+
+zc; close a paragraph
+zC; close all paragraphs
+zo; open a paragraph
+zO; close all paragraphs
+zM; close selected paragraphs
+zR; open selected paragraphs
+
+
+###################
+# dein.vim
+###################
+
+# update
+:call dein#update()
+
+
+
+###################
+# denite.vim
+###################
+
+
+
+###################
+# denite.vim
+###################
+
+<Leader> k => head up
+<Leader> j => head down
+<Leader> b => word up
+<Leader> e => word down
+
+
+
+###################
+# fugitive
+###################
+
+:Gstatus => status
+:Gwrete => add
+:Gcommit => commit
+
+
+
+###################
+# NERDTree
+###################
+
+-- Bookmark --
+:Bookmark []
+:ClearBookmarks []
+:ClearAllBookmarks
+
+-- file --
+m -> a; make file or directory
+m -> m -> "file path"; mv
+m -> d; delete
+I; open or close dot file
+r; update
+
+
+
+###################
+# syntastic
+###################
+
+:SyntasticCheck
+:Error
+:SyntasticInfo
+setting file => $HOME/.flake8
+
+
+
+###################
+# vim-auto-save
+###################
+
+deactivate <= default
+activate => let g:auto_save = 1
+
+
+
+###################
+# vim-quickrun
+###################
+
+<Leader> r
