@@ -45,7 +45,7 @@ set shiftwidth=2         "set indent 2 spaces (it is also needed)
 "set autoindent           "continue the indent of the formar line
 "set noautoindent
 
-"""new action set nostartofline        "don't move to the head of the next line"
+"""new action set nostartofline
 set nowrap               "you can input the same line until line feed
 
 """when you open vim

@@ -33,9 +33,9 @@ repo = 'itchyny/lightline.vim'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
 
-[[plugins]]
-repo = 'lervag/vimtex'
-hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
+# [[plugins]]
+# repo = 'lervag/vimtex'
+# hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
 
 [[plugins]]
 repo = 'Lokaltog/vim-easymotion'
