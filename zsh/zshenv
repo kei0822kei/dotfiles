@@ -15,7 +15,7 @@ echo ""
 #   echo "who are you? : $USER"
 # fi
 
-# ### my scripts
+### my scripts
 GITHUB_REPO="$HOME/src/github.com"
 export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
@@ -23,9 +23,12 @@ export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/crystal/scripts:$PATH"
 # export PATH="$GITHUB_REPO/kei0822kei/smooziee/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/poscry/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/twinpy/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
+export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
 # export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
 # export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
-# export PATH="$GITHUB_REPO/bin:$PATH"
+export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
 
 
 ################################################################################
@@ -60,3 +63,8 @@ fi
 
 export PATH="$PYENV_ROOT/versions/anaconda3-2018.12/bin/:$PATH"
 # source $PYENV_ROOT/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
+
+################################################################################
+# Aiida
+################################################################################
+export AIIDA_PATH="$HOME/database/aiida"

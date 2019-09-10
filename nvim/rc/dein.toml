@@ -19,11 +19,6 @@ on_i = 1
 
 # completion
 [[plugins]]
-repo = 'reireias/vim-cheatsheet'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/vim-cheatsheet.vim'
-
-[[plugins]]
 repo = 'plytophogy/vim-virtualenv'
 on_i = 1
 on_ft = 'python'
@@ -52,12 +47,21 @@ hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 # hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
 
 [[plugins]]
+repo = 'majutsushi/tagbar'
+# hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
+
+[[plugins]]
 repo = 'osyo-manga/vim-over'
 hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
 
 [[plugins]]
 repo = 'pgilad/vim-skeletons'
 hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/vim-cheatsheet.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
