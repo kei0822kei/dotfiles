@@ -2,3 +2,8 @@ Host vega
   User mizo
   Hostname vega
   IdentityFile ~/.ssh/id_rsa
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile "/home/mizo/.ssh/id_git_rsa"
