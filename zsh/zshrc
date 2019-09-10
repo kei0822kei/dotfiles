@@ -5,6 +5,20 @@ echo "~~~ source .zshrc ~~~"
 echo ""
 
 ################################################################################
+# OS
+################################################################################
+
+if [ "$(uname)" = 'Darwin' ]; then
+  OS='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
+  OS='Linux'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
+
+
+################################################################################
 # anaconda
 ################################################################################
 # source $PYENV_ROOT/versions/anaconda3-5.0.1/etc/profile.d/conda.sh
@@ -56,6 +70,15 @@ alias lsd="find . -mindepth 1 -maxdepth 1 -type d | sed s/'\.\///g' | grep -v '^
 # stty erase "^?"   # you can use backspace while shell script is running↲
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
+
+
+################################################################################
+# brew
+################################################################################
+
+if [ ! -e /usr/local/bin/brew ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 
 ################################################################################
