@@ -65,3 +65,6 @@ fi
 
 ### git
 ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
+
+### ssh
+ln -nsf "$GITDIR/ssh/$USER" "$HOME/.ssh/config"

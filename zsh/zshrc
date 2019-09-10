@@ -9,9 +9,9 @@ echo ""
 ################################################################################
 
 if [ "$(uname)" = 'Darwin' ]; then
-  OS='Mac'
+  TERMINAL='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
-  OS='Linux'
+  TERMINAL='Linux'
 else
   echo "Your platform ($(uname -a)) is not supported."
   exit 1
@@ -87,7 +87,7 @@ fi
 
 if [ ! -e $HOME/src/go ]; then
   echo "install golang"
-  if [ $OS = "Mac" ]; then
+  if [ $TERMINAL = "Mac" ]; then
     /usr/local/bin/brew install golang
   else
     sudo apt install golang
@@ -104,7 +104,7 @@ export PATH="$GOPATH/bin:$PATH"
 
 if [ ! -e $HOME/src/go/bin/ghq ]; then
   echo "install ghq"
-  if [ $OS = "Mac" ]; then
+  if [ $TERMINAL = "Mac" ]; then
     /usr/local/bin/go get github.com/motemen/ghq
   else
     /usr/bin/go get github.com/motemen/ghq
@@ -118,14 +118,14 @@ fi
 ################################################################################
 
 if [ ! -e $HOME/src/nvim ]; then
-  if [ $OS = "Mac" ]; then
+  if [ $TERMINAL = "Mac" ]; then
     (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz; tar xzf nvim-macos.tar.gz)
   else
     (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage; chmod u+x nvim.appimage)
   fi
 fi
 
-if [ $OS = "Mac" ]; then
+if [ $TERMINAL = "Mac" ]; then
   alias vim=$HOME/src/nvim/nvim-osx64/bin/nvim
 else
   alias vim=$HOME/src/nvim/nvim.appimage
@@ -134,11 +134,38 @@ export XDG_CONFIG_HOME="$HOME/.mydot"
 
 
 ################################################################################
+# terminal
+################################################################################
+if [ ! -e $HOME/src/go/bin/powerline-go ]; then
+  go get -u github.com/justjanne/powerline-go
+fi
+
+function powerline_precmd() {
+  # prompt
+  PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
+
+
+################################################################################
 # ssh
 ################################################################################
-# if [ `uname` = "Darwin" ]; then
-#   alias ssh="$HOME/.tmux/ssh-change-profile.bash"
-# fi
+if [ $TERMINAL = "Mac" ]; then
+  alias ssh="$HOME/.tmux/ssh-change-profile.bash"
+fi
 
 
 

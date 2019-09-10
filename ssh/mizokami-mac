@@ -1,0 +1,4 @@
+Host mizou
+  User mizo
+  Hostname mizou
+  IdentityFile ~/.ssh/id_rsa
