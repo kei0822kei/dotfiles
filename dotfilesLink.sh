@@ -58,13 +58,8 @@ ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
 ### latex
 ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
 
-### keybind
-if [ "$USER" = "mizokami-ubuntu" ]; then
-  ln -nsf "$GITDIR/keybind/Xmodmap" "$HOME/.Xmodmap"
-fi
-
 ### git
 ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
 
 ### ssh
-ln -nsf "$GITDIR/ssh/$USER" "$HOME/.ssh/config"
+ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
