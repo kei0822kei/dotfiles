@@ -45,6 +45,7 @@ if [ ! -e "$NVIMDIR" ]; then
   mkdir -p "$NVIMDIR"
 fi
 ln -nsf "$GITDIR/nvim/init.vim" "$NVIMDIR/init.vim"
+ln -nsf "$GITDIR/nvim/cheatsheet.txt" "$NVIMDIR/cheatsheet.txt"
 ln -nsf "$GITDIR/nvim/ftplugin" "$NVIMDIR/ftplugin"
 ln -nsf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -nsf "$GITDIR/nvim/template" "$NVIMDIR/template"

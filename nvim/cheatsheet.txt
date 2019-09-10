@@ -1,4 +1,13 @@
 ###################
+# install nvim
+###################
+already written in zshrc
+but sometimes pynvim is needed
+% pip3 install pynvim
+
+
+
+###################
 # command line
 ###################
 
@@ -64,6 +73,19 @@ zR; open selected paragraphs
 
 
 ###################
+# jedi-vim
+###################
+
+# python path where jedi-vim looks for
+:python3 import sys; print(sys.path)
+
+# how to complete modules in vertual environment
+% conda activate env
+% conda install -c conda-forge neovim
+
+
+
+###################
 # NERDTree
 ###################
 
@@ -89,6 +111,14 @@ r; update
 :Error
 :SyntasticInfo
 setting file => $HOME/.flake8
+
+
+
+###################
+# tagbar
+###################
+
+:TagbarToggle
 
 
 

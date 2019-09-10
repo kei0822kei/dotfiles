@@ -47,6 +47,10 @@ hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 # hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
 
 [[plugins]]
+repo = 'majutsushi/tagbar'
+# hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
+
+[[plugins]]
 repo = 'osyo-manga/vim-over'
 hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
 

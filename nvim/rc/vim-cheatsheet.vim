@@ -1,1 +1,1 @@
-let g:cheatsheet#cheat_file = '~/.mydot/nvim/cheatsheat.txt'
+let g:cheatsheet#cheat_file = '~/.mydot/nvim/cheatsheet.txt'
