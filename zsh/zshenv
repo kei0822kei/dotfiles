@@ -5,15 +5,29 @@ echo "~~~ source .zshenv ~~~"
 echo ""
 
 ################################################################################
-# PATH
+# OS
 ################################################################################
 
-### software
-# if [ "$HOST" = "mizou" ]; then
-#   export PATH="$HOME/.local/bin:$PATH"
-# else
-#   echo "who are you? : $USER"
-# fi
+if [ "$(uname)" = 'Darwin' ]; then
+  OS='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
+  OS='Linux'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
+
+
+################################################################################
+# software versions
+################################################################################
+
+ANACONDA_VERSION="anaconda3-2018.12"
+
+
+################################################################################
+# PATH
+################################################################################
 
 ### my scripts
 GITHUB_REPO="$HOME/src/github.com"
@@ -28,7 +42,7 @@ export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
 export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
 # export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
 # export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
-export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
+# export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
 
 
 ################################################################################
@@ -36,11 +50,37 @@ export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
 ################################################################################
 export ZDOTDIR="$HOME/.mydot/zsh"
 
+
 ################################################################################
 # GO
 ################################################################################
+if [ ! -e $HOME/src/go ]; then
+  echo "install golang"
+  if [ $OS = "Mac" ]; then
+    /usr/local/bin/brew install golang
+  else
+    sudo apt install golang
+  fi
+fi
+
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
+
+
+################################################################################
+# GHQ
+################################################################################
+
+if [ ! -e $HOME/src/go/ghq ]; then
+  echo "install ghq"
+  if [ $OS = "Mac" ]; then
+    /usr/local/bin/go get github.com/motemen/ghq
+  else
+    /usr/bin/go get github.com/motemen/ghq
+  fi
+  git config --global ghq.root ~/src
+fi
+
 
 ################################################################################
 # PYENV
@@ -53,15 +93,14 @@ export PYENV_ROOT="$HOME/src/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 if [ "$flag" = 1 ]; then
-  $HOME/src/pyenv/bin/pyenv install anaconda3-2018.12
+  $HOME/src/pyenv/bin/pyenv install $ANACONDA_VERSION
   $HOME/src/pyenv/bin/pyenv rehash
-  $HOME/src/pyenv/bin/pyenv global anaconda3-2018.12
-  echo "please do"
-  echo "source ~/.zshenv"
+  $HOME/src/pyenv/bin/pyenv global $ANACONDA_VERSION
+  echo "please restart, and then"
   echo "conda update conda"
 fi
 
-export PATH="$PYENV_ROOT/versions/anaconda3-2018.12/bin/:$PATH"
+export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
 # source $PYENV_ROOT/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
 
 ################################################################################
