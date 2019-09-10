@@ -52,38 +52,7 @@ export ZDOTDIR="$HOME/.mydot/zsh"
 
 
 ################################################################################
-# GO
-################################################################################
-if [ ! -e $HOME/src/go ]; then
-  echo "install golang"
-  if [ $OS = "Mac" ]; then
-    /usr/local/bin/brew install golang
-  else
-    sudo apt install golang
-  fi
-fi
-
-export GOPATH="$HOME/src/go"
-export PATH="$GOPATH/bin:$PATH"
-
-
-################################################################################
-# GHQ
-################################################################################
-
-if [ ! -e $HOME/src/go/ghq ]; then
-  echo "install ghq"
-  if [ $OS = "Mac" ]; then
-    /usr/local/bin/go get github.com/motemen/ghq
-  else
-    /usr/bin/go get github.com/motemen/ghq
-  fi
-  git config --global ghq.root ~/src
-fi
-
-
-################################################################################
-# PYENV
+# pyenv
 ################################################################################
 if [ ! -e "$HOME/src/pyenv" ]; then
   git clone https://github.com/yyuu/pyenv.git $HOME/src/pyenv
