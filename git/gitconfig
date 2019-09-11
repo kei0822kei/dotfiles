@@ -3,3 +3,5 @@
 [user]
 	email = mizokami.keiyu@gmail.com
 	name = kei0822kei
+[core]
+	editor = vim
