@@ -46,3 +46,14 @@ options     head
 		    ValueError
 		        conditions which ValueError occurs
 		"""
+
+snippet     argparse
+abbr        def function(...): ...
+options     head
+	parser = argparse.ArgumentParser(
+	    description="")
+	parser.add_argument("--filename", default=None, help="file name")
+	parser.add_argument("--title", dest="title", default=None, help="Plot title")
+	parser.add_argument('--temperature', type=float, default=300.0,
+	                    help='Temperature to output data at')
+	args = parser.parse_args()
