@@ -12,7 +12,7 @@ ANACONDA_VERSION="anaconda3-2018.12"
 
 
 ################################################################################
-# PATH
+# scriipts
 ################################################################################
 
 ### my scripts
@@ -21,7 +21,7 @@ export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/crystal/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/smooziee/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/aiidaplus/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/poscry/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/twinpy/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
@@ -29,6 +29,15 @@ export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
 # export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
 # export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
 # export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
+
+# export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
+# export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus:$PYTHONPATH"
+
+
+### lammps
+# alias lmp_mpi="$HOME/src/github.com/lammps/lammps/src/lmp_mpi"
+# alias lmp_serial="$HOME/src/github.com/lammps/lammps/src/lmp_serial"
 
 
 ################################################################################

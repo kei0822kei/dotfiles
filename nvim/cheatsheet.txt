@@ -3,8 +3,9 @@
 ###################
 already written in zshrc
 but sometimes pynvim is needed
-% pip install pynvim
+% pip --no-cache-dir install -I pynvim
 
+ref. https://blog.fakiyer.com/entry/2018/11/20/101826
 
 
 ###################
