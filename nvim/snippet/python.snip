@@ -1,5 +1,15 @@
-snippet     class
-abbr        class Class(...): ...
+snippet     argparse
+abbr        def function(...): ...
+options     head
+	parser = argparse.ArgumentParser(
+	    description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
+	parser.add_argument('-f', '--filename', type=str,
+	    default=None, help="")
+	parser.add_argument('-b', '--bool', action='store_true',
+	    help="")
+	args = parser.parse_args()
+
+snippet     class abbr        class Class(...): ...
 options     head
 	class ${1:#:name}():
 		"""
@@ -46,3 +56,14 @@ options     head
 		    ValueError
 		        conditions which ValueError occurs
 		"""
+
+snippet     init
+options     head
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+
+	"""
+	hogehoge calculation
+	--------------------
+	description of this script
+	"""

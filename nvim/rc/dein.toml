@@ -50,6 +50,10 @@ hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 repo = 'majutsushi/tagbar'
 # hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
 
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# on_i = 1
+
 [[plugins]]
 repo = 'osyo-manga/vim-over'
 hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
@@ -97,6 +101,11 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/denite.nvim'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/deol.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
