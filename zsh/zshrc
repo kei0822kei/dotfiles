@@ -248,4 +248,3 @@ setopt rm_star_silent        # rm * を実行する前に確認しない
 # setopt  nounset              # 未定義の変数を使うとエラーを吐く　これがあるとanacondaのactivateが使えなくなる
 setopt  long_list_jobs       # 内部コマンド jobs の出力をデフォルトで jobs -1 にする
 setopt  no_checkjobs         # 終了時にSIGHUPを送信しない
-
