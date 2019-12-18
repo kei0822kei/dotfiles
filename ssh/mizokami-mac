@@ -1,12 +1,12 @@
- # Host via
- #     User mizo
- #     Hostname quantum.mtl.kyoto-u.ac.jp
- #     IdentityFile ~/.ssh/id_rsa
- # 
- # # Host stern aachen mydata mayavi pbook boston timac x240s gpu1 gpu2 gpu3 gpu4 gpu5 gpu6 gpu7 vmhost aiida vega aiida-vasp gpu mem1 mem2 mmac
- # Host stern vega mizou
- #      ProxyCommand ssh -l mizo via nc %h %p
- #      ServerAliveInterval 15
+ Host via
+     User mizo
+     Hostname quantum.mtl.kyoto-u.ac.jp
+     IdentityFile ~/.ssh/id_rsa
+ 
+ # Host stern aachen mydata mayavi pbook boston timac x240s gpu1 gpu2 gpu3 gpu4 gpu5 gpu6 gpu7 vmhost aiida vega aiida-vasp gpu mem1 mem2 mmac
+ Host stern vega mizou
+      ProxyCommand ssh -l mizo via nc %h %p
+      ServerAliveInterval 15
 
 Host mizou
   User mizo
