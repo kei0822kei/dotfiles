@@ -140,6 +140,7 @@ if [ ! -e $HOME/src/nvim ]; then
   else
     (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage; chmod u+x nvim.appimage)
   fi
+  pip install pynvim --user
 fi
 
 if [ $TERMINAL = "Mac" ]; then
