@@ -8,7 +8,7 @@ echo ""
 # software versions
 ################################################################################
 
-ANACONDA_VERSION="anaconda3-2018.12"
+# ANACONDA_VERSION="anaconda3-2018.12"
 
 
 ################################################################################
@@ -25,79 +25,79 @@ else
 fi
 
 
-################################################################################
-# anaconda
-################################################################################
-
-. $HOME/src/pyenv/versions/$ANACONDA_VERSION/etc/profile.d/conda.sh
-export CONDA_DEFAULT_ENV="base"
-
-
+# ################################################################################
+# # anaconda
+# ################################################################################
+# 
+# . $HOME/src/pyenv/versions/$ANACONDA_VERSION/etc/profile.d/conda.sh
+# export CONDA_DEFAULT_ENV="base"
+# 
+# 
 ################################################################################
 # zplug
 ################################################################################
 
 source "$ZDOTDIR/rc/zplug.zsh"
-
-
+# 
+# 
 ################################################################################
 # alias
 ################################################################################
-
+# 
 alias zinit="source $HOME/.mydot/zsh/.zshrc"
 alias lsf="find . -mindepth 1 -maxdepth 1 -type f | sed s/'\.\///g' | grep -v '^\.'"
 alias lsd="find . -mindepth 1 -maxdepth 1 -type d | sed s/'\.\///g' | grep -v '^\.'"
-
-
-################################################################################
-# display
-################################################################################
-
-if [ $TERMINAL = 'Mac' ]; then
-  export DISPLAY=:0.0
-fi
-
-
-################################################################################
-# mount
-################################################################################
-### mizokami-ubuntu
-# if [ "$USER" = "mizokami-ubuntu" ]; then
-#   # if [ -z "$(ls ~/VEGA)" ]; then
-#   if [ -z "$(ls ~/vega)" ]; then
-#     # sshfs mizo@vega:/home/mizo/ $HOME/VEGA
-#     # sshfs mizo@vega:/home/mizo/ $HOME/vega
-#   fi
+# 
+# 
+# ################################################################################
+# # display
+# ################################################################################
+# 
+# if [ $TERMINAL = 'Mac' ]; then
+#   export DISPLAY=:0.0
 # fi
-
-# bindkey "^p" history-beginning-search-backward-end
-# bindkey "^n" history-beginning-search-forward-end
-# bindkey "^[p" history-search-backward
-# bindkey "^[n" history-search-forward
-# zstyle ':completion:*:default' menu select=1
-# setopt auto_list
-# autoload -U history-search-end
-# zle -N history-beginning-search-backward-end history-search-end
-# zle -N history-beginning-search-forward-end history-search-end
-# bindkey "^[p" history-beginning-search-backward-end
-# bindkey "^[n" history-beginning-search-forward-end
-# stty»-erase»'^H'    # backspace↲
-# stty»-intr»-'^C'    # C-c↲
-# stty»-susp»-'^Z'↲
-# stty erase "^?"   # you can use backspace while shell script is running↲
-bindkey '^P' history-beginning-search-backward
-bindkey '^N' history-beginning-search-forward
-
-
-################################################################################
-# brew
-################################################################################
-
-if [ ! -e /usr/local/bin/brew ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-
+# 
+# 
+# ################################################################################
+# # mount
+# ################################################################################
+# ### mizokami-ubuntu
+# # if [ "$USER" = "mizokami-ubuntu" ]; then
+# #   # if [ -z "$(ls ~/VEGA)" ]; then
+# #   if [ -z "$(ls ~/vega)" ]; then
+# #     # sshfs mizo@vega:/home/mizo/ $HOME/VEGA
+# #     # sshfs mizo@vega:/home/mizo/ $HOME/vega
+# #   fi
+# # fi
+# 
+# # bindkey "^p" history-beginning-search-backward-end
+# # bindkey "^n" history-beginning-search-forward-end
+# # bindkey "^[p" history-search-backward
+# # bindkey "^[n" history-search-forward
+# # zstyle ':completion:*:default' menu select=1
+# # setopt auto_list
+# # autoload -U history-search-end
+# # zle -N history-beginning-search-backward-end history-search-end
+# # zle -N history-beginning-search-forward-end history-search-end
+# # bindkey "^[p" history-beginning-search-backward-end
+# # bindkey "^[n" history-beginning-search-forward-end
+# # stty»-erase»'^H'    # backspace↲
+# # stty»-intr»-'^C'    # C-c↲
+# # stty»-susp»-'^Z'↲
+# # stty erase "^?"   # you can use backspace while shell script is running↲
+# bindkey '^P' history-beginning-search-backward
+# bindkey '^N' history-beginning-search-forward
+# 
+# 
+# ################################################################################
+# # brew
+# ################################################################################
+# 
+# if [ ! -e /usr/local/bin/brew ]; then
+#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# fi
+# 
+# 
 ################################################################################
 # golang
 ################################################################################
@@ -107,10 +107,11 @@ if [ ! -e $HOME/src/go ]; then
   if [ $TERMINAL = "Mac" ]; then
     /usr/local/bin/brew install golang
   else
-    sudo apt install golang
+    sudo snap install --channel=1.13/stable --classic go
   fi
 fi
 
+# export GOROOT="/usr/local/go"
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
 
@@ -121,35 +122,34 @@ export PATH="$GOPATH/bin:$PATH"
 
 if [ ! -e $HOME/src/go/bin/ghq ]; then
   echo "install ghq"
-  if [ $TERMINAL = "Mac" ]; then
-    /usr/local/bin/go get github.com/motemen/ghq
-  else
-    /usr/bin/go get github.com/motemen/ghq
-  fi
+  (cd $HOME/src/github.com;
+   git clone https://github.com/motemen/ghq;
+   cd ghq;
+   make install)
   git config --global ghq.root ~/src
 fi
 
 
-################################################################################
-# nvim
-################################################################################
-
-if [ ! -e $HOME/src/nvim ]; then
-  if [ $TERMINAL = "Mac" ]; then
-    (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz; tar xzf nvim-macos.tar.gz)
-  else
-    (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage; chmod u+x nvim.appimage)
-  fi
-fi
-
-if [ $TERMINAL = "Mac" ]; then
-  alias vim=$HOME/src/nvim/nvim-osx64/bin/nvim
-else
-  alias vim=$HOME/src/nvim/nvim.appimage
-fi
-export XDG_CONFIG_HOME="$HOME/.mydot"
-
-
+# ################################################################################
+# # nvim
+# ################################################################################
+# 
+# if [ ! -e $HOME/src/nvim ]; then
+#   if [ $TERMINAL = "Mac" ]; then
+#     (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz; tar xzf nvim-macos.tar.gz)
+#   else
+#     (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage; chmod u+x nvim.appimage)
+#   fi
+# fi
+# 
+# if [ $TERMINAL = "Mac" ]; then
+#   alias vim=$HOME/src/nvim/nvim-osx64/bin/nvim
+# else
+#   alias vim=$HOME/src/nvim/nvim.appimage
+# fi
+# export XDG_CONFIG_HOME="$HOME/.mydot"
+# 
+# 
 ################################################################################
 # terminal
 ################################################################################
@@ -177,12 +177,12 @@ function install_powerline_precmd() {
 install_powerline_precmd
 
 
-################################################################################
-# ssh
-################################################################################
-if [ $TERMINAL = "Mac" ]; then
-  alias ssh="$HOME/.tmux/ssh-change-profile.bash"
-fi
+# ################################################################################
+# # ssh
+# ################################################################################
+# if [ $TERMINAL = "Mac" ]; then
+#   alias ssh="$HOME/.tmux/ssh-change-profile.bash"
+# fi
 
 
 ################################################################################
