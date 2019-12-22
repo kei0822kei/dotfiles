@@ -33,8 +33,8 @@ export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
 
 # export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
 # export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
-export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
-export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus:$PYTHONPATH"
+# export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
 
 
 ### lammps
@@ -70,3 +70,5 @@ if [ ! -e $PYENV_ROOT/versions/$ANACONDA_VERSION ]; then
 fi
 
 export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
+
+

@@ -127,3 +127,9 @@ build = 'make'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = 'source ~/.mydot/nvim/rc/quickrun.vim'
+
+[[plugins]]
+repo = 'neovim/neovim-ruby'
+
+[[plugins]]
+repo = 'neovim/node-client'
