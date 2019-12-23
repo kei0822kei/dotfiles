@@ -12,6 +12,21 @@ ANACONDA_VERSION="anaconda3-2019.10"
 # ANACONDA_VERSION="anaconda3-2018.12"
 alias xcrysden="$HOME/src/xcrysden-1.6.2-bin-shared/xcrysden"
 
+
+################################################################################
+# OS
+################################################################################
+
+if [ "$(uname)" = 'Darwin' ]; then
+  export TERMINAL='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
+  export TERMINAL='Linux'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
+
+
 ################################################################################
 # scriipts
 ################################################################################
@@ -65,7 +80,7 @@ export PATH="$HOME/.local/bin:$PATH"  # to use packages installed via pip --user
 ################################################################################
 if [ ! -e "$HOME/src/pyenv" ]; then
   git clone https://github.com/yyuu/pyenv.git $HOME/src/pyenv
-  flag=1
+  # flag=1
 fi
 export PYENV_ROOT="$HOME/src/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

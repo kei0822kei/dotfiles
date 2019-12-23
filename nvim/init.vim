@@ -30,6 +30,13 @@ if dein#check_install()
 endif
 
 """appearance
+" for Python
+"let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019-10/envs/neovim/bin/python'
+"let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019-10/envs/neovim3/bin/python'
+let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim2/bin/python'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim3/bin/python'
+
+
 set number               "display the numbers of the lines
 set title                "display the title of the editing file
 set showmatch            "when you input a parenthesis, show you the other

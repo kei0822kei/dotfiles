@@ -8,21 +8,7 @@ echo ""
 # software versions
 ################################################################################
 
-# ANACONDA_VERSION="anaconda3-2018.12"
-
-
-################################################################################
-# OS
-################################################################################
-
-if [ "$(uname)" = 'Darwin' ]; then
-  TERMINAL='Mac'
-elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
-  TERMINAL='Linux'
-else
-  echo "Your platform ($(uname -a)) is not supported."
-  exit 1
-fi
+ANACONDA_VERSION="anaconda3-2019.10"
 
 
 ################################################################################

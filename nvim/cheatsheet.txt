@@ -1,12 +1,25 @@
 ###################
 # install nvim
 ###################
-already written in zshrc
-but sometimes pynvim is needed
-% pip --no-cache-dir install -I pynvim
+installing nvim is already written in 'zshrc'
 
-ref. https://blog.fakiyer.com/entry/2018/11/20/101826
+---------------------
+# python2 and python3
+---------------------
+### make neovim2 neovim3 environment in which python 2 and 3 is used.
+### then
+let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim2/bin/python'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim3/bin/python'
 
+--------
+# nodejs
+--------
+conda install -c conda-forge nodejs
+
+------
+# ruby
+------
+sudo gem install neovim
 
 ###################
 # command line
