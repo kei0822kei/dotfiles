@@ -8,33 +8,34 @@ echo ""
 # software versions
 ################################################################################
 
+ANACONDA_VERSION="anaconda3-2019.10"
 # ANACONDA_VERSION="anaconda3-2018.12"
-# alias xcrysden="$HOME/src/xcrysden-1.6.2-bin-shared/xcrysden"
+alias xcrysden="$HOME/src/xcrysden-1.6.2-bin-shared/xcrysden"
 
 ################################################################################
 # scriipts
 ################################################################################
 
 ### my scripts
-# GITHUB_REPO="$HOME/src/github.com"
-# export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/crystal/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/aiidaplus/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/poscry/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/twinpy/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/phonospic/scripts:$PATH"
-# export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
-# export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
-# export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
+GITHUB_REPO="$HOME/src/github.com"
+export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/crystal/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/aiidaplus/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/poscry/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/twinpy/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/phonospic/scripts:$PATH"
+export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
+export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
+export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
 
-# export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
-# export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
-# export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
-# export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
+export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
+export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
+export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
 
 
 ### lammps
@@ -62,22 +63,21 @@ export PATH="$HOME/.local/bin:$PATH"  # to use packages installed via pip --user
 ################################################################################
 # pyenv
 ################################################################################
-# if [ ! -e "$HOME/src/pyenv" ]; then
-#   git clone https://github.com/yyuu/pyenv.git $HOME/src/pyenv
-#   flag=1
-# fi
-# export PYENV_ROOT="$HOME/src/pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# if [ ! -e $PYENV_ROOT/versions/$ANACONDA_VERSION ]; then
-#   $HOME/src/pyenv/bin/pyenv install $ANACONDA_VERSION
-#   $HOME/src/pyenv/bin/pyenv rehash
-#   $HOME/src/pyenv/bin/pyenv global $ANACONDA_VERSION
-#   conda install perl git pip
-#   conda update conda
-#   pip install pynvim
-#   echo "please restart"
-#   # echo "conda update conda"
-# fi
+if [ ! -e "$HOME/src/pyenv" ]; then
+  git clone https://github.com/yyuu/pyenv.git $HOME/src/pyenv
+  flag=1
+fi
+export PYENV_ROOT="$HOME/src/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+if [ ! -e $PYENV_ROOT/versions/$ANACONDA_VERSION ]; then
+  $HOME/src/pyenv/bin/pyenv install $ANACONDA_VERSION
+  $HOME/src/pyenv/bin/pyenv rehash
+  $HOME/src/pyenv/bin/pyenv global $ANACONDA_VERSION
+  conda install perl git pip
+  conda update conda
+  echo "please restart"
+  # echo "conda update conda"
+fi
 
-# export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
+export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
