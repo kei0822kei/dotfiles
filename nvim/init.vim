@@ -29,11 +29,9 @@ if dein#check_install()
   call dein#install()
 endif
 
-"""appearance
 " for Python
-"let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019-10/envs/neovim/bin/python'
-"let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019-10/envs/neovim3/bin/python'
-if exists("$CONDA_DEFAULT_ENV")
+" if exists("$CONDA_DEFAULT_ENV")
+if $CONDA_DEFAULT_ENV != 'base'
   let g:python3_host_prog =
           \ $PYENV_ROOT .
           \ '/versions/' .
