@@ -8,7 +8,7 @@ echo ""
 # software versions
 ################################################################################
 
-ANACONDA_VERSION="anaconda3-2018.12"
+# ANACONDA_VERSION="anaconda3-2018.12"
 
 
 ################################################################################
@@ -107,10 +107,11 @@ if [ ! -e $HOME/src/go ]; then
   if [ $TERMINAL = "Mac" ]; then
     /usr/local/bin/brew install golang
   else
-    sudo apt install golang
+    sudo snap install --channel=1.13/stable --classic go
   fi
 fi
 
+# export GOROOT="/usr/local/go"
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
 
@@ -121,11 +122,10 @@ export PATH="$GOPATH/bin:$PATH"
 
 if [ ! -e $HOME/src/go/bin/ghq ]; then
   echo "install ghq"
-  if [ $TERMINAL = "Mac" ]; then
-    /usr/local/bin/go get github.com/motemen/ghq
-  else
-    /usr/bin/go get github.com/motemen/ghq
-  fi
+  (cd $HOME/src/github.com;
+   git clone https://github.com/motemen/ghq;
+   cd ghq;
+   make install)
   git config --global ghq.root ~/src
 fi
 
@@ -140,6 +140,7 @@ if [ ! -e $HOME/src/nvim ]; then
   else
     (mkdir -p $HOME/src/nvim; cd $HOME/src/nvim; curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage; chmod u+x nvim.appimage)
   fi
+  pip install pynvim --user
 fi
 
 if [ $TERMINAL = "Mac" ]; then

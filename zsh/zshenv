@@ -8,7 +8,8 @@ echo ""
 # software versions
 ################################################################################
 
-ANACONDA_VERSION="anaconda3-2018.12"
+ANACONDA_VERSION="anaconda3-2019.10"
+# ANACONDA_VERSION="anaconda3-2018.12"
 alias xcrysden="$HOME/src/xcrysden-1.6.2-bin-shared/xcrysden"
 
 ################################################################################
@@ -27,25 +28,36 @@ export PATH="$GITHUB_REPO/kei0822kei/twinpy/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/phonaly/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/phonospic/scripts:$PATH"
 export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
-# export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
-# export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
-# export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
+export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
+export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
+export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
 
-# export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
-# export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
-export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus:$PYTHONPATH"
-# export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
+export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
+export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
+export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
 
 
 ### lammps
 # alias lmp_mpi="$HOME/src/github.com/lammps/lammps/src/lmp_mpi"
 # alias lmp_serial="$HOME/src/github.com/lammps/lammps/src/lmp_serial"
 
+################################################################################
+# SNAP
+################################################################################
+export PATH="/snap/bin:$PATH"  # to use /snap/bin/go
+
 
 ################################################################################
 # ZSHRC
 ################################################################################
 export ZDOTDIR="$HOME/.mydot/zsh"
+
+
+################################################################################
+# PIP
+################################################################################
+export PATH="$HOME/.local/bin:$PATH"  # to use packages installed via pip --user
 
 
 ################################################################################
@@ -64,7 +76,6 @@ if [ ! -e $PYENV_ROOT/versions/$ANACONDA_VERSION ]; then
   $HOME/src/pyenv/bin/pyenv global $ANACONDA_VERSION
   conda install perl git pip
   conda update conda
-  pip install pynvim
   echo "please restart"
   # echo "conda update conda"
 fi
