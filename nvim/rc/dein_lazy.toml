@@ -29,9 +29,4 @@ hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
 # rev = 'release'
 # hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
 
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_i = 1
-merged = '0'
 # hook_source = 'call coil398#init#coc#hook_source()'

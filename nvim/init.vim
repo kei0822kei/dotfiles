@@ -33,8 +33,26 @@ endif
 " for Python
 "let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019-10/envs/neovim/bin/python'
 "let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019-10/envs/neovim3/bin/python'
-let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim2/bin/python'
-let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim3/bin/python'
+if exists("$CONDA_DEFAULT_ENV")
+  let g:python3_host_prog =
+          \ $PYENV_ROOT .
+          \ '/versions/' .
+          \ $ANACONDA_VERSION .
+          \ '/envs/' .
+          \ $CONDA_DEFAULT_ENV .
+          \ '/bin/python'
+else
+  let g:python3_host_prog =
+          \ $PYENV_ROOT .
+          \ '/versions/' .
+          \ $ANACONDA_VERSION .
+          \ '/envs/neovim3/bin/python'
+endif
+let g:python_host_prog =
+        \ $PYENV_ROOT .
+        \ '/versions/' .
+        \ $ANACONDA_VERSION .
+        \ '/envs/neovim2/bin/python'
 
 
 set number               "display the numbers of the lines
