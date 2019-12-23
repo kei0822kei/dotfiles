@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env sh
 
 ################################################################################
 # make shortcut
@@ -33,12 +33,12 @@ if [ ! -e "$HOME/.tmux" ]; then
   mkdir $HOME/.tmux
 fi
 ln -nsf "$GITDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
-ln -nsf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
-ln -nsf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
-ln -nsf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
-ln -nsf "$GITDIR/tmux/get_ssid_tmux" "$HOME/.tmux/get_ssid_tmux"
-ln -nsf "$GITDIR/tmux/get_volume_tmux" "$HOME/.tmux/get_volume_tmux"
-ln -nsf "$GITDIR/tmux/ssh-change-profile.bash" "$HOME/.tmux/ssh-change-profile.bash"
+# ln -nsf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
+# ln -nsf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
+# ln -nsf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
+# ln -nsf "$GITDIR/tmux/get_ssid_tmux" "$HOME/.tmux/get_ssid_tmux"
+# ln -nsf "$GITDIR/tmux/get_volume_tmux" "$HOME/.tmux/get_volume_tmux"
+# ln -nsf "$GITDIR/tmux/ssh-change-profile.bash" "$HOME/.tmux/ssh-change-profile.bash"
 
 ### nvim
 NVIMDIR="$MYDOTDIR/nvim"
@@ -56,7 +56,7 @@ ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
 
 ### latex
-ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
+# ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
 
 ### git
 ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
