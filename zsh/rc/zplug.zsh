@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 ### set ZPLUG_HOME
 export ZPLUG_HOME="$HOME/.mydot/zsh/.zplug"
@@ -14,7 +14,7 @@ source $ZPLUG_HOME/init.zsh
 ### install plugins
 zplug "mollifier/anyframe"                    # like denite.nvim
 zplug "sorin-ionescu/prezto"
-#zplug "b4b4r07/enhancd", at:v1                # at: はブランチとタグをサポートしている
+# zplug "b4b4r07/enhancd", at:v1                # at: はブランチとタグをサポートしている
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:"fzf"
 zplug "zsh-users/zsh-autosuggestions"         # auto completion
 zplug "zsh-users/zsh-completions"             # complete sub commands  ex) git <TAB>

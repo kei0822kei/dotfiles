@@ -23,9 +23,9 @@ if [ ! -e "$ZSHDIR" ]; then
 fi
 ln -nsf "$GITDIR/zsh/zshenv" "$HOME/.zshenv"
 ln -nsf "$GITDIR/zsh/zshrc" "$ZSHDIR/.zshrc"
-ln -nsf "$GITDIR/zsh/zlogin" "$ZSHDIR/.zlogin"
-ln -nsf "$GITDIR/zsh/zlogout" "$ZSHDIR/.zlogout"
-ln -nsf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
+# ln -nsf "$GITDIR/zsh/zlogin" "$ZSHDIR/.zlogin"
+# ln -nsf "$GITDIR/zsh/zlogout" "$ZSHDIR/.zlogout"
+# ln -nsf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
 ln -nsf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
 
 ### tmux
@@ -53,7 +53,7 @@ ln -nsf "$GITDIR/nvim/template" "$NVIMDIR/template"
 ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 
 ### flake8
-ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
+# ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
 
 ### latex
 # ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
@@ -62,4 +62,4 @@ ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
 ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
 
 ### ssh
-ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
+# ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
