@@ -1,29 +1,24 @@
-###################
+--------------
 # install nvim
-###################
-installing nvim is already written in 'zshrc'
+--------------
+How to install nvim is already written in 'zshrc'
 
----------------------
-# python2 and python3
----------------------
-### make neovim2 neovim3 environment in which python 2 and 3 is used.
-### then
-let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim2/bin/python'
-let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim3/bin/python'
 
 --------
 # nodejs
 --------
 conda install -c conda-forge nodejs
 
+
 ------
 # ruby
 ------
 sudo gem install neovim
 
-###################
+
+--------------
 # command line
-###################
+--------------
 
 # history
 :history => Enter; execute   i; insert mode
@@ -32,15 +27,17 @@ q: => open command line including history
 # input
 (insert mode) C-v + <Tab>  =>  input <Tab>
 
+# python path where jedi-vim looks for
+:python3 import sys; print(sys.path)
+
 # shortcut
 end of the line; ^
 head of the line; $
 
 
-
-###################
+-----------
 # braceless
-###################
+-----------
 
 zc; close a paragraph
 zC; close all paragraphs
@@ -50,59 +47,49 @@ zM; close selected paragraphs
 zR; open selected paragraphs
 
 
-###################
+----------
+# coc.nvim
+----------
+
+gd; go to definition
+<Shift> k; see docstring
+[g; previous navigate diagnostics
+]g; next navigate diagnostics
+
+
+----------
 # dein.vim
-###################
+----------
 
 # update
 :call dein#update()
 
 
-
-###################
+------------
 # denite.vim
-###################
+------------
 
 
-
-###################
-# denite.vim
-###################
-
+------------
+# easymotion
+------------
 <Leader> k => head up
 <Leader> j => head down
 <Leader> b => word up
 <Leader> e => word down
 
 
-
-###################
+----------
 # fugitive
-###################
-
+----------
 :Gstatus => status
 :Gwrete => add
 :Gcommit => commit
 
 
-
-###################
-# jedi-vim
-###################
-
-# python path where jedi-vim looks for
-:python3 import sys; print(sys.path)
-
-# how to complete modules in vertual environment
-% conda activate env
-% conda install -c conda-forge neovim
-
-
-
-###################
+----------
 # NERDTree
-###################
-
+----------
 -- Bookmark --
 :Bookmark []
 :ClearBookmarks []
@@ -116,37 +103,40 @@ I; open or close dot file
 r; update
 
 
-
-###################
+-----------
 # syntastic
-###################
-
+-----------
 :SyntasticCheck
 :Error
 :SyntasticInfo
 setting file => $HOME/.flake8
 
 
-
-###################
+--------
 # tagbar
-###################
-
+--------
 :TagbarToggle
 
 
-
-###################
+---------------
 # vim-auto-save
-###################
-
+---------------
 deactivate <= default
 activate => let g:auto_save = 1
 
 
-
-###################
+--------------
 # vim-quickrun
-###################
-
+--------------
 <Leader> r
+
+
+ ~~ (does not work well) ~~
+---------------------
+# python2 and python3
+---------------------
+### make neovim2 neovim3 environment in which python 2 and 3 is used.
+### then
+let g:python_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim2/bin/python'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/anaconda3-2019.10/envs/neovim3/bin/python'
+ ~~ (does not work well) ~~
