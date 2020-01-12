@@ -31,7 +31,6 @@ fi
 # scriipts
 ################################################################################
 
-### my scripts
 export GITHUB_REPO="$HOME/src/github.com"
 export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
@@ -46,11 +45,19 @@ export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
 export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
 export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
-
 export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
-export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
-export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
-export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
+
+
+################################################################################
+# PYTHONPATH
+################################################################################
+
+# export PYTHONPATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus:$PYTHONPATH"
+# export PYTHONPATH="$GITHUB_REPO/kei0822kei/dichlib:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/twinpy:$PYTHONPATH"
+# export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
+# export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
 
 
 ### lammps
