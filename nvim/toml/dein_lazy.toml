@@ -1,0 +1,32 @@
+# [[plugins]]
+# repo = 'davidhalter/jedi-vim'
+# on_i = 1
+# on_ft = 'python'
+# hook_add = 'source ~/.mydot/nvim/rc/jedi-vim.vim'
+
+# [[plugins]]
+# repo = 'nvie/vim-flake8'
+# on_i = 1
+# on_ft = 'python'
+# hook_add = 'source ~/.mydot/nvim/rc/flake8.vim'
+
+# [[plugins]]
+# repo = 'scrooloose/syntastic'
+
+# [[plugins]]
+# repo = 'tweekmonster/braceless.vim'
+# on_ft  = 'python'
+# hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
+
+# [[plugins]]
+# repo = 'zchee/deoplete-jedi'
+# on_i = 1
+# on_ft = 'python'
+
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# merged = 0
+# rev = 'release'
+# hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
+
+# hook_source = 'call coil398#init#coc#hook_source()'

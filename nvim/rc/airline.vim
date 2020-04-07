@@ -8,7 +8,6 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
-let g:airline_theme='tomorrow'
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -39,3 +38,5 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
+
+let g:airline_theme='simple theme'
