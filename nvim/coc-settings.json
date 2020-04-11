@@ -27,4 +27,5 @@
     "python.jediEnabled": false,
     "python.analysis.diagnosticPublishDelay": 1,
     "python.linting.enabled": true,
+    "coc.preferences.jumpCommand": "drop"
 }

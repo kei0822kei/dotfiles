@@ -5,13 +5,6 @@ echo "~~~ source .zshrc ~~~"
 echo ""
 
 ################################################################################
-# software versions
-################################################################################
-
-# export ANACONDA_VERSION="anaconda3-2019.10"
-
-
-################################################################################
 # anaconda
 ################################################################################
 
@@ -45,43 +38,11 @@ fi
 
 
 ################################################################################
-# mount
+# bind key
 ################################################################################
-### mizokami-ubuntu
-# if [ "$USER" = "mizokami-ubuntu" ]; then
-#   # if [ -z "$(ls ~/VEGA)" ]; then
-#   if [ -z "$(ls ~/vega)" ]; then
-#     # sshfs mizo@vega:/home/mizo/ $HOME/VEGA
-#     # sshfs mizo@vega:/home/mizo/ $HOME/vega
-#   fi
-# fi
 
-# bindkey "^p" history-beginning-search-backward-end
-# bindkey "^n" history-beginning-search-forward-end
-# bindkey "^[p" history-search-backward
-# bindkey "^[n" history-search-forward
-# zstyle ':completion:*:default' menu select=1
-# setopt auto_list
-# autoload -U history-search-end
-# zle -N history-beginning-search-backward-end history-search-end
-# zle -N history-beginning-search-forward-end history-search-end
-# bindkey "^[p" history-beginning-search-backward-end
-# bindkey "^[n" history-beginning-search-forward-end
-# stty»-erase»'^H'    # backspace↲
-# stty»-intr»-'^C'    # C-c↲
-# stty»-susp»-'^Z'↲
-# stty erase "^?"   # you can use backspace while shell script is running↲
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
-
-
-################################################################################
-# brew
-################################################################################
-
-# if [ ! -e /usr/local/bin/brew ]; then
-#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# fi
 
 
 ################################################################################
@@ -97,7 +58,6 @@ if [ ! -e $HOME/src/go ]; then
   fi
 fi
 
-# export GOROOT="/usr/local/go"
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
 

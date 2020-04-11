@@ -52,13 +52,36 @@ endif
 "         \ '/versions/' .
 "         \ $ANACONDA_VERSION .
 "         \ '/envs/neovim2/bin/python'
-let g:python3_host_prog =
-        \ $PYENV_ROOT .
-        \ '/versions/' .
-        \ $ANACONDA_VERSION .
-        \ '/envs/' .
-        \ $CONDA_DEFAULT_ENV .
-        \ '/bin/python'
+" let g:python3_host_prog =
+"         \ $PYENV_ROOT .
+"         \ '/versions/' .
+"         \ $ANACONDA_VERSION .
+"         \ '/envs/' .
+"         \ $CONDA_DEFAULT_ENV .
+"         \ '/bin/python'
+if $CONDA_PREFIX == ''
+  let g:python_host_prog =
+          \ $PYENV_ROOT .
+          \ '/versions/' .
+          \ $ANACONDA_VERSION .
+          \ '/envs/' .
+          \ $CONDA_DEFAULT_ENV .
+          \ '/bin/python'
+  let g:python3_host_prog =
+          \ $PYENV_ROOT .
+          \ '/versions/' .
+          \ $ANACONDA_VERSION .
+          \ '/envs/' .
+          \ $CONDA_DEFAULT_ENV .
+          \ '/bin/python'
+else
+  let g:python_host_prog =
+          \ $CONDA_PREFIX .
+          \ '/bin/python'
+  let g:python3_host_prog =
+          \ $CONDA_PREFIX .
+          \ '/bin/python'
+endif
 
 
 set number               "display the numbers of the lines
@@ -120,3 +143,24 @@ set cursorcolumn
 
 """latex
 set conceallevel=0
+
+"""terminal
+" exit terminal
+tnoremap q <C-\><C-n>:q<CR>
+" from insert to normal
+tnoremap <ESC> <C-\><C-n>
+"function! Term()
+"  call termopen(&shell, {'on_exit': 'OnExit'})
+"endfunction
+"
+"function! CloseLastTerm()
+"  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+"    :q
+"  endif
+"endfunction
+"
+"function! OnExit(job_id, code, event)
+"  if a:code == 0
+"    call CloseLastTerm()
+"  endif
+"endfunction

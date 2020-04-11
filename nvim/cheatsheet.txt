@@ -170,7 +170,7 @@ replace
 --------------
 # vim-quickrun
 --------------
-<Leader> r
+<C-r>
 
 
  ~~ (does not work well) ~~
