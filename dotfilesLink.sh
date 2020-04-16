@@ -50,7 +50,7 @@ ln -nsf "$GITDIR/nvim/cheatsheet.txt" "$NVIMDIR/cheatsheet.txt"
 ln -nsf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -nsf "$GITDIR/nvim/coc-settings.json" "$NVIMDIR/coc-settings.json"
 ln -nsf "$GITDIR/nvim/toml" "$NVIMDIR/toml"
-ln -nsf "$GITDIR/nvim/template" "$NVIMDIR/template"
+ln -nsf "$GITDIR/nvim/templates" "$NVIMDIR/templates"
 ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 
 ### flake8

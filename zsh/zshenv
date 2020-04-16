@@ -108,4 +108,4 @@ export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
 ################################################################################
 # github
 ################################################################################
-source $GITHUB_REPO/kei0822kei/dotfiles/git/token.zsh
+# source $GITHUB_REPO/kei0822kei/dotfiles/git/token.zsh

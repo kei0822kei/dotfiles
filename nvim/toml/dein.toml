@@ -6,6 +6,11 @@ merged = 0
 hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+on_i = 1
+hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/indentLine.vim'
@@ -18,6 +23,9 @@ hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
 [[plugins]]
 repo = 'cohama/lexima.vim'
 on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
@@ -57,6 +65,10 @@ repo = 'Lokaltog/vim-easymotion'
 hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+on_i = 1
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
 on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
@@ -87,14 +99,6 @@ repo = 'lambdalisue/vim-quickrun-neovim-job'
 
 
 
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
@@ -141,9 +145,6 @@ hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
 # repo = 'vim-scripts/vim-auto-save'
 # hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
 
-# [[plugins]]
-# repo = 'tpope/vim-fugitive'
-# on_i = 1
 
 
 
