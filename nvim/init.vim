@@ -1,5 +1,29 @@
 " -*- init.vim -*-
 
+if $CONDA_PREFIX == ''
+  let g:python_host_prog =
+          \ $PYENV_ROOT .
+          \ '/versions/' .
+          \ $ANACONDA_VERSION .
+          \ '/envs/' .
+          \ $CONDA_DEFAULT_ENV .
+          \ '/bin/python'
+  let g:python3_host_prog =
+          \ $PYENV_ROOT .
+          \ '/versions/' .
+          \ $ANACONDA_VERSION .
+          \ '/envs/' .
+          \ $CONDA_DEFAULT_ENV .
+          \ '/bin/python'
+else
+  let g:python_host_prog =
+          \ $CONDA_PREFIX .
+          \ '/bin/python'
+  let g:python3_host_prog =
+          \ $CONDA_PREFIX .
+          \ '/bin/python'
+endif
+
 """dein
 let s:dein_dir = expand('~/.mydot/nvim/bundle')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -28,59 +52,6 @@ endif
 
 if dein#check_install()
   call dein#install()
-endif
-
-" for Python
-" if exists("$CONDA_DEFAULT_ENV")
-" " if $CONDA_DEFAULT_ENV != 'base'
-"   let g:python3_host_prog =
-"           \ $PYENV_ROOT .
-"           \ '/versions/' .
-"           \ $ANACONDA_VERSION .
-"           \ '/envs/' .
-"           \ $CONDA_DEFAULT_ENV .
-"           \ '/bin/python'
-" else
-"   let g:python3_host_prog =
-"           \ $PYENV_ROOT .
-"           \ '/versions/' .
-"           \ $ANACONDA_VERSION .
-"           \ '/envs/neovim3/bin/python'
-" endif
-" let g:python_host_prog =
-"         \ $PYENV_ROOT .
-"         \ '/versions/' .
-"         \ $ANACONDA_VERSION .
-"         \ '/envs/neovim2/bin/python'
-" let g:python3_host_prog =
-"         \ $PYENV_ROOT .
-"         \ '/versions/' .
-"         \ $ANACONDA_VERSION .
-"         \ '/envs/' .
-"         \ $CONDA_DEFAULT_ENV .
-"         \ '/bin/python'
-if $CONDA_PREFIX == ''
-  let g:python_host_prog =
-          \ $PYENV_ROOT .
-          \ '/versions/' .
-          \ $ANACONDA_VERSION .
-          \ '/envs/' .
-          \ $CONDA_DEFAULT_ENV .
-          \ '/bin/python'
-  let g:python3_host_prog =
-          \ $PYENV_ROOT .
-          \ '/versions/' .
-          \ $ANACONDA_VERSION .
-          \ '/envs/' .
-          \ $CONDA_DEFAULT_ENV .
-          \ '/bin/python'
-else
-  let g:python_host_prog =
-          \ $CONDA_PREFIX .
-          \ '/bin/python'
-  let g:python3_host_prog =
-          \ $CONDA_PREFIX .
-          \ '/bin/python'
 endif
 
 
