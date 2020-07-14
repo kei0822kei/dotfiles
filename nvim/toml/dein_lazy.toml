@@ -1,3 +1,7 @@
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
+
 # [[plugins]]
 # repo = 'davidhalter/jedi-vim'
 # on_i = 1

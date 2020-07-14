@@ -44,7 +44,7 @@ export PATH="$GITHUB_REPO/kei0822kei/phonospic/scripts:$PATH"
 export PATH="$GITHUB_REPO/abelcarreras/DynaPhoPy/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/Phonopy-Spectroscopy/Scripts:$PATH"
 export PATH="$HOME/Vega/Github/vasper/scripts:$PATH"
-export PATH="$HOME/src/lobster-3.2.1/Linux:$PATH"
+export PATH="$HOME/src/lobster-4.0.0:$PATH"
 export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
 
 
@@ -79,7 +79,7 @@ export ZDOTDIR="$HOME/.mydot/zsh"
 ################################################################################
 # PIP
 ################################################################################
-export PATH="$HOME/.local/bin:$PATH"  # to use packages installed via pip --user
+# export PATH="$HOME/.local/bin:$PATH"  # to use packages installed via pip --user
 
 
 ################################################################################
