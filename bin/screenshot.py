@@ -4,15 +4,24 @@ import os
 import datetime
 
 #########################
+# png to pdf
+#########################
+# for i in `ls`
+# do
+# sips -s format pdf $i --out ~/pdf/${i}.pdf
+# done
+
+
+#########################
 # settings
 #########################
 
 # page num
-page = 383
+page = 355
 # upper left
-x1, y1 = 250, 43
+x1, y1 = 289, 203
 # lower right
-x2, y2 = 1216, 1404
+x2, y2 = 1146, 1409
 # span of shot
 span = 1
 # folder name header
@@ -20,7 +29,7 @@ h_foldername = "output"
 # filename
 h_filename = "picture"
 
-click1, click2 = 1595, 19
+click1, click2 = 715, 178
 
 #########################
 # main
@@ -37,6 +46,5 @@ for p in range(page):
     s = pyautogui.screenshot(region=(x1, y1, x2-x1, y2-y1))
     s.save(folder_name + '/' + out_filename)
     # pyautogui.keyDown('right')
-    print(click1, click2)
     pyautogui.click(click1, click2)
     time.sleep(span)
