@@ -88,6 +88,17 @@ fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
 
 
+###############################################################################
+# jupyter
+###############################################################################
+export JUPYTER_PATH="$HOME/src/pyenv/versions/anaconda3-2019.10/share/jupyter"
+export JUPYTER_CONFIG_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/etc/jupyter"
+export JUPYTER_DATA_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/share/jupyter"
+export JUPYTER_RUNTIME_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/share/jupyter/runtime"
+
+
+
+
 ################################################################################
 # terminal
 ################################################################################
