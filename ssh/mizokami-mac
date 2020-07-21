@@ -16,8 +16,7 @@ Host mizou
   ForwardX11Trusted yes
   LocalForward 8888 localhost:8888
   LocalForward 8889 localhost:8889
- #  LocalForward 5000 localhost:5000
-  ServerAliveInterval 120
+  ServerAliveInterval 15
 
 Host vega
   User mizo

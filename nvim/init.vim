@@ -1,5 +1,7 @@
 " -*- init.vim -*-
 
+let g:coc_user_config = "{~/coc-settings.json}"
+
 if $CONDA_PREFIX == ''
   let g:python_host_prog =
           \ $PYENV_ROOT .
@@ -23,6 +25,7 @@ else
           \ $CONDA_PREFIX .
           \ '/bin/python'
 endif
+
 
 """dein
 let s:dein_dir = expand('~/.mydot/nvim/bundle')

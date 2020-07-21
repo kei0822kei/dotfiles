@@ -47,6 +47,13 @@ head of the line; $
 to change theme => ref. https://qiita.com/myouga/items/2f241731c16cf09273ff
 
 
+-----
+# ale
+-----
+# enable
+:ALEEnable
+
+
 -----------
 # braceless
 -----------
@@ -65,6 +72,13 @@ gd; go to definition
 <Shift> k; see docstring
 [g; previous navigate diagnostics
 ]g; next navigate diagnostics
+
+# setup
+% cd $CONDA_PREFIX
+% mkdir -p ./etc/conda/activate.d
+% mkdir -p ./etc/conda/deactivate.d
+% ln -nsf $HOME/src/github.com/kei0822kei/dotfiles/conda/python.sh `pwd`/etc/conda/activate.d/python.sh
+% ln -nsf $HOME/src/github.com/kei0822kei/dotfiles/conda/python.sh `pwd`/etc/conda/deactivate.d/python.sh
 
 
 ----------
