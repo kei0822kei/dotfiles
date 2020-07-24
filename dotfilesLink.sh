@@ -54,7 +54,7 @@ ln -nsf "$GITDIR/nvim/templates" "$NVIMDIR/templates"
 ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 
 ### flake8
-# ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
+ln -nsf "$GITDIR/lint/flake8" "$HOME/.config/flake8"
 
 ### latex
 # ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"

@@ -53,6 +53,11 @@ to change theme => ref. https://qiita.com/myouga/items/2f241731c16cf09273ff
 # enable
 :ALEEnable
 
+# disable
+:ALEDisable
+
+# currently using flake8 (settings are in ~/.config/flake8)
+
 
 -----------
 # braceless
@@ -109,7 +114,7 @@ call dein#recache_runtimepath()
 # fugitive
 ----------
 :Gstatus => status
-:Gwrete => add
+:Gwrite => add
 :Gcommit => commit
 
 

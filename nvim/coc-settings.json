@@ -19,7 +19,7 @@
         }
     },
     "python.jediEnabled": false,
-    "python.analysis.diagnosticPublishDelay": 1,
+    "python.analysis.diagnosticEnabled": false,
     "python.linting.enabled": false,
     "coc.preferences.jumpCommand": "drop"
 }
