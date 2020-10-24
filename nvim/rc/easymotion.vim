@@ -4,5 +4,4 @@
 " nmap f <plug>(easymotion-overwin-f2)
 " 検索時、大文字小文字を区別しない
 let g:EasyMotion_smartcase = 1
-
 let g:EasyMotion_leader_key = '<Space>'

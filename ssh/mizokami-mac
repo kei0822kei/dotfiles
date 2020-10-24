@@ -7,7 +7,7 @@
 # Host stern vega mizou
 #      ProxyCommand ssh -l mizo via nc %h %p
 #      ServerAliveInterval 15
-# 
+
 Host mizou
   User mizo
   Hostname mizou
