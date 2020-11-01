@@ -7,9 +7,12 @@ ignore = \
          E201, \  # whitespace after '[' -- [  1.,           0., 0.]
          E202, \  # whitespace before ')'
          E203, \  # whitespace before ':'
+         E225, \  # missing whitespace around operator -- mesh==2
          E226, \  # missing whitespace around arithmetic operator -- [-0.5, np.sqrt(3)/2, 0.]
+         E228, \  # missing whitespace around modulo operator -- x%2
          E231, \  # missing whitespace after ':'
          E241, \  # multiple spaces after ',' -- [  1.,           0., 0.]
          E252, \  # missing whitespace around parameter equal -- wyckoff:str='c'
          E731, \  # do not assign a lambda expression, use a def
          E741, \  # ambiguous variable name 'l'
+         W503, \  # line break before binary operator -- see https://teratail.com/questions/213385
