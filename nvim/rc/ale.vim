@@ -19,10 +19,10 @@ let g:ale_python_flake8_options = '-m flake8'
 
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
-let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_lint_on_save = 1
 let g:ale_open_list = 1
+let g:ale_enabled = 0  " default disabled
 let g:ale_keep_list_window_open = 1
 let g:airline#extensions#ale#enabled = 1
 

@@ -50,6 +50,12 @@ to change theme => ref. https://qiita.com/myouga/items/2f241731c16cf09273ff
 -----
 # ale
 -----
+# setup
+you have to install flake8
+% pip install flake8
+or
+% conda install flake8
+
 # enable
 :ALEEnable
 
@@ -78,12 +84,8 @@ gd; go to definition
 [g; previous navigate diagnostics
 ]g; next navigate diagnostics
 
-# setup
-% cd $CONDA_PREFIX
-% mkdir -p ./etc/conda/activate.d
-% mkdir -p ./etc/conda/deactivate.d
-% ln -nsf $HOME/src/github.com/kei0822kei/dotfiles/conda/python.sh `pwd`/etc/conda/activate.d/python.sh
-% ln -nsf $HOME/src/github.com/kei0822kei/dotfiles/conda/python.sh `pwd`/etc/conda/deactivate.d/python.sh
+# set interpreter
+:CocCommand => python.setInterpreter => choose interpreter
 
 
 ----------
