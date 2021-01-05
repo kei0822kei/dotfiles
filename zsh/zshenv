@@ -56,6 +56,7 @@ export PATH="$GITHUB_REPO/oekosheri/GB_code/gb_code:$PATH"
 export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus:$PYTHONPATH"
 # export PYTHONPATH="$GITHUB_REPO/kei0822kei/dichlib:$PYTHONPATH"
 export PYTHONPATH="$GITHUB_REPO/kei0822kei/twinpy:$PYTHONPATH"
+export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiida-twinpy:$PYTHONPATH"
 # export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus/aiidaplus:$PYTHONPATH"
 # export PYTHONPATH="/home/mizo/project/aiida/tutorial/path_dir:$PYTHONPATH"
 
