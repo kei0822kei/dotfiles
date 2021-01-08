@@ -182,6 +182,16 @@ deactivate <= default
 activate => let g:auto_save = 1
 
 ----------
+# vim-json
+----------
+- REPOSITORY:
+https://github.com/elzr/vim-json
+
+- FEATURE:
+You can visualize "(double quatation) by settings
+'let g:vim_json_syntax_conceal = 0'.
+
+----------
 # vim-over
 ----------
 replace
