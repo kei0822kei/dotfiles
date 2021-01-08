@@ -181,6 +181,7 @@ highlight unnecessary trailing white space
 deactivate <= default
 activate => let g:auto_save = 1
 
+
 ----------
 # vim-json
 ----------
@@ -190,6 +191,10 @@ https://github.com/elzr/vim-json
 - FEATURE:
 You can visualize "(double quatation) by settings
 'let g:vim_json_syntax_conceal = 0'.
+
+- REF:
+https://qiita.com/karur4n/items/a26007236c59c5fb8735
+
 
 ----------
 # vim-over
