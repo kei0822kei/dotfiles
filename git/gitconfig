@@ -5,3 +5,5 @@
 	name = kei0822kei
 [core]
 	editor = vim
+[merge]
+	ff = false
