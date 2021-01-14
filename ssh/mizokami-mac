@@ -1,34 +1,19 @@
-Match exec "ping -c 1 -o 10.232.7.238 -t 1 > /dev/null"
+Match Host via Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+  User mizo
+  Hostname quantum.mtl.kyoto-u.ac.jp
+  IdentityFile ~/.ssh/id_rsa
 
-  Host mizou
-    User mizo
-    Hostname mizou
-    IdentityFile ~/.ssh/id_rsa
-    ForwardX11 yes
-    ForwardX11Trusted yes
-    LocalForward 8888 localhost:8888
-    LocalForward 8889 localhost:8889
-    ServerAliveInterval 15
+Match Host stern Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+  Hostname stern
+  ProxyCommand ssh -l mizo via nc %h %p
 
-  Host vega
-    User mizo
-    Hostname vega
-    IdentityFile ~/.ssh/id_rsa
+Match Host stern Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+  Hostname vega
+  ProxyCommand ssh -l mizo via nc %h %p
 
-  Host stern
-    User mizo
-    Hostname stern
-    IdentityFile ~/.ssh/id_rsa
-
-
-Host via
-    User mizo
-    Hostname quantum.mtl.kyoto-u.ac.jp
-    IdentityFile ~/.ssh/id_rsa
-
-Host stern vega mizou
-     ProxyCommand ssh -l mizo via nc %h %p
-     ServerAliveInterval 15
+Match Host stern Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+  Hostname mizou
+  ProxyCommand ssh -l mizo via nc %h %p
 
 Host mizou
   User mizo
@@ -39,13 +24,18 @@ Host mizou
   LocalForward 8888 localhost:8888
   LocalForward 8889 localhost:8889
   ServerAliveInterval 15
+  TCPKeepAlive yes
 
 Host vega
   User mizo
   Hostname vega
   IdentityFile ~/.ssh/id_rsa
+  ServerAliveInterval 15
+  TCPKeepAlive yes
 
 Host stern
   User mizo
   Hostname stern
   IdentityFile ~/.ssh/id_rsa
+  ServerAliveInterval 15
+  TCPKeepAlive yes
