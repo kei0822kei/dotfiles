@@ -1,0 +1,8 @@
+[distutils]
+index-servers =
+  testpypi
+
+[testpypi]
+repository: https://test.pypi.org/legacy/
+username: kei0822kei
+password: 0822801784
