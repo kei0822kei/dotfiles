@@ -21,8 +21,8 @@ Host mizou
   IdentityFile ~/.ssh/id_rsa
   ForwardX11 yes
   ForwardX11Trusted yes
-  LocalForward 8888 localhost:8888
-  LocalForward 8889 localhost:8889
+  # LocalForward 8888 localhost:8888
+  # LocalForward 8889 localhost:8889
   ServerAliveInterval 15
   TCPKeepAlive yes
 
