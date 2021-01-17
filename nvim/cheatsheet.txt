@@ -20,6 +20,12 @@ sudo gem install neovim
 # command line
 --------------
 
+# show plugin document
+:h <plugin name>
+
+# show filetype
+:echo &filetype
+
 # history
 :history => Enter; execute   i; insert mode
 q: => open command line including history
@@ -91,10 +97,14 @@ gd; go to definition
 ----------
 # dein.vim
 ----------
-# update
+# update dein.vim
+% cd /path/to/dein/
+% git pull
+
+# update plugins
 :call dein#update()
 
-# try when problem occurs
+# clear cache (try when problem occurs)
 call dein#recache_runtimepath()
 
 

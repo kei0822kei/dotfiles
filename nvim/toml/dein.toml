@@ -1,56 +1,59 @@
+# You can find event list in autocmd documentation.
+# https://vim-jp.org/vimdoc-ja/autocmd.html
+
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-on_i = 1
+on_event = 'IntertEnter'
 merged = 0
 hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-on_i = 1
-hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+repo = 'Shougo/defx.nvim'  # filer
+# depends = ['defx-icons', 'defx-git']
+hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
 
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+#
 [[plugins]]
 repo = 'Yggdroot/indentLine'
-on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/indentLine.vim'
-
+#
 [[plugins]]
-repo = 'itchyny/landscape.vim'
-on_i = 1
+repo = 'itchyny/landscape.vim'  # color scheme
 hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
 
 [[plugins]]
-repo = 'cohama/lexima.vim'
-on_i = 1
+repo = 'cohama/lexima.vim'  # brackets completion
+on_event = 'IntertEnter'
 
 [[plugins]]
-repo = 'Shougo/neomru.vim'
+repo = 'Shougo/neomru.vim'  # used with denite
 
 [[plugins]]
-repo = 'Shougo/neoyank.vim'
+repo = 'Shougo/neoyank.vim'  # used with denite
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'scrooloose/nerdtree'  # filer
 hook_add = 'source ~/.mydot/nvim/rc/nerdtree.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
-on_i = 1
+on_event = 'IntertEnter'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
-on_i = 1
+on_event = 'IntertEnter'
 hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
 
 [[plugins]]
 repo = 'kassio/neoterm'
-on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/neoterm.vim'
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
-on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
 
 [[plugins]]
@@ -66,68 +69,48 @@ hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-on_i = 1
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-on_i = 1
 hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
 
 [[plugins]]
 repo = 'elzr/vim-json'
-on_i = 1
 on_ft = 'json'
 hook_add = 'source ~/.mydot/nvim/rc/vim-json.vim'
 
 [[plugins]]
-repo = 'osyo-manga/vim-over'
+repo = 'osyo-manga/vim-over'  # replace strings by s/"hoge"/"fuga"/g
 hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
-on_i = 1
-
-[[plugins]]
 repo = 'thinca/vim-quickrun'
 on_ft = 'python'
 hook_add = 'source ~/.mydot/nvim/rc/quickrun.vim'
 
-[[plugins]]
-repo = 'lambdalisue/vim-quickrun-neovim-job'
 
-
-
-
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-# depends = ['defx-icons', 'defx-git']
-hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
+# ##############################################################################
+# # currently not using
+# ##############################################################################
 
 # [[plugins]]
 # repo ='kristijanhusak/defx-icons'
-# 
+
 # [[plugins]]
 # repo ='kristijanhusak/defx-git'
 # hook_add = 'source ~/.mydot/nvim/rc/defx-git.vim'
 
-
-
-
 # [[plugins]]
 # repo = 'julienr/vim-cellmode'
-# on_i = 1
+# on_event = 1
 
 # [[plugins]]
 # repo = 'tpope/vim-dispatch'
-# 
+#
 # [[plugins]]
 # repo = 'janko-m/vim-test'
 # depends = ['vim-dispatch']
@@ -139,37 +122,32 @@ hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
 #   \ 'suite':   'basic',
 # \}
 # '''
-# 
+
 # [[plugins]]
 # repo = 'aliev/vim-compiler-python'
-
-
-
-
 
 # [[plugins]]
 # repo = 'vim-scripts/vim-auto-save'
 # hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
 
-
-
-
-
 # [[plugins]]
 # repo = 'Shougo/deol.nvim'
-# on_i = 1
+# on_event = 1
 # hook_add = 'source ~/.mydot/nvim/rc/deol.vim'
 
+# [[plugins]]
+# repo = 'lambdalisue/vim-quickrun-neovim-job'
 
+# [[plugins]]
+# ## NOTE: This cannot goes with defx.
+# ## NOTE: 'on_ft=python' could not fix this problem.
+# repo = 'bronson/vim-trailing-whitespace'
+# on_event = 1
+# hook_add = 'source ~/.mydot/nvim/rc/vim-trailing-whitespace.vim'
 
-# 
-
-
-
-
-##############################################################################
-# currently not using
-##############################################################################
+# [[plugins]]
+# repo = 'Shougo/vimproc.vim'
+# build = 'make'
 
 # [[plugins]]
 # repo = 'zchee/deoplete-jedi'
@@ -181,30 +159,30 @@ hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
 
 # [[plugins]]
 # repo = 'nathanaelkane/vim-indent-guides'
-# on_i = 1 hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
+# on_event = 1 hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
 
 # [[plugins]]
 # repo = 'itchyny/lightline.vim'
-# on_i = 1
+# on_event = 1
 # hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
 
 # [[plugins]]
 # repo = 'neovim/node-client'
-# 
+#
 # [[plugins]]
 # repo = 'neovim/neovim-ruby'
 
 # # completion
 # [[plugins]]
 # repo = 'plytophogy/vim-virtualenv'
-# on_i = 1
+# on_event = 1
 # on_ft = 'python'
-# 
+#
 # [[plugins]]
 # repo = 'reireias/vim-cheatsheet'
-# on_i = 1
+# on_event = 1
 # hook_add = 'source ~/.mydot/nvim/rc/vim-cheatsheet.vim'
-# 
+#
 # [[plugins]]
 # repo = 'pgilad/vim-skeletons'
 # hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
