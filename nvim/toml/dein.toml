@@ -64,6 +64,9 @@ hook_add = 'source ~/.mydot/nvim/rc/airline.vim'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
+repo = 't9md/vim-choosewin'
+
+[[plugins]]
 repo = 'Lokaltog/vim-easymotion'
 hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 

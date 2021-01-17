@@ -94,6 +94,34 @@ gd; go to definition
 :CocCommand => python.setInterpreter => choose interpreter
 
 
+------
+# defx
+------
+# open file
+ <CR> => drop
+  i   => drop split
+  s   => drop vsplit
+  t   => tab open
+
+# directory
+  u   => cd ..
+  o   => open and close directory
+
+# handle file
+  c   => copy
+  m   => move
+  p   => paste
+  K   => create new directory
+  N   => create new file
+  M   => create new files
+  d   => delete file
+  r   => rename file
+
+# yank and print
+  yy  => yank path
+<C-g> => print path
+
+
 ----------
 # dein.vim
 ----------
