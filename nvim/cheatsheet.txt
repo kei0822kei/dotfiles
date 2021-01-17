@@ -104,11 +104,12 @@ gd; go to definition
  <CR> => drop
   i   => drop split
   s   => drop vsplit
-  t   => tab open
+  t   => open tab
 
 # directory
+ <CR> => open and close directory
+  o   => open and close directory (recursive:3)
   u   => cd ..
-  o   => open and close directory
 
 # handle file
   c   => copy
@@ -142,6 +143,18 @@ call dein#recache_runtimepath()
 ------------
 # denite.vim
 ------------
+# search
+<C-m>b => show buffer
+<C-m>c => show commands
+<C-m>f => show files
+<C-m>p => show bookmark
+<C-m>gr => grep patterns from files
+
+# open file
+ <CR> => open
+  i   => open split
+  s   => open vsplit
+  t   => open tab
 
 
 ------------
