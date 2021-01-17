@@ -1,0 +1,51 @@
+{
+  "configurations": {
+    "python_file": {
+      "adapter": "debugpy",
+      "configuration": {
+        "name": "Python: Current File",
+        "type": "python",
+        "request": "launch",
+        "cwd": "${fileDirname}",
+        "program": "${file}",
+        "args": [],
+        "stopOnEntry": true,
+        "externalConsole": false,
+        "debugOptions": []
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "Y"
+        }
+      }
+    },
+    "python_test": {
+      "adapter": "debugpy",
+      "variables": {
+        "gitRootPath": {
+          "shell" : [ "git", "rev-parse", "--show-toplevel" ]
+        }
+      },
+      "configuration": {
+        "name": "Python: Test",
+        "type": "python",
+        "request": "launch",
+        "cwd": "${gitRootPath}",
+        "args": [
+          "-m",
+          "pytest"
+        ],
+        "stopOnEntry": true,
+        "externalConsole": true,
+        "debugOptions": []
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "Y"
+        }
+      }
+    }
+  }
+}

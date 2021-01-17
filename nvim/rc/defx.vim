@@ -11,15 +11,23 @@ call defx#custom#option('_', {
       \ 'winwidth': 35,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
-      \ 'show_ignored_files': 1,
+      \ 'show_ignored_files': 0,
       \ 'buffer_name': 'exlorer',
       \ 'toggle': 1,
       \ 'resume': 1,
+      \ 'ignored_files':
+      \     '.mypy_cache,.pytest_cache,.git,.hg,.svn,.stversions'
+      \   . ',__pycache__,.sass-cache,*.egg-info,.DS_Store,*.pyc'
+      \   . ',build,dist'
       \ })
 
 """ keybind
 autocmd FileType defx call s:defx_my_settings()
    function! s:defx_my_settings() abort
+
+     """ show ignoreed files
+     nnoremap <silent><buffer><expr> .
+     \ defx#do_action('toggle_ignored_files')
 
      """ open file
      nnoremap <silent><buffer><expr> <CR>
@@ -35,7 +43,7 @@ autocmd FileType defx call s:defx_my_settings()
      nnoremap <silent><buffer><expr> u
      \ defx#do_action('cd', ['..'])
      nnoremap <silent><buffer><expr> o
-     \ defx#do_action('open_or_close_tree')
+     \ defx#do_action('open_or_close_tree', 'recursive:3')
 
      """ handle file
      nnoremap <silent><buffer><expr> c
@@ -62,33 +70,31 @@ autocmd FileType defx call s:defx_my_settings()
      \ defx#do_action('print')
 
      """ future use (not understand yet)
-     " nnoremap <silent><buffer><expr> C
-     " \ defx#do_action('toggle_columns',
-     " \                'mark:indent:icon:filename:type:size:time')
-     " nnoremap <silent><buffer><expr> S
-     " \ defx#do_action('toggle_sort', 'time')
-     " nnoremap <silent><buffer><expr> !
-     " \ defx#do_action('execute_command')
-     " nnoremap <silent><buffer><expr> x
-     " \ defx#do_action('execute_system')
-     " nnoremap <silent><buffer><expr> .
-     " \ defx#do_action('toggle_ignored_files')
-     " nnoremap <silent><buffer><expr> ;
-     " \ defx#do_action('repeat')
-     " nnoremap <silent><buffer><expr> ~
-     " \ defx#do_action('cd')
-     " nnoremap <silent><buffer><expr> q
-     " \ defx#do_action('quit')
-     " nnoremap <silent><buffer><expr> <Space>
-     " \ defx#do_action('toggle_select') . 'j'
-     " nnoremap <silent><buffer><expr> *
-     " \ defx#do_action('toggle_select_all')
-     " nnoremap <silent><buffer><expr> j
-     " \ line('.') == line('$') ? 'gg' : 'j'
-     " nnoremap <silent><buffer><expr> k
-     " \ line('.') == 1 ? 'G' : 'k'
-     " nnoremap <silent><buffer><expr> <C-l>
-     " \ defx#do_action('redraw')
-     " nnoremap <silent><buffer><expr> cd
-     " \ defx#do_action('change_vim_cwd')
+     nnoremap <silent><buffer><expr> C
+     \ defx#do_action('toggle_columns',
+     \                'mark:indent:icon:filename:type:size:time')
+     nnoremap <silent><buffer><expr> S
+     \ defx#do_action('toggle_sort', 'time')
+     nnoremap <silent><buffer><expr> !
+     \ defx#do_action('execute_command')
+     nnoremap <silent><buffer><expr> x
+     \ defx#do_action('execute_system')
+     nnoremap <silent><buffer><expr> ;
+     \ defx#do_action('repeat')
+     nnoremap <silent><buffer><expr> ~
+     \ defx#do_action('cd')
+     nnoremap <silent><buffer><expr> q
+     \ defx#do_action('quit')
+     nnoremap <silent><buffer><expr> <Space>
+     \ defx#do_action('toggle_select') . 'j'
+     nnoremap <silent><buffer><expr> *
+     \ defx#do_action('toggle_select_all')
+     nnoremap <silent><buffer><expr> j
+     \ line('.') == line('$') ? 'gg' : 'j'
+     nnoremap <silent><buffer><expr> k
+     \ line('.') == 1 ? 'G' : 'k'
+     nnoremap <silent><buffer><expr> <C-l>
+     \ defx#do_action('redraw')
+     nnoremap <silent><buffer><expr> cd
+     \ defx#do_action('change_vim_cwd')
    endfunction

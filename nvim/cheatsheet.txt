@@ -97,6 +97,9 @@ gd; go to definition
 ------
 # defx
 ------
+# show
+  .   => show ignored files
+
 # open file
  <CR> => drop
   i   => drop split
