@@ -126,6 +126,12 @@ gd; go to definition
 <C-g> => print path
 
 
+-----------
+# defx-icon
+-----------
+# install
+# ref. https://zenn.dev/hisasann/articles/e8e6b17bf9faab
+
 ----------
 # dein.vim
 ----------

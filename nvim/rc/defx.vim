@@ -15,6 +15,7 @@ call defx#custom#option('_', {
       \ 'buffer_name': 'exlorer',
       \ 'toggle': 1,
       \ 'resume': 1,
+      \ 'columns': 'indent:git:icons:filename:mark',
       \ 'ignored_files':
       \     '.mypy_cache,.pytest_cache,.git,.hg,.svn,.stversions'
       \   . ',__pycache__,.sass-cache,*.egg-info,.DS_Store,*.pyc'
