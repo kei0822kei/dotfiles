@@ -11,6 +11,7 @@
         "args": [],
         "stopOnEntry": true,
         "externalConsole": false,
+        "justMyCode": false,
         "debugOptions": []
       },
       "breakpoints": {
@@ -34,10 +35,12 @@
         "cwd": "${gitRootPath}",
         "args": [
           "-m",
+          "-s",
           "pytest"
         ],
         "stopOnEntry": true,
         "externalConsole": true,
+        "justMyCode": false,
         "debugOptions": []
       },
       "breakpoints": {

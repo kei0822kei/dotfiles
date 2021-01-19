@@ -1,0 +1,11 @@
+nmap <C-s>n <Plug>VimspectorContinue
+nmap <C-s>s <Plug>VimspectorStop
+nmap <C-s>r <Plug>VimspectorRestart
+nmap <C-s>p <Plug>VimspectorPause
+nmap <C-s>b <Plug>VimspectorToggleBreakpoint
+nmap <C-s>c <Plug>VimspectorToggleConditionalBreakpoint
+nmap <C-s>a <Plug>VimspectorAddFunctionBreakpoint
+nmap <C-s>v <Plug>VimspectorStepOver
+nmap <C-s>i <Plug>VimspectorStepInto
+nmap <C-s>o <Plug>VimspectorStepOut
+nmap <C-s>u <Plug>VimspectorRunToCursor

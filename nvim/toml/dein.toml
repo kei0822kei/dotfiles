@@ -54,6 +54,10 @@ repo = 'kassio/neoterm'
 hook_add = 'source ~/.mydot/nvim/rc/neoterm.vim'
 
 [[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = 'source ~/.mydot/nvim/rc/rainbow.vim'
+
+[[plugins]]
 repo = 'majutsushi/tagbar'
 hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
 
