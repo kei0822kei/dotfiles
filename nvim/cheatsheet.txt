@@ -41,6 +41,16 @@ end of the line; ^
 head of the line; $
 
 
+--------------------
+# about vim language
+--------------------
+# meaning of nnoremap, silent ...
+ref. https://thinca.hatenablog.com/entry/20100205/1265307642
+
+# <C-u>
+ref. https://vim-jp.org/vim-users-jp/2009/07/02/Hack-35.html
+
+
 ---------------------
 # check vim open time
 ---------------------
@@ -155,6 +165,7 @@ call dein#recache_runtimepath()
 <C-m>f => show files
 <C-m>p => show bookmark
 <C-m>gr => grep patterns from files
+<C-m>y => show yank history
 
 # open file
  <CR> => open
@@ -230,10 +241,12 @@ setting file => $HOME/.flake8
 --------
 <C-t>
 
+
 ---------------------
 # trailing-whitespece
 ---------------------
 highlight unnecessary trailing white space
+
 
 ---------------
 # vim-auto-save
@@ -267,6 +280,22 @@ replace
 # vim-quickrun
 --------------
 <C-r>
+
+
+------------
+# vimspector
+------------
+<C-s>n => VimspectorContinue
+<C-s>s => VimspectorStop
+<C-s>r => VimspectorRestart
+<C-s>p => VimspectorPause
+<C-s>b => VimspectorToggleBreakpoint
+<C-s>c => VimspectorToggleConditionalBreakpoint
+<C-s>a => VimspectorAddFunctionBreakpoint
+<C-s>v => VimspectorStepOver
+<C-s>i => VimspectorStepInto
+<C-s>o => VimspectorStepOut
+<C-s>u => VimspectorRunToCursor
 
 
  ~~ (does not work well) ~~
