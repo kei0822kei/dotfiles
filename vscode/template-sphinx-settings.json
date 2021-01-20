@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/Users/mizokami-mac/src/pyenv/versions/anaconda3-2019.10/envs/twinpy/bin/python",
+    "restructuredtext.builtDocumentationPath": "/Users/mizokami-mac/src/github.com/kei0822kei/twinpy/docs/build/html",
+    "restructuredtext.confPath": "/Users/mizokami-mac/src/github.com/kei0822kei/twinpy/docs/source",
+    "restructuredtext.sphinxBuildPath": "/Users/mizokami-mac/src/pyenv/versions/anaconda3-2019.10/envs/twinpy/bin/sphinx-build",
+}
