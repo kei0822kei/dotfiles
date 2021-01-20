@@ -20,6 +20,12 @@ sudo gem install neovim
 # command line
 --------------
 
+# show plugin document
+:h <plugin name>
+
+# show filetype
+:echo &filetype
+
 # history
 :history => Enter; execute   i; insert mode
 q: => open command line including history
@@ -33,6 +39,16 @@ q: => open command line including history
 # shortcut
 end of the line; ^
 head of the line; $
+
+
+--------------------
+# about vim language
+--------------------
+# meaning of nnoremap, silent ...
+ref. https://thinca.hatenablog.com/entry/20100205/1265307642
+
+# <C-u>
+ref. https://vim-jp.org/vim-users-jp/2009/07/02/Hack-35.html
 
 
 ---------------------
@@ -88,19 +104,74 @@ gd; go to definition
 :CocCommand => python.setInterpreter => choose interpreter
 
 
+------
+# defx
+------
+# show
+  .   => show ignored files
+
+# open file
+ <CR> => drop
+  i   => drop split
+  s   => drop vsplit
+  t   => open tab
+
+# directory
+ <CR> => open and close directory
+  o   => open and close directory (recursive:3)
+  u   => cd ..
+
+# handle file
+  c   => copy
+  m   => move
+  p   => paste
+  K   => create new directory
+  N   => create new file
+  M   => create new files
+  d   => delete file
+  r   => rename file
+
+# yank and print
+  yy  => yank path
+<C-g> => print path
+
+
+-----------
+# defx-icon
+-----------
+# install
+# ref. https://zenn.dev/hisasann/articles/e8e6b17bf9faab
+
 ----------
 # dein.vim
 ----------
-# update
+# update dein.vim
+% cd /path/to/dein/
+% git pull
+
+# update plugins
 :call dein#update()
 
-# try when problem occurs
+# clear cache (try when problem occurs)
 call dein#recache_runtimepath()
 
 
 ------------
 # denite.vim
 ------------
+# search
+<C-m>b => show buffer
+<C-m>c => show commands
+<C-m>f => show files
+<C-m>p => show bookmark
+<C-m>gr => grep patterns from files
+<C-m>y => show yank history
+
+# open file
+ <CR> => open
+  i   => open split
+  s   => open vsplit
+  t   => open tab
 
 
 ------------
@@ -170,10 +241,12 @@ setting file => $HOME/.flake8
 --------
 <C-t>
 
+
 ---------------------
 # trailing-whitespece
 ---------------------
 highlight unnecessary trailing white space
+
 
 ---------------
 # vim-auto-save
@@ -207,6 +280,22 @@ replace
 # vim-quickrun
 --------------
 <C-r>
+
+
+------------
+# vimspector
+------------
+<C-s>n => VimspectorContinue
+<C-s>s => VimspectorStop
+<C-s>r => VimspectorRestart
+<C-s>p => VimspectorPause
+<C-s>b => VimspectorToggleBreakpoint
+<C-s>c => VimspectorToggleConditionalBreakpoint
+<C-s>a => VimspectorAddFunctionBreakpoint
+<C-s>v => VimspectorStepOver
+<C-s>i => VimspectorStepInto
+<C-s>o => VimspectorStepOut
+<C-s>u => VimspectorRunToCursor
 
 
  ~~ (does not work well) ~~

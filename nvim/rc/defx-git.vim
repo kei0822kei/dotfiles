@@ -7,3 +7,5 @@ let g:defx_git#indicators = {
   \ 'Deleted'   : 'x',
   \ 'Unknown'   : '?'
   \ }
+
+call defx#custom#column('git', 'column_length', 1)

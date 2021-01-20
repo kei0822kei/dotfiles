@@ -58,13 +58,15 @@ if dein#check_install()
 endif
 
 
-set number               "display the numbers of the lines
-set title                "display the title of the editing file
-set showmatch            "when you input a parenthesis, show you the other
-set ruler                "display where is the cursor
-syntax on                "coloring codes
-set laststatus=2         "comment at th bottom
-set cursorline
+"""layout
+set number                 "display the numbers of the lines
+" set title                "display the title of the editing file
+" set showmatch            "when you input a parenthesis, show you the other
+" set ruler                "display where is the cursor
+" set laststatus=2         "comment at th bottom
+" set cursorline
+set list                   " visualize invisible characters
+set listchars=tab:»-,trail:-,nbsp:%,eol:↲
 
 """indent
 set expandtab            "exchange tab to space
@@ -76,65 +78,27 @@ set shiftwidth=2         "set indent 2 spaces (it is also needed)
 """new action set nostartofline
 set nowrap               "you can input the same line until line feed
 
-"""when you open vim
-set nocompatible         "igmore vi settings
+"""file backup
 set nobackup             "avoid making swap file
 set viminfo=             "avoid making file
 
-"""for Japanese language
-set ambiwidth=double
-set formatoptions+=mM
+"""color
+"""  - color number => http://cohama.hateblo.jp/entry/2013/08/11/020849
+"""  - Normal => normal text
+"""  - NormalFloat => normal float text
+"""  - NonText => eol, extends, precedes
+"""  - SpecialKey => nbsp, tab, trail
+syntax enable  "coloring codes, seems necessary to place before 'hi'
+hi NormalFloat ctermfg=121 ctermbg=239
+hi NonText ctermfg=66
+hi SpecialKey ctermfg=237
 
-"""visualize invisibles
-set list
-set listchars=tab:»-,trail:-,nbsp:%,eol:↲
-hi SpecialKey ctermfg=237 guifg=#3a3a3a
-hi NonText ctermfg=66 guifg=#5f8787
-
-
-"""leader ==> space
+""" leader ==> space
 let mapleader = "\<Space>"
 
-"""command line completion
-set wildmenu wildmode=list:longest,full
+""" command line completion
+" set wildmenu wildmode=list:longest,full
 set history=10000
 
-"""to use backspace
-noremap  
-noremap!  
-set backspace=2
-" noremap      maybe don't need
-" noremap!     maybe don't need
-
-"""tab
+""" tab
 nnoremap <Tab> :tabn<cr>
-
-set wildmode=longest:full,full
-set history=10000
-
-set cursorline
-set cursorcolumn
-
-"""latex
-set conceallevel=0
-
-"""terminal
-" exit terminal
-tnoremap q <C-\><C-n>:q<CR>
-" from insert to normal
-tnoremap <ESC> <C-\><C-n>
-"function! Term()
-"  call termopen(&shell, {'on_exit': 'OnExit'})
-"endfunction
-"
-"function! CloseLastTerm()
-"  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-"    :q
-"  endif
-"endfunction
-"
-"function! OnExit(job_id, code, event)
-"  if a:code == 0
-"    call CloseLastTerm()
-"  endif
-"endfunction

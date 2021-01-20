@@ -1,10 +1,17 @@
 [[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
-on_i = 1
 
-# repo = 'dense-analysis/ale'
-# hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
+[[plugins]]
+repo = 'puremourning/vimspector'
+on_ft = ['python']
+build = "./install_gadget.py --enable-python --force-enable-node"
+hook_add = 'source ~/.mydot/nvim/rc/vimspector.vim'
+
+
+# ##############################################################################
+# # currently not using
+# ##############################################################################
 
 # [[plugins]]
 # repo = 'davidhalter/jedi-vim'
