@@ -53,7 +53,7 @@ ln -nsf "$GITDIR/nvim/vimspector.json" "$HOME/.vimspector.json"
 ln -nsf "$GITDIR/nvim/toml" "$NVIMDIR/toml"
 ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 if [ ! -e "$NVIMDIR/bookmark.vim" ]; then
-  cp "$GITDIR/nvim/bookmark-template.vim" "$NVIMDIR/bookmark.vim"
+  cp "$GITDIR/nvim/template/bookmark.vim" "$NVIMDIR/bookmark.vim"
 fi
 
 ### flake8
