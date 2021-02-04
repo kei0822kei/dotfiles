@@ -96,7 +96,7 @@ zR; open selected paragraphs
 # coc.nvim
 ----------
 gd; go to definition
-<Shift> k; see docstring
+K; see docstring
 [g; previous navigate diagnostics
 ]g; next navigate diagnostics
 
