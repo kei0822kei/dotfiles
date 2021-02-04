@@ -88,10 +88,15 @@ set viminfo=             "avoid making file
 """  - NormalFloat => normal float text
 """  - NonText => eol, extends, precedes
 """  - SpecialKey => nbsp, tab, trail
+
+" You can show variable naem by :help highlight :help highlight group
 syntax enable  "coloring codes, seems necessary to place before 'hi'
 hi NormalFloat ctermfg=121 ctermbg=239
 hi NonText ctermfg=66
 hi SpecialKey ctermfg=237
+hi NormalFloat ctermfg=121 ctermbg=239
+hi Pmenu ctermfg=121 ctermbg=237
+highlight jediFunction guifg=#ffffff guibg=#cc99ff
 
 """ leader ==> space
 let mapleader = "\<Space>"
