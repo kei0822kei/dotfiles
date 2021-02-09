@@ -21,8 +21,8 @@ nnoremap <silent><C-m>f :<C-u>Denite file/rec -split=floating file:new<CR>
 nnoremap <silent><C-m>gr :<C-u>Denite grep -buffer-name=search<CR>
 nnoremap <silent><C-m>c :<C-u>Denite command_history -split=floating<CR>
 nnoremap <silent><C-m>y :<C-u>Denite neoyank -split=floating<CR>
-" nnoremap <silent><C-m>, :<C-u>DeniteCursorWord grep -buffer-name=search line<CR>
-" nnoremap <silent><C-m>gs :<C-u>Denite -resume -buffer-name=search<CR>
+nnoremap <silent><C-m>, :<C-u>DeniteCursorWord grep -buffer-name=search line<CR>
+nnoremap <silent><C-m>gs :<C-u>Denite -resume -buffer-name=search<CR>
 
 """ open file
 autocmd FileType denite call s:denite_my_settings()
@@ -37,12 +37,12 @@ function! s:denite_my_settings() abort
   \ denite#do_map('do_action', 'vsplit')
   nnoremap <silent><buffer><expr> <Esc>
   \ denite#do_map('quit')
-  " nnoremap <silent><buffer><expr> f
-  " \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> f
+  \ denite#do_map('open_filter_buffer')
   " nnoremap <silent><buffer><expr> d
   " \ denite#do_map('do_action', 'delete')
-  " nnoremap <silent><buffer><expr> p
-  " \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
 endfunction
 
 " bookmark

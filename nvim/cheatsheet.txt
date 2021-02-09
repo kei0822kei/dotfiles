@@ -3,17 +3,20 @@
 --------------
 How to install nvim is already written in 'zshrc'
 
-
---------
 # nodejs
---------
 conda install -c conda-forge nodejs
 
-
-------
 # ruby
-------
 sudo gem install neovim
+
+
+-------------
+# normal mode
+-------------
+# delelte
+dw => word delete
+D  => delete from cursol to end of line
+
 
 
 --------------
@@ -179,8 +182,10 @@ call dein#recache_runtimepath()
 ------------
 <Leader> k => head up
 <Leader> j => head down
-<Leader> b => word up
-<Leader> e => word down
+<Leader> b => head of word up
+<Leader> ge=> tail of word up
+<Leader> w => head of word down
+<Leader> e => tail of word down
 
 
 ----------

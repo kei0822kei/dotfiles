@@ -98,6 +98,20 @@ hi NormalFloat ctermfg=121 ctermbg=239
 hi Pmenu ctermfg=121 ctermbg=237
 highlight jediFunction guifg=#ffffff guibg=#cc99ff
 
+" hi DiffAdd ctermfg=253 ctermbg=237 guifg=#dadada guibg=#3a3a3a
+" hi DiffChange ctermfg=red ctermbg=238 guifg=#dadada guibg=#3a3a3a
+" hi DiffText ctermfg=blue ctermbg=239 guifg=#dadada guibg=#3a3a3a
+" hi DiffDelete ctermfg=yellow ctermbg=240 guifg=#dadada guibg=#3a3a3a
+"
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
+
+" set background=dark
+" let g:solarized_diffmode="high"
+" colorscheme solarized
+
 """ leader ==> space
 let mapleader = "\<Space>"
 
@@ -107,3 +121,5 @@ set history=10000
 
 """ tab
 nnoremap <Tab> :tabn<cr>
+
+set textwidth=80

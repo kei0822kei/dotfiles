@@ -1,8 +1,9 @@
 # -*- zshenv -*-
 
-echo ""
-echo "~~~ source .zshenv ~~~"
-echo ""
+# comment out because this cannot goes with vim-fugitive
+# echo ""
+# echo "~~~ source .zshenv ~~~"
+# echo ""
 
 ################################################################################
 # software versions

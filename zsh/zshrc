@@ -1,8 +1,8 @@
 # -*- zshrc -*-
 
-echo ""
-echo "~~~ source .zshrc ~~~"
-echo ""
+# echo ""
+# echo "~~~ source .zshrc ~~~"
+# echo ""
 
 ################################################################################
 # anaconda

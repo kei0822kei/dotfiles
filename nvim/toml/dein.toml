@@ -77,6 +77,7 @@ hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_add = 'source ~/.mydot/nvim/rc/vim-fugitive.vim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
