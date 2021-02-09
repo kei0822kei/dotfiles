@@ -1,0 +1,4 @@
+clang
+%c
+-I/Users/mizokami-mac/src/pyenv/versions/anaconda3-2019.10/envs/cpp/include/c++/v1
+-I./include

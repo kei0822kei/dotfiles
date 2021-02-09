@@ -1,0 +1,11 @@
+[
+  { "arguments": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang++",
+      "-c",
+      "-I",
+      "./include"
+    ],
+    "directory": "/path/to/working/directory",
+    "file": "compilefile.cpp"
+  }
+]
