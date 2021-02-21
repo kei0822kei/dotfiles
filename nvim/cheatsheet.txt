@@ -3,22 +3,30 @@
 --------------
 How to install nvim is already written in 'zshrc'
 
-
---------
 # nodejs
---------
 conda install -c conda-forge nodejs
 
-
-------
 # ruby
-------
 sudo gem install neovim
+
+
+-------------
+# normal mode
+-------------
+# delelte
+dw => word delete
+$  => delete from cursol to end of line
+
+# command line window
+c (remaped from 'q:')
 
 
 --------------
 # command line
 --------------
+
+# reload settings
+:source ~/.mydot/nvim/init.vim
 
 # show plugin document
 :h <plugin name>
@@ -179,8 +187,11 @@ call dein#recache_runtimepath()
 ------------
 <Leader> k => head up
 <Leader> j => head down
-<Leader> b => word up
-<Leader> e => word down
+<Leader> b => head of word up
+<Leader> ge=> tail of word up
+<Leader> w => head of word down
+<Leader> e => tail of word down
+<Leader> s => select charactor
 
 
 ----------
@@ -272,8 +283,11 @@ https://qiita.com/karur4n/items/a26007236c59c5fb8735
 ----------
 # vim-over
 ----------
-replace
+- replace by sed
 <Space> o
+
+- relace word
+<Space> r
 
 
 --------------

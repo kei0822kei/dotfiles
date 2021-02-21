@@ -57,7 +57,10 @@ if [ ! -e "$NVIMDIR/bookmark.vim" ]; then
 fi
 
 ### flake8
-ln -nsf "$GITDIR/lint/flake8" "$HOME/.config/flake8"
+ln -nsf "$GITDIR/lint/flake8" "$HOME.flake8"
+
+### pylint
+ln -nsf "$GITDIR/lint/pylintrc" "$HOME/.pylintrc"
 
 ### latex
 # ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"

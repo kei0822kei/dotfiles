@@ -7,3 +7,7 @@ Host github.com
   HostName github.com
   User git
   IdentityFile "/home/mizo/.ssh/id_git_rsa"
+
+Host *
+ServerAliveInterval 60
+TCPKeepAlive yes
