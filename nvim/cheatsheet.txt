@@ -68,6 +68,9 @@ ref. https://vim-jp.org/vim-users-jp/2009/07/02/Hack-35.html
 ---------
 # airline
 ---------
+# install font
+https://qiita.com/uhooi/items/dc9a9657f1706283753b
+
 to change theme => ref. https://qiita.com/myouga/items/2f241731c16cf09273ff
 
 
