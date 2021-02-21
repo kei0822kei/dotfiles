@@ -20,6 +20,17 @@ source "$ZDOTDIR/rc/zplug.zsh"
 
 
 ################################################################################
+# ls coloring
+################################################################################
+
+if [ "$TERMINAL" = "Linux" ]; then
+  alias ls="ls --color"
+elif [ "$TERMINAL" = "Mac" ]; then
+  alias ls="ls -G"
+fi
+
+
+################################################################################
 # alias
 ################################################################################
 
@@ -113,7 +124,8 @@ fi
 
 function powerline_precmd() {
   # prompt
-  PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
+  # PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
+  PS1="$($GOPATH/bin/powerline-go -shell zsh -error $? -cwd-mode plane -newline -cwd-max-depth 5 -modules venv,cwd,git,exit)"
 }
 
 function install_powerline_precmd() {
