@@ -121,5 +121,6 @@ set history=10000
 
 """ tab
 nnoremap <Tab> :tabn<cr>
+nnoremap c q:
 
 set textwidth=80

@@ -15,8 +15,10 @@ sudo gem install neovim
 -------------
 # delelte
 dw => word delete
-D  => delete from cursol to end of line
+$  => delete from cursol to end of line
 
+# command line window
+c (remaped from 'q:')
 
 
 --------------
