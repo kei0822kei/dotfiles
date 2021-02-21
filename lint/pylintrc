@@ -1,2 +1,14 @@
-disable=
-  invalid-name
+[MESSAGES CONTROL]
+
+disable=invalid-name,
+        fixme,
+        import-outside-toplevel,
+        missing-function-docstring,
+        too-many-arguments,
+        too-many-branches,
+        too-many-function-args,
+        too-many-instance-attributes,
+        too-many-locals,
+        too-many-statements,
+        unsubscriptable-object  # Ignore incorrect error occuring when
+                                # 'np.array(a) - np.array(b)' is excuted.

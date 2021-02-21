@@ -23,6 +23,9 @@ D  => delete from cursol to end of line
 # command line
 --------------
 
+# reload settings
+:source ~/.mydot/nvim/init.vim
+
 # show plugin document
 :h <plugin name>
 
@@ -186,6 +189,7 @@ call dein#recache_runtimepath()
 <Leader> ge=> tail of word up
 <Leader> w => head of word down
 <Leader> e => tail of word down
+<Leader> s => select charactor
 
 
 ----------
@@ -277,8 +281,11 @@ https://qiita.com/karur4n/items/a26007236c59c5fb8735
 ----------
 # vim-over
 ----------
-replace
+- replace by sed
 <Space> o
+
+- relace word
+<Space> r
 
 
 --------------

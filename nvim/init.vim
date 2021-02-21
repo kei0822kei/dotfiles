@@ -80,7 +80,7 @@ set nowrap               "you can input the same line until line feed
 
 """file backup
 set nobackup             "avoid making swap file
-set viminfo=             "avoid making file
+set viminfo='1000        "vim commandline history
 
 """color
 """  - color number => http://cohama.hateblo.jp/entry/2013/08/11/020849
