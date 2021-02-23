@@ -118,7 +118,7 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 let mapleader = "\<Space>"
 
 """ command line completion
-" set wildmenu wildmode=list:longest,full
+set wildmenu wildmode=list:longest,full
 set history=10000
 
 """ tab

@@ -10,5 +10,5 @@ disable=invalid-name,
         too-many-instance-attributes,
         too-many-locals,
         too-many-statements,
-        unsubscriptable-object  # Ignore incorrect error occuring when
-                                # 'np.array(a) - np.array(b)' is excuted.
+        unnecessary-comprehension,  # Ignore incorrct error occuring when [ i for i in range(len(lst)) ] is excuted.
+        unsubscriptable-object  # Ignore incorrect error occuring when 'np.array(a) - np.array(b)' is excuted.
