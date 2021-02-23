@@ -97,7 +97,7 @@ else
   alias vim=$HOME/src/nvim/nvim.appimage
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
-export EDITOR=vim
+# export EDITOR=vim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
 
 
 ###############################################################################
@@ -125,7 +125,7 @@ fi
 function powerline_precmd() {
   # prompt
   # PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
-  PS1="$($GOPATH/bin/powerline-go -shell zsh -error $? -cwd-mode plane -newline -cwd-max-depth 5 -modules venv,cwd,git,exit)"
+  PS1="$($GOPATH/bin/powerline-go -shell zsh -error $? -cwd-mode dironly -newline -modules venv,cwd,git,exit)"
 }
 
 function install_powerline_precmd() {

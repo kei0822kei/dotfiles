@@ -82,6 +82,8 @@ set nowrap               "you can input the same line until line feed
 set nobackup             "avoid making swap file
 set viminfo='1000        "vim commandline history
 
+set encoding=UTF-8
+
 """color
 """  - color number => http://cohama.hateblo.jp/entry/2013/08/11/020849
 """  - Normal => normal text
@@ -116,7 +118,7 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 let mapleader = "\<Space>"
 
 """ command line completion
-" set wildmenu wildmode=list:longest,full
+set wildmenu wildmode=list:longest,full
 set history=10000
 
 """ tab
