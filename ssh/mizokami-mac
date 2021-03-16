@@ -1,17 +1,17 @@
-Match Host via Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+Match Host via Exec "test `hostname` = mizokami-mac"
   User mizo
   Hostname quantum.mtl.kyoto-u.ac.jp
   IdentityFile ~/.ssh/id_rsa
 
-Match Host stern Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+Match Host stern Exec "test `hostname` = mizokami-mac"
   Hostname stern
   ProxyCommand ssh -l mizo via nc %h %p
 
-Match Host stern Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+Match Host vega Exec "test `hostname` = mizokami-mac"
   Hostname vega
   ProxyCommand ssh -l mizo via nc %h %p
 
-Match Host stern Exec "ping quantum.mtl.kyoto-u.ac.jp -c 1 -t 1"
+Match Host mizou Exec "test `hostname` = mizokami-mac"
   Hostname mizou
   ProxyCommand ssh -l mizo via nc %h %p
 
