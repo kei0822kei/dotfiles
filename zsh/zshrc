@@ -1,8 +1,8 @@
 # -*- zshrc -*-
 
-echo ""
-echo "~~~ source .zshrc ~~~"
-echo ""
+# echo ""
+# echo "~~~ source .zshrc ~~~"
+# echo ""
 
 ################################################################################
 # anaconda
@@ -17,6 +17,17 @@ export CONDA_DEFAULT_ENV="base"
 ################################################################################
 
 source "$ZDOTDIR/rc/zplug.zsh"
+
+
+################################################################################
+# ls coloring
+################################################################################
+
+if [ "$TERMINAL" = "Linux" ]; then
+  alias ls="ls --color"
+elif [ "$TERMINAL" = "Mac" ]; then
+  alias ls="ls -G"
+fi
 
 
 ################################################################################
@@ -86,6 +97,7 @@ else
   alias vim=$HOME/src/nvim/nvim.appimage
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
+# export EDITOR=vim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
 
 
 ###############################################################################
@@ -95,10 +107,11 @@ export XDG_CONFIG_HOME="$HOME/.mydot"
 # export JUPYTER_CONFIG_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/etc/jupyter"
 # export JUPYTER_DATA_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/share/jupyter"
 # export JUPYTER_RUNTIME_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/share/jupyter/runtime"
+#
 export JUPYTER_PATH="$HOME/src/pyenv/versions/anaconda3-2019.10/envs/jupyter/share/jupyter"
 export JUPYTER_CONFIG_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/envs/jupyter/etc/jupyter"
-export JUPYTER_DATA_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/envs/jupyter/share/jupyter"
-export JUPYTER_RUNTIME_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/envs/jupyter/share/jupyter/runtime"
+# # export JUPYTER_DATA_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/envs/jupyter/share/jupyter"
+# export JUPYTER_RUNTIME_DIR="$HOME/src/pyenv/versions/anaconda3-2019.10/envs/jupyter/share/jupyter/runtime"
 
 
 
@@ -112,7 +125,8 @@ fi
 
 function powerline_precmd() {
   # prompt
-  PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
+  # PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
+  PS1="$($GOPATH/bin/powerline-go -shell zsh -error $? -cwd-mode dironly -newline -modules venv,cwd,git,exit)"
 }
 
 function install_powerline_precmd() {
