@@ -66,6 +66,12 @@ export PYTHONPATH="$GITHUB_REPO/kei0822kei/aiidaplus:$PYTHONPATH"
 # alias lmp_mpi="$HOME/src/github.com/lammps/lammps/src/lmp_mpi"
 # alias lmp_serial="$HOME/src/github.com/lammps/lammps/src/lmp_serial"
 
+
+################################################################################
+# PYCHACH
+################################################################################
+export PYTHONDONTWRITEBYTECODE=1
+
 ################################################################################
 # SNAP
 ################################################################################

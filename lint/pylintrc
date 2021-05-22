@@ -4,11 +4,13 @@ disable=invalid-name,
         fixme,
         import-outside-toplevel,
         missing-function-docstring,
+        no-self-use  # ignore no self use in def
         too-many-arguments,
         too-many-branches,
         too-many-function-args,
         too-many-instance-attributes,
         too-many-locals,
+        too-many-public-methods,
         too-many-statements,
         unnecessary-comprehension,  # Ignore incorrct error occuring when [ i for i in range(len(lst)) ] is excuted.
         unsubscriptable-object  # Ignore incorrect error occuring when 'np.array(a) - np.array(b)' is excuted.
