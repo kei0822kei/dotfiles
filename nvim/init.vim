@@ -38,11 +38,12 @@ if &runtimepath !~# '/dein.vim'
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-if dein#load_state(s:dein_dir)
+if dein#load_state(s:dein_dir)  " 'load_chache' is deprecated
+  let g:dein#cache_directory = $HOME . '/.mydot/nvim/cache'
   call dein#begin(s:dein_dir)
 
   let g:rc_dir    = expand('~/.mydot/nvim/rc/')
-  let g:toml_dir    = expand('~/.mydot/nvim/toml/')
+  let g:toml_dir  = expand('~/.mydot/nvim/toml/')
   let s:toml      = g:toml_dir . 'dein.toml'
   let s:lazy_toml = g:toml_dir . 'dein_lazy.toml'
 

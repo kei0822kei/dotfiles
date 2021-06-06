@@ -1,12 +1,12 @@
-[[plugins]]
-repo = 'dense-analysis/ale'
-hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
-
-[[plugins]]
-repo = 'puremourning/vimspector'
-on_ft = ['python']
-build = "./install_gadget.py --enable-python --force-enable-node"
-hook_add = 'source ~/.mydot/nvim/rc/vimspector.vim'
+# [[plugins]]
+# repo = 'dense-analysis/ale'
+# hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
+# 
+# [[plugins]]
+# repo = 'puremourning/vimspector'
+# on_ft = ['python']
+# build = "./install_gadget.py --enable-python --force-enable-node"
+# hook_add = 'source ~/.mydot/nvim/rc/vimspector.vim'
 
 # [[plugins]]
 # repo = 'tweekmonster/braceless.vim'
