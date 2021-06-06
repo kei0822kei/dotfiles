@@ -11,17 +11,17 @@ hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 [[plugins]]
 repo = 'Shougo/defx.nvim'  # filer
 depends = ['defx-git']
-# depends = ['defx-icons', 'defx-git']
+depends = ['defx-icons', 'defx-git']
 hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
-#
+
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = 'source ~/.mydot/nvim/rc/indentLine.vim'
-#
+
 [[plugins]]
 repo = 'itchyny/landscape.vim'  # color scheme
 hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
@@ -49,9 +49,9 @@ repo = 'Shougo/neosnippet.vim'
 on_event = 'IntertEnter'
 hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
 
-[[plugins]]
-repo = 'kassio/neoterm'
-hook_add = 'source ~/.mydot/nvim/rc/neoterm.vim'
+# [[plugins]]
+# repo = 'kassio/neoterm'
+# hook_add = 'source ~/.mydot/nvim/rc/neoterm.vim'
 
 [[plugins]]
 repo = 'luochen1990/rainbow'
@@ -101,6 +101,12 @@ repo = 'thinca/vim-quickrun'
 on_ft = 'python'
 hook_add = 'source ~/.mydot/nvim/rc/quickrun.vim'
 
+
+# ##############################################################################
+# # test using
+# ##############################################################################
+[[plugins]]
+repo = 'bfredl/nvim-ipy'
 
 # ##############################################################################
 # # currently not using
