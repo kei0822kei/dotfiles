@@ -38,6 +38,8 @@ alias zinit="source $HOME/.mydot/zsh/.zshrc"
 alias lsf="find . -mindepth 1 -maxdepth 1 -type f | sed s/'\.\///g' | grep -v '^\.'"
 alias lsd="find . -mindepth 1 -maxdepth 1 -type d | sed s/'\.\///g' | grep -v '^\.'"
 
+alias tmux="tmux -f ~/.mydot/tmux/tmux.conf"
+
 
 ################################################################################
 # bind key

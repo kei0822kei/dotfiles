@@ -32,7 +32,7 @@ ln -nsf "$GITDIR/zsh/rc" "$ZSHDIR/rc"
 if [ ! -e "$HOME/.tmux" ]; then
   mkdir $HOME/.tmux
 fi
-ln -nsf "$GITDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
+ln -nsf "$GITDIR/tmux/tmux.conf" "$HOME/.mydot/tmux/tmux.conf"
 # ln -nsf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
 # ln -nsf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
 # ln -nsf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
