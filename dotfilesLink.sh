@@ -23,6 +23,7 @@ if [ ! -e "$ZSHDIR" ]; then
 fi
 ln -nsf "$GITDIR/zsh/zshenv" "$HOME/.zshenv"
 ln -nsf "$GITDIR/zsh/zshrc" "$ZSHDIR/.zshrc"
+ln -nsf "$GITDIR/zsh/bindkey.zsh" "$ZSHDIR/bindkey.zsh"
 # ln -nsf "$GITDIR/zsh/zlogin" "$ZSHDIR/.zlogin"
 # ln -nsf "$GITDIR/zsh/zlogout" "$ZSHDIR/.zlogout"
 # ln -nsf "$GITDIR/zsh/zpreztorc" "$ZSHDIR/.zpreztorc"
@@ -57,7 +58,7 @@ if [ ! -e "$NVIMDIR/bookmark.vim" ]; then
 fi
 
 ### flake8
-ln -nsf "$GITDIR/lint/flake8" "$HOME.flake8"
+ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
 
 ### pylint
 ln -nsf "$GITDIR/lint/pylintrc" "$HOME/.pylintrc"

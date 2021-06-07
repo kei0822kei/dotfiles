@@ -1,3 +1,7 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
 # [[plugins]]
 # repo = 'dense-analysis/ale'
 # hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
