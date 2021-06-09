@@ -1,5 +1,7 @@
 " -*- init.vim -*-
 
+"""settings necessary for plugins
+let mapleader = "\<Space>"
 let g:coc_user_config = "{~/coc-settings.json}"
 
 if $CONDA_PREFIX == ''
@@ -108,9 +110,6 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 " set background=dark
 " let g:solarized_diffmode="high"
 " colorscheme solarized
-
-""" leader ==> space
-let mapleader = "\<Space>"
 
 """ command line completion
 set wildmenu wildmode=list:longest,full

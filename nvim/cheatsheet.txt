@@ -226,6 +226,14 @@ color scheme
 <C-k>
 
 
+------------
+# neosnippet
+------------
+:NeoTex
+:NeoTexOn
+:NeoTexOff
+
+
 ----------
 # NERDTree
 ----------
