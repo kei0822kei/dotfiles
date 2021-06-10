@@ -30,7 +30,7 @@ bindkey '^xb' anyframe-widget-checkout-git-branch # change branch
 bindkey '^xg' anyframe-widget-cd-ghq-repository
 bindkey '^xi' anyframe-widget-insert-git-branch
 bindkey '^xt' anyframe-widget-tmux-attach
-bindkey '^xv' anyframe-widget-cd-ghq-repository
+bindkey '^zv' anyframe-widget-cd-ghq-repository
 
 
 # anyframe-widget-execute-history 	コマンドライン履歴から選んで実行する

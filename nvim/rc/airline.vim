@@ -8,7 +8,7 @@
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_section_a = airline#section#create(['mode','','branch'])
+" let g:airline_section_a = airline#section#create(['mode','','branch'])  " error
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -53,7 +53,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 " let g:airline_theme = 'tomorrow'
-let g:airline_theme='jellybeans'
+" let g:airline_theme='jellybeans'
+" let g:airline_theme='landscape'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
