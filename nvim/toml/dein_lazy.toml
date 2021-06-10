@@ -3,20 +3,72 @@ repo = 'dense-analysis/ale'
 hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
 
 [[plugins]]
-repo = 'puremourning/vimspector'
-on_ft = ['python']
-build = "./install_gadget.py --enable-python --force-enable-node"
-hook_add = 'source ~/.mydot/nvim/rc/vimspector.vim'
+repo = 'tweekmonster/braceless.vim'  # folds classes and functions
+hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
 
-# [[plugins]]
-# repo = 'tweekmonster/braceless.vim'
-# on_ft  = 'python'
-# hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_event = 'IntertEnter'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_event = 'IntertEnter'
+hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
+
+[[plugins]]
+repo = 'donRaphaco/neotex'
+on_ft = 'latex'
+hook_add = 'source ~/.mydot/nvim/rc/neotex.vim'
+
+[[plugins]]
+repo = 'kannokanno/previm'
+hook_add = 'source ~/.mydot/nvim/rc/previm.vim'
+
+[[plugins]]
+repo = 'preservim/tagbar'
+hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = 'source ~/.mydot/nvim/rc/vim-fugitive.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+hook_add = 'source ~/.mydot/nvim/rc/vim-json.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-over'  # replace strings by s/"hoge"/"fuga"/g
+hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
 
 
 # ##############################################################################
 # # currently not using
 # ##############################################################################
+
+# [[plugins]]
+# repo = 'famiu/nvim-reload'  # reload
+
+
+# [[plugins]]
+# repo = 'puremourning/vimspector'  # test running
+# on_ft = ['python']
+# build = "./install_gadget.py --enable-python --force-enable-node"
+# hook_add = 'source ~/.mydot/nvim/rc/vimspector.vim'
+
+# [[plugins]]
+# repo = 'thinca/vim-quickrun'
+# on_ft = 'python'
+# hook_add = 'source ~/.mydot/nvim/rc/quickrun.vim'
+
 
 # [[plugins]]
 # repo = 'davidhalter/jedi-vim'
@@ -50,3 +102,8 @@ hook_add = 'source ~/.mydot/nvim/rc/vimspector.vim'
 # hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
 
 # hook_source = 'call coil398#init#coc#hook_source()'
+
+# [[plugins]]
+# repo = 't9md/vim-choosewin'
+# hook_add = 'source ~/.mydot/nvim/rc/choosewin.vim'
+# 
