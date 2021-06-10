@@ -1,5 +1,7 @@
 " -*- init.vim -*-
 
+"""settings necessary for plugins
+let mapleader = "\<Space>"
 let g:coc_user_config = "{~/coc-settings.json}"
 
 if $CONDA_PREFIX == ''
@@ -38,11 +40,12 @@ if &runtimepath !~# '/dein.vim'
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-if dein#load_state(s:dein_dir)
+if dein#load_state(s:dein_dir)  " 'load_chache' is deprecated
+  let g:dein#cache_directory = $HOME . '/.mydot/nvim/cache'
   call dein#begin(s:dein_dir)
 
   let g:rc_dir    = expand('~/.mydot/nvim/rc/')
-  let g:toml_dir    = expand('~/.mydot/nvim/toml/')
+  let g:toml_dir  = expand('~/.mydot/nvim/toml/')
   let s:toml      = g:toml_dir . 'dein.toml'
   let s:lazy_toml = g:toml_dir . 'dein_lazy.toml'
 
@@ -99,12 +102,6 @@ hi SpecialKey ctermfg=237
 hi NormalFloat ctermfg=121 ctermbg=239
 hi Pmenu ctermfg=121 ctermbg=237
 highlight jediFunction guifg=#ffffff guibg=#cc99ff
-
-" hi DiffAdd ctermfg=253 ctermbg=237 guifg=#dadada guibg=#3a3a3a
-" hi DiffChange ctermfg=red ctermbg=238 guifg=#dadada guibg=#3a3a3a
-" hi DiffText ctermfg=blue ctermbg=239 guifg=#dadada guibg=#3a3a3a
-" hi DiffDelete ctermfg=yellow ctermbg=240 guifg=#dadada guibg=#3a3a3a
-"
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
@@ -113,9 +110,6 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 " set background=dark
 " let g:solarized_diffmode="high"
 " colorscheme solarized
-
-""" leader ==> space
-let mapleader = "\<Space>"
 
 """ command line completion
 set wildmenu wildmode=list:longest,full

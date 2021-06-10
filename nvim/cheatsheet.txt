@@ -158,7 +158,7 @@ K; see docstring
 ----------
 # update dein.vim
 % cd /path/to/dein/
-% git pull
+% git pull   # not necessary? dein#update probably update dein
 
 # update plugins
 :call dein#update()
@@ -191,10 +191,11 @@ call dein#recache_runtimepath()
 <Leader> k => head up
 <Leader> j => head down
 <Leader> b => head of word up
-<Leader> ge=> tail of word up
+<Leader> v => tail of word up (defaul:ge)
 <Leader> w => head of word down
 <Leader> e => tail of word down
 <Leader> s => select charactor
+<Leader> f => select charactor and jump nearest
 
 
 ----------
@@ -223,6 +224,14 @@ color scheme
 ------------
 # to open
 <C-k>
+
+
+------------
+# neosnippet
+------------
+:NeoTex
+:NeoTexOn
+:NeoTexOff
 
 
 ----------
