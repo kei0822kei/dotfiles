@@ -20,6 +20,16 @@ source "$ZDOTDIR/rc/zplug.zsh"
 
 
 ################################################################################
+# bindkey
+################################################################################
+
+source "$ZDOTDIR/bindkey.zsh"
+# bindkey -e  # to use Ctrl-a Ctrl-e
+# bindkey '^P' history-beginning-search-backward
+# bindkey '^N' history-beginning-search-forward
+
+
+################################################################################
 # ls coloring
 ################################################################################
 
@@ -28,6 +38,12 @@ if [ "$TERMINAL" = "Linux" ]; then
 elif [ "$TERMINAL" = "Mac" ]; then
   alias ls="ls -G"
 fi
+export CLICOLOR=1;
+export LSCOLORS=gxfxcxdxbxegedabagacad;  # useful website => https://geoff.greer.fm/lscolors/
+export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
+autoload -Uz compinit
+compinit
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS} 'm:{a-z}={A-Z}'  # 大文字小文字を区別せずに補完
 
 
 ################################################################################
@@ -37,14 +53,6 @@ fi
 alias zinit="source $HOME/.mydot/zsh/.zshrc"
 alias lsf="find . -mindepth 1 -maxdepth 1 -type f | sed s/'\.\///g' | grep -v '^\.'"
 alias lsd="find . -mindepth 1 -maxdepth 1 -type d | sed s/'\.\///g' | grep -v '^\.'"
-
-
-################################################################################
-# bind key
-################################################################################
-
-bindkey '^P' history-beginning-search-backward
-bindkey '^N' history-beginning-search-forward
 
 
 ################################################################################
@@ -97,7 +105,7 @@ else
   alias vim=$HOME/src/nvim/nvim.appimage
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
-# export EDITOR=vim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
+export EDITOR=vim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
 
 
 ###############################################################################
@@ -123,10 +131,18 @@ if [ ! -e $HOME/src/go/bin/powerline-go ]; then
   go get -u github.com/justjanne/powerline-go
 fi
 
+powerline_args=(
+  -shell zsh
+  -error $?
+  -numeric-exit-codes
+  -eval
+  -modules nix-shell,venv,exit,perms,hg,vgo,newline,root
+  -modules-right git,cwd
+  -cwd-max-depth 6
+)
+
 function powerline_precmd() {
-  # prompt
-  # PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-mode plain -newline -modules kube,venv,ssh,cwd,perms,git,jobs,exit,root -priority kube,root,cwd,ssh,perms,git-branch,git-status,jobs,exit,cwd-path)"
-  PS1="$($GOPATH/bin/powerline-go -shell zsh -error $? -cwd-mode dironly -newline -modules venv,cwd,git,exit)"
+  eval "$($GOPATH/bin/powerline-go ${powerline_args[@]})"
 }
 
 function install_powerline_precmd() {
@@ -138,18 +154,22 @@ function install_powerline_precmd() {
   precmd_functions+=(powerline_precmd)
 }
 
-# if [ "$TERM" != "linux" ]; then
-#     install_powerline_precmd
-# fi
 install_powerline_precmd
+
+
+################################################################################
+# tmux
+################################################################################
+alias mux=tmuxinator
+
 
 
 ################################################################################
 # ssh
 ################################################################################
-if [ $TERMINAL = "Mac" ]; then
-  alias ssh="$HOME/.tmux/ssh-change-profile.bash"
-fi
+# if [ $TERMINAL = "Mac" ]; then
+#   alias ssh="$HOME/.tmux/ssh-change-profile.bash"
+# fi
 
 
 ################################################################################
@@ -168,15 +188,12 @@ setopt append_history        # 履歴をすぐに追加する(通常は終了時
 ################################################################################
 # completion
 ################################################################################
-autoload -U compinit
-compinit
 # setopt correct               # スペルミスを補完
 # setopt correct_all           # コマンドライン全てのスペルチェックをする
 setopt auto_param_slash      # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 setopt mark_dirs             # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
 setopt auto_menu             # TABで順に補完候補を切り替える
 #setopt prompt_subst          # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'   # 大文字小文字を区別せずに補完
 setopt list_types            # 補完候補一覧でファイルの種別をマーク表示
 
 
