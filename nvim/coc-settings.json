@@ -13,5 +13,8 @@
           }
         }
      }
-  }
+  },
+  "snippets.ultisnips.directories": [
+    "~/.mydot/nvim/ultisnips",
+    "~/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/UltiSnips"]
 }

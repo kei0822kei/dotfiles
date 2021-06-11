@@ -13,6 +13,14 @@ export CONDA_DEFAULT_ENV="base"
 
 
 ################################################################################
+# vim-snippets
+################################################################################
+
+# This is necessary if you want to use vim-snippets
+export PYTHONPATH="$HOME/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/pythonx:$PYTHONPATH"
+
+
+################################################################################
 # zplug
 ################################################################################
 
@@ -41,9 +49,9 @@ fi
 export CLICOLOR=1;
 export LSCOLORS=gxfxcxdxbxegedabagacad;  # useful website => https://geoff.greer.fm/lscolors/
 export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
-autoload -Uz compinit
-compinit
-zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS} 'm:{a-z}={A-Z}'  # 大文字小文字を区別せずに補完
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS} 'm:{a-z}={A-Z}'  # 大文字小文字を区別せずに補完
 
 
 ################################################################################
