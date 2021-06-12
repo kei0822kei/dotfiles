@@ -7,15 +7,6 @@ repo = 'tweekmonster/braceless.vim'  # folds classes and functions
 hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-on_event = 'IntertEnter'
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-on_event = 'IntertEnter'
-hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
-
-[[plugins]]
 repo = 'donRaphaco/neotex'
 on_ft = 'latex'
 hook_add = 'source ~/.mydot/nvim/rc/neotex.vim'
@@ -27,6 +18,10 @@ hook_add = 'source ~/.mydot/nvim/rc/previm.vim'
 [[plugins]]
 repo = 'preservim/tagbar'
 hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
+
+[[plugins]]
+repo = 'SirVer/ultisnips'  # snippets
+hook_add = 'source ~/.mydot/nvim/rc/ultisnips.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -46,8 +41,24 @@ repo = 'osyo-manga/vim-over'  # replace strings by s/"hoge"/"fuga"/g
 hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
 
 [[plugins]]
+repo = 'honza/vim-snippets'  # used by coc-snipptes
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+
+##############################################################################
+# testing
+##############################################################################
+
+# hook_add = '''
+#   let g:UltiSnipsSnippetDirectories=["~/.mydot/nvim/snippet"]
+#   let g:UltiSnipsJumpForwardTrigger="<tab>"
+#   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+#   let g:UltiSnipsEditSplit="vertical"
+#   '''
+
 
 
 # ##############################################################################
@@ -107,3 +118,11 @@ on_ft = 'toml'
 # repo = 't9md/vim-choosewin'
 # hook_add = 'source ~/.mydot/nvim/rc/choosewin.vim'
 # 
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
+# # on_event = 'IntertEnter'
+# 
+# [[plugins]]
+# repo = 'Shougo/neosnippet.vim'
+# # on_event = 'IntertEnter'
+# hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'

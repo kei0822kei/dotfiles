@@ -166,6 +166,9 @@ K; see docstring
 # clear cache (try when problem occurs)
 call dein#recache_runtimepath()
 
+# check installed plugins
+:Denite dein
+
 
 ------------
 # denite.vim
@@ -269,6 +272,17 @@ setting file => $HOME/.flake8
 # trailing-whitespece
 ---------------------
 highlight unnecessary trailing white space
+
+
+-----------
+# ultisnips
+-----------
+# after install
+:CocInstall coc-snippets
+:CocConfig => set variable "snippets.ultisnips.directories"
+
+# check list of snippets
+:CocList snippets
 
 
 ---------------

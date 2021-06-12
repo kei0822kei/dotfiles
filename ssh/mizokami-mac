@@ -1,23 +1,23 @@
-# Match Host via Exec "test `hostname` = mizokami-mac"
-# # Match Host via Exec "ping vega -c 1"
-#   User mizo
-#   Hostname quantum.mtl.kyoto-u.ac.jp
-#   IdentityFile ~/.ssh/id_rsa
-# 
-# Match Host stern Exec "test `hostname` = mizokami-mac"
-# # Match Host via Exec "ping vega -c 1"
-#   Hostname stern
-#   ProxyCommand ssh -l mizo via nc %h %p
-# 
-# Match Host vega Exec "test `hostname` = mizokami-mac"
-# # Match Host via Exec "ping vega -c 1"
-#   Hostname vega
-#   ProxyCommand ssh -l mizo via nc %h %p
-# 
-# Match Host mizou Exec "test `hostname` = mizokami-mac"
-# # Match Host via Exec "ping vega -c 1"
-#   Hostname mizou
-#   ProxyCommand ssh -l mizo via nc %h %p
+Match Host via Exec "test `hostname` = mizokami-mac"
+# Match Host via Exec "ping vega -c 1"
+  User mizo
+  Hostname quantum.mtl.kyoto-u.ac.jp
+  IdentityFile ~/.ssh/id_rsa
+
+Match Host stern Exec "test `hostname` = mizokami-mac"
+# Match Host via Exec "ping vega -c 1"
+  Hostname stern
+  ProxyCommand ssh -l mizo via nc %h %p
+
+Match Host vega Exec "test `hostname` = mizokami-mac"
+# Match Host via Exec "ping vega -c 1"
+  Hostname vega
+  ProxyCommand ssh -l mizo via nc %h %p
+
+Match Host mizou Exec "test `hostname` = mizokami-mac"
+# Match Host via Exec "ping vega -c 1"
+  Hostname mizou
+  ProxyCommand ssh -l mizo via nc %h %p
 
 Host mizou
   User mizo
