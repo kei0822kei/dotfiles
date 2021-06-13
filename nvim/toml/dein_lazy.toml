@@ -20,6 +20,10 @@ repo = 'SirVer/ultisnips'  # snippets
 hook_add = 'source ~/.mydot/nvim/rc/ultisnips.vim'
 
 [[plugins]]
+repo = 'alvan/vim-closetag'
+hook_add = 'source ~/.mydot/nvim/rc/vim-closetag.vim'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = 'source ~/.mydot/nvim/rc/vim-fugitive.vim'
 

@@ -22,9 +22,9 @@
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-# rev = 'release'
-# on_event = 'IntertEnter'
-# merged = 0
+rev = 'release'
+on_event = 'IntertEnter'
+merged = 0
 hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 
 [[plugins]]
@@ -49,7 +49,6 @@ hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
  
 [[plugins]]
 repo = 'cohama/lexima.vim'  # brackets completion
-on_event = 'IntertEnter'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'  # used with denite

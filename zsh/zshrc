@@ -13,14 +13,6 @@ export CONDA_DEFAULT_ENV="base"
 
 
 ################################################################################
-# vim-snippets
-################################################################################
-
-# This is necessary if you want to use vim-snippets
-export PYTHONPATH="$HOME/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/pythonx:$PYTHONPATH"
-
-
-################################################################################
 # zplug
 ################################################################################
 
@@ -114,6 +106,11 @@ else
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
 export EDITOR=$HOME/src/nvim/nvim-osx64/bin/nvim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
+export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/log
+export NVIM_PYTHON_LOG_LEVEL=DEBUG
+
+# This is necessary if you want to use vim-snippets
+export PYTHONPATH="$HOME/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/pythonx:$PYTHONPATH"
 
 
 ###############################################################################
