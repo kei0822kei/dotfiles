@@ -113,7 +113,7 @@ else
   alias vim=$HOME/src/nvim/nvim.appimage
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
-export EDITOR=vim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
+export EDITOR=$HOME/src/nvim/nvim-osx64/bin/nvim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
 
 
 ###############################################################################
