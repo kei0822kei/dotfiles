@@ -165,12 +165,15 @@ K; see docstring
 
 # update plugins
 :call dein#update()
+:UpdateRemotePlugins()
 
 # clear cache (try when problem occurs)
 call dein#recache_runtimepath()
 
 # check installed plugins
 :Denite dein
+
+# When some plugins do not work well, remove plugins and reinstall again.
 
 
 ------------
