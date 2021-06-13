@@ -12,10 +12,6 @@ on_ft = 'latex'
 hook_add = 'source ~/.mydot/nvim/rc/neotex.vim'
 
 [[plugins]]
-repo = 'kannokanno/previm'
-hook_add = 'source ~/.mydot/nvim/rc/previm.vim'
-
-[[plugins]]
 repo = 'preservim/tagbar'
 hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
 
@@ -126,3 +122,7 @@ on_ft = 'toml'
 # repo = 'Shougo/neosnippet.vim'
 # # on_event = 'IntertEnter'
 # hook_add = 'source ~/.mydot/nvim/rc/neosnippet.vim'
+
+# [[plugins]]
+# repo = 'previm/previm'
+# hook_add = 'source ~/.mydot/nvim/rc/previm.vim'
