@@ -114,6 +114,9 @@ K; see docstring
 # set interpreter
 :CocCommand => python.setInterpreter => choose interpreter
 
+# install language
+:CocInstall coc-vimlsp  # vim script
+
 
 ------
 # defx
