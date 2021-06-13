@@ -34,12 +34,7 @@ if [ ! -e "$HOME/.tmux" ]; then
   mkdir $HOME/.tmux
 fi
 ln -nsf "$GITDIR/tmux/tmux.conf" "$HOME/.mydot/tmux/tmux.conf"
-# ln -nsf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
-# ln -nsf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
-# ln -nsf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
-# ln -nsf "$GITDIR/tmux/get_ssid_tmux" "$HOME/.tmux/get_ssid_tmux"
-# ln -nsf "$GITDIR/tmux/get_volume_tmux" "$HOME/.tmux/get_volume_tmux"
-# ln -nsf "$GITDIR/tmux/ssh-change-profile.bash" "$HOME/.tmux/ssh-change-profile.bash"
+ln -nsf "$GITDIR/tmux/tmuxinator" "$HOME/.mydot/tmuxinator"
 
 ### nvim
 NVIMDIR="$MYDOTDIR/nvim"
