@@ -24,7 +24,7 @@ let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 
 " dict
-" Disables auto-close if not in a "valid" region (based on filetype)
+" Disables auto-close if not in a valid region (based on filetype)
 "
 let g:closetag_regions = {
     \ 'typescript.tsx': 'jsxRegion,tsxRegion',
@@ -35,8 +35,10 @@ let g:closetag_regions = {
 
 " Shortcut for closing tags, default is '>'
 "
-let g:closetag_shortcut = '>'
+" let g:closetag_shortcut = '<Enter>'
 
 " Add > at current position without closing the current tag, default is ''
 "
-let g:closetag_close_shortcut = '<leader>>'
+" let g:closetag_close_shortcut = '<leader>>'
+
+nnoremap <C-l> :CloseTagEnableBuffer<CR>

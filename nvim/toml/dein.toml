@@ -20,12 +20,12 @@
 # https://vim-jp.org/vimdoc-ja/autocmd.html
 ################ FUTURE DELETE ####################
 
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_event = 'IntertEnter'
-merged = 0
-hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# rev = 'release'
+# on_event = 'IntertEnter'
+# merged = 0
+# hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'  # filer

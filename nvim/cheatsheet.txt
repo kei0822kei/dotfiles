@@ -17,6 +17,9 @@ sudo gem install neovim
 # ref. https://lifetestsyou.com/how-to-log-with-vim
 % vim -V9logfile => log filename is 'logfile'
 
+# check loadtime
+% vim --startuptime /tmp/startuptime.txt
+
 
 -------------
 # normal mode
@@ -188,6 +191,12 @@ call dein#recache_runtimepath()
 # check installed plugins
 :Denite dein
 
+
+--------------
+# closetag.vim
+--------------
+# Enable CloseTag
+<C-l>
 
 
 ------------
