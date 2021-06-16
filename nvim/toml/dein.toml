@@ -20,12 +20,12 @@
 # https://vim-jp.org/vimdoc-ja/autocmd.html
 ################ FUTURE DELETE ####################
 
-# [[plugins]]
-# repo = 'neoclide/coc.nvim'
-# rev = 'release'
-# on_event = 'IntertEnter'
-# merged = 0
-# hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_event = 'IntertEnter'
+merged = 0
+hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'  # filer
@@ -77,115 +77,115 @@ repo = 'Lokaltog/vim-easymotion'
 hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 
 
-# # ##############################################################################
-# # # test using
-# # ##############################################################################
-# [[plugins]]
-# repo = 'bfredl/nvim-ipy'
-
-# [[plugins]]
-# repo = 'haya14busa/dein-command.vim'
-# 
-# ##############################################################################
-# # currently not using
-# ##############################################################################
-
+# # # ##############################################################################
+# # # # test using
+# # # ##############################################################################
 # # [[plugins]]
-# # repo = 'kassio/neoterm'
-# # hook_add = 'source ~/.mydot/nvim/rc/neoterm.vim'
+# # repo = 'bfredl/nvim-ipy'
 # 
-# [[plugins]]
-# repo ='kristijanhusak/defx-icons'
+# # [[plugins]]
+# # repo = 'haya14busa/dein-command.vim'
+# # 
+# # ##############################################################################
+# # # currently not using
+# # ##############################################################################
 # 
-# [[plugins]]
-# repo ='kristijanhusak/defx-git'
-# hook_add = 'source ~/.mydot/nvim/rc/defx-git.vim'
-
-
-# [[plugins]]
-# repo = 'julienr/vim-cellmode'
-# on_event = 1
-
-# [[plugins]]
-# repo = 'tpope/vim-dispatch'
-#
-# [[plugins]]
-# repo = 'janko-m/vim-test'
-# depends = ['vim-dispatch']
-# # let g:test#strategy = 'dispatch'
-# hook_add = '''
-# let g:test#strategy = {
-#   \ 'nearest': 'neovim',
-#   \ 'file':    'dispatch',
-#   \ 'suite':   'basic',
-# \}
-# '''
-
-# [[plugins]]
-# repo = 'aliev/vim-compiler-python'
-
-# [[plugins]]
-# repo = 'vim-scripts/vim-auto-save'
-# hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
-
-# [[plugins]]
-# repo = 'Shougo/deol.nvim'
-# on_event = 1
-# hook_add = 'source ~/.mydot/nvim/rc/deol.vim'
-
-# [[plugins]]
-# repo = 'lambdalisue/vim-quickrun-neovim-job'
-
-# [[plugins]]
-# ## NOTE: This cannot goes with defx.
-# ## NOTE: 'on_ft=python' could not fix this problem.
-# repo = 'bronson/vim-trailing-whitespace'
-# on_event = 1
-# hook_add = 'source ~/.mydot/nvim/rc/vim-trailing-whitespace.vim'
-
-# [[plugins]]
-# repo = 'Shougo/vimproc.vim'
-# build = 'make'
-
-# [[plugins]]
-# repo = 'zchee/deoplete-jedi'
-# on_ft = 'python'
-
-# [[plugins]]
-# repo = 'Shougo/deoplete.nvim'
-# hook_add = 'source ~/.mydot/nvim/rc/deoplete.vim'
-
-# [[plugins]]
-# repo = 'nathanaelkane/vim-indent-guides'
-# on_event = 1 hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
-
-# [[plugins]]
-# repo = 'itchyny/lightline.vim'
-# on_event = 1
-# hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
-
-# [[plugins]]
-# repo = 'neovim/node-client'
-#
-# [[plugins]]
-# repo = 'neovim/neovim-ruby'
-
-# # completion
-# [[plugins]]
-# repo = 'plytophogy/vim-virtualenv'
-# on_event = 1
-# on_ft = 'python'
-#
-# [[plugins]]
-# repo = 'reireias/vim-cheatsheet'
-# on_event = 1
-# hook_add = 'source ~/.mydot/nvim/rc/vim-cheatsheet.vim'
-#
-# [[plugins]]
-# repo = 'pgilad/vim-skeletons'
-# hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
-#
-# [[plugins]]
-# repo = 'lervag/vimtex'
-# hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
-
+# # # [[plugins]]
+# # # repo = 'kassio/neoterm'
+# # # hook_add = 'source ~/.mydot/nvim/rc/neoterm.vim'
+# # 
+# # [[plugins]]
+# # repo ='kristijanhusak/defx-icons'
+# # 
+# # [[plugins]]
+# # repo ='kristijanhusak/defx-git'
+# # hook_add = 'source ~/.mydot/nvim/rc/defx-git.vim'
+# 
+# 
+# # [[plugins]]
+# # repo = 'julienr/vim-cellmode'
+# # on_event = 1
+# 
+# # [[plugins]]
+# # repo = 'tpope/vim-dispatch'
+# #
+# # [[plugins]]
+# # repo = 'janko-m/vim-test'
+# # depends = ['vim-dispatch']
+# # # let g:test#strategy = 'dispatch'
+# # hook_add = '''
+# # let g:test#strategy = {
+# #   \ 'nearest': 'neovim',
+# #   \ 'file':    'dispatch',
+# #   \ 'suite':   'basic',
+# # \}
+# # '''
+# 
+# # [[plugins]]
+# # repo = 'aliev/vim-compiler-python'
+# 
+# # [[plugins]]
+# # repo = 'vim-scripts/vim-auto-save'
+# # hook_add = 'source ~/.mydot/nvim/rc/vim-auto-save.vim'
+# 
+# # [[plugins]]
+# # repo = 'Shougo/deol.nvim'
+# # on_event = 1
+# # hook_add = 'source ~/.mydot/nvim/rc/deol.vim'
+# 
+# # [[plugins]]
+# # repo = 'lambdalisue/vim-quickrun-neovim-job'
+# 
+# # [[plugins]]
+# # ## NOTE: This cannot goes with defx.
+# # ## NOTE: 'on_ft=python' could not fix this problem.
+# # repo = 'bronson/vim-trailing-whitespace'
+# # on_event = 1
+# # hook_add = 'source ~/.mydot/nvim/rc/vim-trailing-whitespace.vim'
+# 
+# # [[plugins]]
+# # repo = 'Shougo/vimproc.vim'
+# # build = 'make'
+# 
+# # [[plugins]]
+# # repo = 'zchee/deoplete-jedi'
+# # on_ft = 'python'
+# 
+# # [[plugins]]
+# # repo = 'Shougo/deoplete.nvim'
+# # hook_add = 'source ~/.mydot/nvim/rc/deoplete.vim'
+# 
+# # [[plugins]]
+# # repo = 'nathanaelkane/vim-indent-guides'
+# # on_event = 1 hook_add = 'source ~/.mydot/nvim/rc/indent-guides.vim'
+# 
+# # [[plugins]]
+# # repo = 'itchyny/lightline.vim'
+# # on_event = 1
+# # hook_add = 'source ~/.mydot/nvim/rc/lightline.vim'
+# 
+# # [[plugins]]
+# # repo = 'neovim/node-client'
+# #
+# # [[plugins]]
+# # repo = 'neovim/neovim-ruby'
+# 
+# # # completion
+# # [[plugins]]
+# # repo = 'plytophogy/vim-virtualenv'
+# # on_event = 1
+# # on_ft = 'python'
+# #
+# # [[plugins]]
+# # repo = 'reireias/vim-cheatsheet'
+# # on_event = 1
+# # hook_add = 'source ~/.mydot/nvim/rc/vim-cheatsheet.vim'
+# #
+# # [[plugins]]
+# # repo = 'pgilad/vim-skeletons'
+# # hook_add = 'source ~/.mydot/nvim/rc/skelentons.vim'
+# #
+# # [[plugins]]
+# # repo = 'lervag/vimtex'
+# # hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
+# 

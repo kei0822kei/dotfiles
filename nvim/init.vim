@@ -33,6 +33,10 @@ endif
 let s:dein_dir = expand('~/.mydot/nvim/bundle')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
+if &compatible
+  set nocompatible " Be iMproved
+endif
+
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
@@ -60,6 +64,9 @@ if dein#check_install()
   call dein#install()
 endif
 
+" filetype plugin indent on
+" syntax enable
+
 
 """layout
 set number                 "display the numbers of the lines
@@ -83,9 +90,13 @@ set nowrap               "you can input the same line until line feed
 
 """file backup
 set nobackup             "avoid making swap file
-set viminfo='1000        "vim commandline history
+set viminfo+=n~/.mydot/nvim/viminfo        "vim commandline history
+set directory=~/.mydot/nvim/swap
+set backupdir=~/.mydot/nvim/backup
+set undodir=~/.mydot/nvim/undo
 
 set encoding=UTF-8
+set ignorecase  "do not distinguash s and S when you search.
 
 """color
 """  - color number => http://cohama.hateblo.jp/entry/2013/08/11/020849
@@ -120,3 +131,6 @@ nnoremap <Tab> :tabn<cr>
 nnoremap c q:
 
 set textwidth=80
+
+""" future delete
+let g:session_path = $HOME . '/src/github.com/kei0822kei/programming/vimscript'

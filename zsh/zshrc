@@ -105,6 +105,7 @@ else
   alias vim=$HOME/src/nvim/nvim.appimage
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
+export XDG_CACHE_HOME="$HOME/.mydot"
 export EDITOR=$HOME/src/nvim/nvim-osx64/bin/nvim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
 export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG

@@ -3,6 +3,9 @@
 --------------
 How to install nvim is already written in 'zshrc'
 
+# python3
+conda install pynvim
+
 # nodejs
 conda install -c conda-forge nodejs
 

@@ -24,6 +24,9 @@ repo = 'alvan/vim-closetag'
 hook_add = 'source ~/.mydot/nvim/rc/vim-closetag.vim'
 
 [[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = 'source ~/.mydot/nvim/rc/vim-fugitive.vim'
 
