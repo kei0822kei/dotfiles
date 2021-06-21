@@ -3,11 +3,25 @@
 --------------
 How to install nvim is already written in 'zshrc'
 
+# python3
+conda install pynvim
+
 # nodejs
 conda install -c conda-forge nodejs
 
 # ruby
 sudo gem install neovim
+
+
+--------------
+# nvim options
+--------------
+# If you need log 
+# ref. https://lifetestsyou.com/how-to-log-with-vim
+% vim -V9logfile => log filename is 'logfile'
+
+# check loadtime
+% vim --startuptime /tmp/startuptime.txt
 
 
 -------------
@@ -159,6 +173,13 @@ K; see docstring
 ----------
 # dein.vim
 ----------
+
+# =========================== VERY IMPORTANT ==============================
+# When some plugins do not work well, run
+# % rm -rf bundle
+# then, restart vim and WAIT! until dein.vim shows 'DONE!' in command line.
+# =========================== VERY IMPORTANT ==============================
+
 # update dein.vim
 % cd /path/to/dein/
 % git pull   # not necessary? dein#update probably update dein
@@ -173,7 +194,12 @@ call dein#recache_runtimepath()
 # check installed plugins
 :Denite dein
 
-# When some plugins do not work well, remove plugins and reinstall again.
+
+--------------
+# closetag.vim
+--------------
+# Enable CloseTag
+<C-l>
 
 
 ------------

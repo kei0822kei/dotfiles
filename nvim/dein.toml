@@ -1,0 +1,154 @@
+# ---------
+# dein.toml
+# ---------
+
+## - You can use 'hood_add', 'hook_post_update' and 'hook_done_update'
+## - You cannot use 'hood_source', 'hook_post_source'
+## - ref. https://qiita.com/delphinus/items/cd221a450fd23506e81a
+## - You can find event list in autocmd documentation.
+## - https://vim-jp.org/vimdoc-ja/autocmd.html
+
+
+# =======
+# Utility
+# =======
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = 'source ~/.mydot/nvim/rc/denite.vim'
+depends = ['neomru', 'neoyank']
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'  # used with denite
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'  # used with denite
+
+
+# ===================
+# Language Complesion
+# ===================
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_event = 'IntertEnter'
+merged = 0
+hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
+depends = ['jsonc']
+
+[[plugins]]
+repo = 'neoclide/jsonc.vim'  # to be able to commen in json
+
+[[plugins]]
+repo = 'donRaphaco/neotex'  # future replaced by coc-vimtex
+on_ft = 'latex'
+hook_add = 'source ~/.mydot/nvim/rc/neotex.vim'
+
+
+# ========
+# Snippets
+# ========
+
+[[plugins]]
+repo = 'SirVer/ultisnips'  # snippets
+hook_add = 'source ~/.mydot/nvim/rc/ultisnips.vim'
+
+[[plugins]]
+repo = 'honza/vim-snippets'  # used by coc-snipptes
+
+
+# ===============
+# Programming Aid
+# ===============
+
+[[plugins]]
+repo = 'Lokaltog/vim-easymotion'
+hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'  # brackets completion
+
+[[plugins]]
+repo = 'tweekmonster/braceless.vim'  # folds classes and functions
+hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
+
+[[plugins]]
+repo = 'preservim/tagbar'
+hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+hook_add = 'source ~/.mydot/nvim/rc/vim-closetag.vim'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'osyo-manga/vim-over'  # replace strings by s/"hoge"/"fuga"/g
+hook_add = 'source ~/.mydot/nvim/rc/vim-over.vim'
+
+
+# =====
+# Filer
+# =====
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'  # filer
+hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
+depends = ['defx-git']
+
+[[plugins]]
+repo ='kristijanhusak/defx-git'  # show git status in defx
+hook_add = 'source ~/.mydot/nvim/rc/defx-git.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'  # filer
+hook_add = 'source ~/.mydot/nvim/rc/nerdtree.vim'
+
+
+# ===
+# Git
+# ===
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = 'source ~/.mydot/nvim/rc/vim-fugitive.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = 'source ~/.mydot/nvim/rc/vim-gitgutter.vim'
+
+
+# ======
+# Visual
+# ======
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'  # indent guide line
+hook_add = 'source ~/.mydot/nvim/rc/indentLine.vim'
+
+[[plugins]]
+repo = 'itchyny/landscape.vim'  # color scheme
+hook_add = 'source ~/.mydot/nvim/rc/landscape.vim'
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = 'source ~/.mydot/nvim/rc/rainbow.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = 'source ~/.mydot/nvim/rc/airline.vim'
+depends = ['vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+
+# =======
+# Debuger
+# =======
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = 'source ~/.mydot/nvim/rc/ale.vim'
