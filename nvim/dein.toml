@@ -35,20 +35,15 @@ rev = 'release'
 on_event = 'IntertEnter'
 merged = 0
 hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
+depends = ['jsonc']
 
 [[plugins]]
-repo = 'donRaphaco/neotex'
+repo = 'neoclide/jsonc.vim'  # to be able to commen in json
+
+[[plugins]]
+repo = 'donRaphaco/neotex'  # future replaced by coc-vimtex
 on_ft = 'latex'
 hook_add = 'source ~/.mydot/nvim/rc/neotex.vim'
-
-[[plugins]]
-repo = 'elzr/vim-json'
-on_ft = 'json'
-hook_add = 'source ~/.mydot/nvim/rc/vim-json.vim'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
 
 
 # ========

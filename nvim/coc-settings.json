@@ -3,18 +3,19 @@
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "jedi.startupMessage": true,
     "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
+      "ccls": {
+        "command": "ccls",
+        "filetypes": ["c", "cpp", "objc", "objcpp"],
+        "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+        "initializationOptions": {
+           "cache": {
+             "directory": "/tmp/ccls"
+           }
          }
-       }
-    }
-  },
+      }
+    },
   "snippets.ultisnips.directories": [
     "~/.mydot/nvim/ultisnips",
-    "~/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/UltiSnips"]
+    "~/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/UltiSnips"
+  ]
 }

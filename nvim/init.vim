@@ -27,7 +27,7 @@ else
           \ '/bin/python'
 endif
 
-"-------- dein settings based on https://github.com/Shougo/dein.vim ----------
+" ------- dein settings based on https://github.com/Shougo/dein.vim -----------
 let s:dein_dir = expand('~/.mydot/nvim/bundle')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 let g:dein#cache_directory = $HOME . '/.mydot/nvim/cache'
@@ -62,7 +62,9 @@ call dein#save_state()
 
 filetype plugin indent on
 syntax enable
-"-------- dein settings based on https://github.com/Shougo/dein.vim ----------
+
+let g:vim_json_syntax_conceal = 0  " fix coneal in order to be able to see '"'.
+" ------- dein settings based on https://github.com/Shougo/dein.vim -----------
 
 
 """layout
