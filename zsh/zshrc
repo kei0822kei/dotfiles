@@ -13,14 +13,6 @@ export CONDA_DEFAULT_ENV="base"
 
 
 ################################################################################
-# vim-snippets
-################################################################################
-
-# This is necessary if you want to use vim-snippets
-export PYTHONPATH="$HOME/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/pythonx:$PYTHONPATH"
-
-
-################################################################################
 # zplug
 ################################################################################
 
@@ -113,7 +105,16 @@ else
   alias vim=$HOME/src/nvim/nvim.appimage
 fi
 export XDG_CONFIG_HOME="$HOME/.mydot"
-export EDITOR=vim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
+mkdir -p $XDG_CONFIG_HOME/nvim/logs
+export XDG_CACHE_HOME="$HOME/.mydot"
+export EDITOR=$HOME/src/nvim/nvim-osx64/bin/nvim  # If you comment in this line. Ctrl-a Ctrl-e can not be used.
+export NVIM_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvim.log
+export NVIM_PYTHON_LOG_FILE=$XDG_CONFIG_HOME/nvim/logs/nvim_python.log
+export NVIM_PYTHON_LOG_LEVEL=DEBUG
+export NVIM_RPLUGIN_MANIFEST=$XDG_CONFIG_HOME/nvim/rplugin
+
+# This is necessary if you want to use vim-snippets
+export PYTHONPATH="$HOME/.mydot/nvim/bundle/repos/github.com/honza/vim-snippets/pythonx:$PYTHONPATH"
 
 
 ###############################################################################
@@ -171,6 +172,13 @@ install_powerline_precmd
 alias mux=tmuxinator
 
 
+################################################################################
+# OpenMP
+################################################################################
+if [ $TERMINAL = "Mac" ]; then
+  alias clang-omp='/usr/local/opt/llvm/bin/clang -fopenmp -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
+  alias clang-omp++='/usr/local/opt/llvm/bin/clang++ -fopenmp -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib'
+fi
 
 ################################################################################
 # ssh

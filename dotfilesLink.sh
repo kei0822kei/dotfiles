@@ -34,12 +34,7 @@ if [ ! -e "$HOME/.tmux" ]; then
   mkdir $HOME/.tmux
 fi
 ln -nsf "$GITDIR/tmux/tmux.conf" "$HOME/.mydot/tmux/tmux.conf"
-# ln -nsf "$GITDIR/tmux/tmux-pane-border" "$HOME/.tmux/tmux-pane-border"
-# ln -nsf "$GITDIR/tmux/get_battery_tmux" "$HOME/.tmux/get_battery_tmux"
-# ln -nsf "$GITDIR/tmux/get_load_average_tmux" "$HOME/.tmux/get_load_average_tmux"
-# ln -nsf "$GITDIR/tmux/get_ssid_tmux" "$HOME/.tmux/get_ssid_tmux"
-# ln -nsf "$GITDIR/tmux/get_volume_tmux" "$HOME/.tmux/get_volume_tmux"
-# ln -nsf "$GITDIR/tmux/ssh-change-profile.bash" "$HOME/.tmux/ssh-change-profile.bash"
+ln -nsf "$GITDIR/tmux/tmuxinator" "$HOME/.mydot/tmuxinator"
 
 ### nvim
 NVIMDIR="$MYDOTDIR/nvim"
@@ -51,7 +46,7 @@ ln -nsf "$GITDIR/nvim/cheatsheet.txt" "$NVIMDIR/cheatsheet.txt"
 ln -nsf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -nsf "$GITDIR/nvim/coc-settings.json" "$NVIMDIR/coc-settings.json"
 ln -nsf "$GITDIR/nvim/vimspector.json" "$HOME/.vimspector.json"
-ln -nsf "$GITDIR/nvim/toml" "$NVIMDIR/toml"
+ln -nsf "$GITDIR/nvim/dein.toml" "$NVIMDIR/dein.toml"
 # ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 ln -nsf "$GITDIR/nvim/ultisnips" "$MYDOTDIR/nvim/ultisnips"
 if [ ! -e "$NVIMDIR/bookmark.vim" ]; then
