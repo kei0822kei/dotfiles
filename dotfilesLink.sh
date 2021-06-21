@@ -46,7 +46,7 @@ ln -nsf "$GITDIR/nvim/cheatsheet.txt" "$NVIMDIR/cheatsheet.txt"
 ln -nsf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -nsf "$GITDIR/nvim/coc-settings.json" "$NVIMDIR/coc-settings.json"
 ln -nsf "$GITDIR/nvim/vimspector.json" "$HOME/.vimspector.json"
-ln -nsf "$GITDIR/nvim/toml" "$NVIMDIR/toml"
+ln -nsf "$GITDIR/nvim/dein.toml" "$NVIMDIR/dein.toml"
 # ln -nsf "$GITDIR/nvim/snippet" "$NVIMDIR/snippet"
 ln -nsf "$GITDIR/nvim/ultisnips" "$MYDOTDIR/nvim/ultisnips"
 if [ ! -e "$NVIMDIR/bookmark.vim" ]; then

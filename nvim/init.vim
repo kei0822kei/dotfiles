@@ -1,7 +1,7 @@
 " -*- init.vim -*-
 
 """settings necessary for plugins
-let g:mapleader = "\<Space>"
+let g:mapleader = '\<Space>'
 
 if $CONDA_PREFIX == ''
   let g:python_host_prog =
@@ -48,12 +48,9 @@ endif
 call dein#begin(s:dein_dir)
 
 let g:rc_dir    = expand('~/.mydot/nvim/rc/')
-let g:toml_dir  = expand('~/.mydot/nvim/toml/')
-let s:toml      = g:toml_dir . 'dein.toml'
-let s:lazy_toml = g:toml_dir . 'dein_lazy.toml'
+let s:toml      = '~/.mydot/nvim/dein.toml'
 
 call dein#load_toml(s:toml,      {'lazy': 0})
-call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
 call dein#end()
 
@@ -70,7 +67,7 @@ syntax enable
 
 """layout
 set number                 "display the numbers of the lines
-" set title                "display the title of the editing file
+set title                "display the title of the editing file
 " set showmatch            "when you input a parenthesis, show you the other
 " set ruler                "display where is the cursor
 " set laststatus=2         "comment at th bottom
@@ -85,10 +82,8 @@ set shiftwidth=2         "set indent 2 spaces (it is also needed)
 "set autoindent           "continue the indent of the formar line
 "set noautoindent
 
-"""new action set nostartofline
-set nowrap               "you can input the same line until line feed
-
 """file backup
+set nowrap               "you can input the same line until line feed
 set nobackup             "avoid making swap file
 set viminfo+=n~/.mydot/nvim/viminfo        "vim commandline history
 set directory=~/.mydot/nvim/swap
@@ -126,8 +121,8 @@ set wildmenu wildmode=list:longest,full
 set history=10000
 
 """ tab
-nnoremap <Tab> :tabn<cr>
-nnoremap c q:
+" nnoremap <Tab> :tabn<cr>
+" nnoremap c q:
 
 set textwidth=80
 
