@@ -2,17 +2,17 @@
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "jedi.startupMessage": true,
-  "languageserver": {
-     "ccls": {
-       "command": "ccls",
-       "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
-       "rootPatterns": [".ccls-root", "compile_commands.json"],
-       "initializationOptions": {
-          "cache": {
-            "directory": "~/.mydot/nvim/.cache"
-          }
-        }
-     }
+    "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+         "cache": {
+           "directory": "/tmp/ccls"
+         }
+       }
+    }
   },
   "snippets.ultisnips.directories": [
     "~/.mydot/nvim/ultisnips",

@@ -1,8 +1,7 @@
 " -*- init.vim -*-
 
 """settings necessary for plugins
-let mapleader = "\<Space>"
-let g:coc_user_config = "{~/coc-settings.json}"
+let g:mapleader = "\<Space>"
 
 if $CONDA_PREFIX == ''
   let g:python_host_prog =
@@ -28,44 +27,45 @@ else
           \ '/bin/python'
 endif
 
-
-"""dein
+"-------- dein settings based on https://github.com/Shougo/dein.vim ----------
 let s:dein_dir = expand('~/.mydot/nvim/bundle')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+let g:dein#cache_directory = $HOME . '/.mydot/nvim/cache'
 
 if &compatible
   set nocompatible " Be iMproved
 endif
 
+" !~# => https://thinca.hatenablog.com/entry/20100201/1265009821
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
+  " add dein path to the head of runtimepath
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-if dein#load_state(s:dein_dir)  " 'load_chache' is deprecated
-  let g:dein#cache_directory = $HOME . '/.mydot/nvim/cache'
-  call dein#begin(s:dein_dir)
+call dein#begin(s:dein_dir)
 
-  let g:rc_dir    = expand('~/.mydot/nvim/rc/')
-  let g:toml_dir  = expand('~/.mydot/nvim/toml/')
-  let s:toml      = g:toml_dir . 'dein.toml'
-  let s:lazy_toml = g:toml_dir . 'dein_lazy.toml'
+let g:rc_dir    = expand('~/.mydot/nvim/rc/')
+let g:toml_dir  = expand('~/.mydot/nvim/toml/')
+let s:toml      = g:toml_dir . 'dein.toml'
+let s:lazy_toml = g:toml_dir . 'dein_lazy.toml'
 
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+call dein#load_toml(s:toml,      {'lazy': 0})
+call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  call dein#end()
-  call dein#save_state()
-endif
+call dein#end()
 
 if dein#check_install()
   call dein#install()
 endif
 
-" filetype plugin indent on
-" syntax enable
+call dein#save_state()
+
+filetype plugin indent on
+syntax enable
+"-------- dein settings based on https://github.com/Shougo/dein.vim ----------
 
 
 """layout
@@ -106,7 +106,6 @@ set ignorecase  "do not distinguash s and S when you search.
 """  - SpecialKey => nbsp, tab, trail
 
 " You can show variable naem by :help highlight :help highlight group
-syntax enable  "coloring codes, seems necessary to place before 'hi'
 hi NormalFloat ctermfg=121 ctermbg=239
 hi NonText ctermfg=66
 hi SpecialKey ctermfg=237
@@ -133,4 +132,4 @@ nnoremap c q:
 set textwidth=80
 
 """ future delete
-let g:session_path = $HOME . '/src/github.com/kei0822kei/programming/vimscript'
+" let g:session_path = $HOME . '/src/github.com/kei0822kei/programming/vimscript'

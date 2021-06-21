@@ -30,6 +30,7 @@ hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 [[plugins]]
 repo = 'Shougo/defx.nvim'  # filer
 hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
+depends = ['defx-git', 'defx-icons']
 
 [[plugins]]
 repo ='kristijanhusak/defx-git'  # show git status in defx
