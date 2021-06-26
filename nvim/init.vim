@@ -74,6 +74,7 @@ set title                "display the title of the editing file
 " set ruler                "display where is the cursor
 " set laststatus=2         "comment at th bottom
 " set cursorline
+set textwidth=79
 set list                   " visualize invisible characters
 set listchars=tab:»-,trail:-,nbsp:%,eol:↲
 
@@ -127,7 +128,11 @@ nnoremap <Tab> :tabn<cr>
 
 " nnoremap c q:
 
-set textwidth=80
+"""json settings
+autocmd Filetype json
+  \ let g:indentLine_setConceal = 0 |
+  \ let g:vim_json_syntax_conceal = 0
 
-""" future delete
+
+"" future delete
 " let g:session_path = $HOME . '/src/github.com/kei0822kei/programming/vimscript'
