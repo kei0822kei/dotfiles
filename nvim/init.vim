@@ -122,8 +122,9 @@ highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 set wildmenu wildmode=list:longest,full
 set history=10000
 
-""" tab
-" nnoremap <Tab> :tabn<cr>
+""" tab use (necessary)
+nnoremap <Tab> :tabn<cr>
+
 " nnoremap c q:
 
 set textwidth=80
