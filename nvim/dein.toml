@@ -38,12 +38,12 @@ hook_add = 'source ~/.mydot/nvim/rc/coc.nvim.vim'
 depends = ['jsonc']
 
 [[plugins]]
-repo = 'neoclide/jsonc.vim'  # to be able to commen in json
+repo = 'neoclide/jsonc.vim'  # to be able to use comment in json
 
 [[plugins]]
-repo = 'donRaphaco/neotex'  # future replaced by coc-vimtex
+repo = 'lervag/vimtex'
 on_ft = 'latex'
-hook_add = 'source ~/.mydot/nvim/rc/neotex.vim'
+hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
 
 
 # ========

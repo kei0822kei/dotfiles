@@ -8,11 +8,12 @@
 # $pdf_mode         = 3;
 # $pvc_view_file_via_temporary = 0;
 
-$latex = 'platex -interaction=nonstopmode -kanji=utf-8 %O %S';
+$latex = 'latex -interaction=nonstopmode -kanji=utf-8 %O %S';
 $dvipdf = 'dvipdfmx %O -o %D %S';
-$bibtex = 'pbibtex';
+$bibtex = 'bibtex';
 $pdf_mode = 3; # use dvipdf
 $pdf_update_method = 2;
-$pdf_previewer = "start mupdf %O %S";
+# $pdf_previewer = "start mupdf %O %S";
+$pdf_previewer = "zathura";
 # Prevent latexmk from removing PDF after typeset.
 # $pvc_view_file_via_temporary = 0;
