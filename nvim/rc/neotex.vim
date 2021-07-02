@@ -1,1 +1,2 @@
-let s:neotex_enabled = 2
+let g:neotex_enabled = 2  " default on
+let g:tex_flavor = 'latex'  " recommended in neotex github
