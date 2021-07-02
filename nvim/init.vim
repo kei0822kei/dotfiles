@@ -64,6 +64,7 @@ filetype plugin indent on
 syntax enable
 
 let g:vim_json_syntax_conceal = 0  " fix coneal in order to be able to see '"'.
+let g:tex_flavor = "latex"
 " ------- dein settings based on https://github.com/Shougo/dein.vim -----------
 
 
