@@ -98,7 +98,7 @@ if [ ! -e "$HOME/src/pyenv" ]; then
   # flag=1
 fi
 export PYENV_ROOT="$HOME/src/pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+# export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
 if [ ! -e $PYENV_ROOT/versions/$ANACONDA_VERSION ]; then
   $HOME/src/pyenv/bin/pyenv install $ANACONDA_VERSION
@@ -110,10 +110,19 @@ if [ ! -e $PYENV_ROOT/versions/$ANACONDA_VERSION ]; then
   # echo "conda update conda"
 fi
 
-export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
+# export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
+# export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
+# export PATH="$PYENV_ROOT/versions/$ANACONDA_VERSION/bin/:$PATH"
 
 
 ################################################################################
 # github
 ################################################################################
 # source $GITHUB_REPO/kei0822kei/dotfiles/git/token.zsh
+
+################################################################################
+# usr
+################################################################################
+export PATH="$HOME/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/usr/lib:$LD_LIBRARY_PATH"
+export CPATH="$HOME/usr/include:$CPATH"
