@@ -1,0 +1,2 @@
+-I/usr/local/Cellar/llvm/12.0.0_1/lib/clang/12.0.0/include
+-std=c11
