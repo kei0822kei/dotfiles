@@ -42,7 +42,6 @@ if [ ! -e "$NVIMDIR" ]; then
   mkdir -p "$NVIMDIR"
 fi
 ln -nsf "$GITDIR/nvim/init.vim" "$NVIMDIR/init.vim"
-ln -nsf "$GITDIR/nvim/cheatsheet.txt" "$NVIMDIR/cheatsheet.txt"
 ln -nsf "$GITDIR/nvim/rc" "$NVIMDIR/rc"
 ln -nsf "$GITDIR/nvim/coc-settings.json" "$NVIMDIR/coc-settings.json"
 ln -nsf "$GITDIR/nvim/vimspector.json" "$HOME/.vimspector.json"

@@ -63,6 +63,9 @@ repo = 'honza/vim-snippets'  # used by coc-snipptes
 # ===============
 
 [[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
 repo = 'Lokaltog/vim-easymotion'
 hook_add = 'source ~/.mydot/nvim/rc/easymotion.vim'
 

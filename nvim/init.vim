@@ -134,6 +134,11 @@ autocmd Filetype json
   \ let g:indentLine_setConceal = 0 |
   \ let g:vim_json_syntax_conceal = 0
 
+"""latex settings
+autocmd Filetype tex
+  \ setl spell |
+  \ set formatoptions=t
+
 
 "" future delete
 " let g:session_path = $HOME . '/src/github.com/kei0822kei/programming/vimscript'
