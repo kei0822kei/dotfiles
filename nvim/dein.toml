@@ -41,6 +41,11 @@ depends = ['jsonc']
 repo = 'neoclide/jsonc.vim'  # to be able to use comment in json
 
 [[plugins]]
+repo = 'alvan/vim-closetag'
+hook_add = 'source ~/.mydot/nvim/rc/vim-closetag.vim'
+on_ft = 'html'
+
+[[plugins]]
 repo = 'lervag/vimtex'
 on_ft = 'latex'
 hook_add = 'source ~/.mydot/nvim/rc/vimtex.vim'
@@ -80,12 +85,8 @@ hook_add = 'source ~/.mydot/nvim/rc/braceless.vim'
 repo = 'preservim/tagbar'
 hook_add = 'source ~/.mydot/nvim/rc/tagbar.vim'
 
-[[plugins]]
-repo = 'alvan/vim-closetag'
-hook_add = 'source ~/.mydot/nvim/rc/vim-closetag.vim'
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'osyo-manga/vim-over'  # replace strings by s/"hoge"/"fuga"/g
