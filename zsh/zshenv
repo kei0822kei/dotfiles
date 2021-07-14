@@ -32,7 +32,7 @@ fi
 # scriipts
 ################################################################################
 
-export GITHUB_REPO="$HOME/src/github.com"
+export GITHUB_REPO="$HOME/src/ghq/github.com"
 # export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
 # export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
@@ -127,7 +127,7 @@ fi
 
 if [[ $TERMINAL = 'Mac' ]]; then
    export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-   export PATH="/usr/local/opt/llvm/bin:$PATH"
+   export PATH="/usr/local/opt/llvm/bin:/usr/local/bin:$PATH"
    export LDFLAGS="-L/usr/local/opt/llvm/lib"
    export CPPFLAGS="-I/usr/local/opt/llvm/include"
 fi
@@ -139,4 +139,3 @@ fi
 export PATH="$HOME/usr/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/usr/lib:$LD_LIBRARY_PATH"
 export CPATH="$HOME/usr/include:$CPATH"
-echo "$PATH"
