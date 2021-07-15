@@ -65,7 +65,7 @@ ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
 ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
 
 ### ssh
-# ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
+ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
 
 ### pypi
 ln -nsf "$GITDIR/python/pypirc" "$HOME/.pypirc"
