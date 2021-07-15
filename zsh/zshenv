@@ -32,7 +32,7 @@ fi
 # scriipts
 ################################################################################
 
-export GITHUB_REPO="$HOME/src/github.com"
+export GITHUB_REPO="$HOME/src/ghq/github.com"
 # export PATH="$GITHUB_REPO/kei0822kei/jmt/scripts:$PATH"
 export PATH="$GITHUB_REPO/kei0822kei/cheater/scripts:$PATH"
 # export PATH="$GITHUB_REPO/kei0822kei/vasper/scripts:$PATH"
@@ -119,6 +119,19 @@ fi
 # github
 ################################################################################
 # source $GITHUB_REPO/kei0822kei/dotfiles/git/token.zsh
+
+
+################################################################################
+# llvm
+################################################################################
+
+if [[ $TERMINAL = 'Mac' ]]; then
+   export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+   export PATH="/usr/local/opt/llvm/bin:/usr/local/bin:$PATH"
+   export LDFLAGS="-L/usr/local/opt/llvm/lib"
+   export CPPFLAGS="-I/usr/local/opt/llvm/include"
+fi
+
 
 ################################################################################
 # usr

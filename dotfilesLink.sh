@@ -5,7 +5,7 @@
 ################################################################################
 
 ### setting variables
-GITDIR="$HOME/src/github.com/kei0822kei/dotfiles"
+GITDIR="$HOME/src/ghq/github.com/kei0822kei/dotfiles"
 MYDOTDIR="$HOME/.mydot"
 
 ### make setting directory
@@ -59,13 +59,13 @@ ln -nsf "$GITDIR/lint/flake8" "$HOME/.flake8"
 ln -nsf "$GITDIR/lint/pylintrc" "$HOME/.pylintrc"
 
 ### latex
-# ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
+ln -nsf "$GITDIR/latex/latexmkrc" "$HOME/.latexmkrc"
 
 ### git
 ln -nsf "$GITDIR/git/gitconfig" "$HOME/.gitconfig"
 
 ### ssh
-# ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
+ln -nsf "$GITDIR/ssh/`hostname`" "$HOME/.ssh/config"
 
 ### pypi
 ln -nsf "$GITDIR/python/pypirc" "$HOME/.pypirc"

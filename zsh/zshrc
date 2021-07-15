@@ -78,11 +78,12 @@ export PATH="$GOPATH/bin:$PATH"
 
 if [ ! -e $HOME/src/go/bin/ghq ]; then
   echo "install ghq"
-  (cd $HOME/src/github.com;
+  (mkdir -p $HOME/src/go/src/github.com;
+   cd $HOME/src/go/src/github.com;
    git clone https://github.com/motemen/ghq;
    cd ghq;
    make install)
-  git config --global ghq.root ~/src
+  git config --global ghq.root ~/src/ghq
 fi
 
 
