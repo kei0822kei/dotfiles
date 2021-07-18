@@ -1,3 +1,5 @@
+" please copy to ~/.mydot/nvim/bookmark.vim
+
 let s:menus = {}
 let s:menus.projects = { 'description': 'switch projects' }
 let s:menus.projects.command_candidates = [

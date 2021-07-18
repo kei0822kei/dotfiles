@@ -103,12 +103,12 @@ hook_add = 'source ~/.mydot/nvim/rc/defx.vim'
 depends = ['defx-git']
 
 [[plugins]]
-repo ='kristijanhusak/defx-git'  # show git status in defx
+repo = 'kristijanhusak/defx-git'  # show git status in defx
 hook_add = 'source ~/.mydot/nvim/rc/defx-git.vim'
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'  # filer
-hook_add = 'source ~/.mydot/nvim/rc/nerdtree.vim'
+# [[plugins]]
+# repo = 'scrooloose/nerdtree'  # filer
+# hook_add = 'source ~/.mydot/nvim/rc/nerdtree.vim'
 
 
 # ===

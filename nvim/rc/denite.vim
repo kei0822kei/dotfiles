@@ -15,12 +15,14 @@ call denite#custom#option('default', {
 
 """ search
 """  - ref. https://qiita.com/pyama2000/items/fafdbc77f394e71a9dd8
-nnoremap <silent><C-m>m :<C-u>Denite file/rec -split=floating file:new<CR>
+" must be used
 nnoremap <silent><C-m>b :<C-u>Denite buffer -split=floating file:new<CR>
 nnoremap <silent><C-m>f :<C-u>Denite file/rec -split=floating file:new<CR>
-nnoremap <silent><C-m>gr :<C-u>Denite grep -buffer-name=search<CR>
 nnoremap <silent><C-m>c :<C-u>Denite command_history -split=floating<CR>
 nnoremap <silent><C-m>y :<C-u>Denite neoyank -split=floating<CR>
+
+" still studying
+nnoremap <silent><C-m>gr :<C-u>Denite grep -buffer-name=search<CR>
 nnoremap <silent><C-m>, :<C-u>DeniteCursorWord grep -buffer-name=search line<CR>
 nnoremap <silent><C-m>gs :<C-u>Denite -resume -buffer-name=search<CR>
 

@@ -139,3 +139,11 @@ fi
 export PATH="$HOME/usr/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/usr/lib:$LD_LIBRARY_PATH"
 export CPATH="$HOME/usr/include:$CPATH"
+
+
+################################################################################
+# openmp
+################################################################################
+if [[ $TERMINAL = 'Linux' ]]; then
+  export OMP_NUM_THREADS=`grep processor /proc/cpuinfo | wc -l`
+fi
